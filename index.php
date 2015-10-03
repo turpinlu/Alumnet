@@ -12,9 +12,9 @@
  $email = $_POST['email'];
  $password = $_POST['password'];
  $password_confirmation = $_POST['password_confirmation'];
- echo "First Name: "
- echo "Last Name: "
- echo "Display Name: "
+ echo "First Name: ";
+ echo "Last Name: ";
+ echo "Display Name: ";
 ?>
 
 <head>
