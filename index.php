@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="shortcut icon" href="logo.ico">
 <?php
 
     //address error handling
