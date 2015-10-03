@@ -200,7 +200,7 @@
             </div>
 
             <?php
-                if ($password != $password_confirmation){ 
+                if (strcmp($password, $password_confirmation) !== 0){ 
             ?>
                 <div class="col-xs-8 col-sm-9 col-md-9">
                      *** The passwords must match
@@ -212,8 +212,8 @@
             <div class="row">
                 <div class="col-xs-4 col-sm-3 col-md-3">
                     <span class="button-checkbox">
-                        <button type="button" class="btn" data-color="info" required tabindex="7"> I Agree</button>
-                        <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+                        <button type="button" class="btn" data-color="info" tabindex="7"> I Agree</button>
+                        <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" required value="1">
                     </span>
                 </div>
                 <div class="col-xs-8 col-sm-9 col-md-9">
