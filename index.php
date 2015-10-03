@@ -164,11 +164,8 @@
 
 <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-        <form role="form">
+        <form role="form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <h2>Please Sign Up <small>It's free and always will be.</small></h2>
-
-           
-            <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             
             <hr class="colorgraph">
             <div class="row">
@@ -227,7 +224,6 @@
             <hr class="colorgraph">
             <div class="row">
                 <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-            </form>
                 <div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
             </div>
         </form>
