@@ -13,6 +13,10 @@
  $email = cleanStringInput($_POST['email']);
  $password = cleanStringInput($_POST['password']);
  $password_confirmation = cleanStringInput($_POST['password_confirmation']);
+ echo " ";
+ echo $password_confirmation;
+ echo " ";
+ echo $password;
  $pwmatch = strcmp($password_confirmation, $password);
  $password = hashPassword($password);
  $password_confirmation = hashPassword($password_confirmation);
