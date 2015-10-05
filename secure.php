@@ -25,12 +25,11 @@ function cleanNumericInput ($input){
 
 function cleanStringInput ($input)
 {
-  echo $input;
   //Prevent SQL injection by stripping any user generated strings of SQL-recognized characters
 	if (get_magic_quotes_gpc()){
-		$input = stripslashes ($input);
-    echo $input;
-    echo "(stripslashes)    ";
+		//$input = stripslashes ($input);
+    //echo $input;
+    //echo "(stripslashes)    ";
 	}
 	$input = mysql_real_escape_string($input);
   echo $input;
