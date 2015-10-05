@@ -107,16 +107,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.html">
+            <a href="index.php">
             <img src="logo2.png" style="max-height:50px;max-width:200px;padding-left:10px;">
             </a>
         </div>
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="http://alumnet.xyz">Home</a></li>
-                <li><a href="http://alumnet.xyz/profile.html">Profile</a></li>
-                <li><a href="http://alumnet.xyz/browse.html">Browse</a></li>
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="browse.php">Browse</a></li>
                 <!-- <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
