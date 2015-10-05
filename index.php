@@ -136,24 +136,6 @@
         </div>
     </nav>
 </div>
-<div class="row">
-    <div class="container">
-        <div class="col-md-6">
-            <div class="jumbotron">
-                <h1>Networking Made Simple</h1>
-                <p>FOR those who leave Salisbury, but for whom Salisbury never leaves, this is where you belong: Salisbury University's Alumni Network (Alumnet, for short). Strengthen your Salisbury connection and help support activities of other alumni by becoming a member.</p>
-                <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Get started today</a></p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="jumbotron">
-                <h1>Trust Us, It's Really Easy</h1>
-                <p>Within minutes, you can be connecting with other alumni. Remember that girl from your Econ class Sophomore year? She's already landed a job in Newark because she contacted another graduate. It's time to get the ball rolling. Sign up with Alumnet today! It's easy!</p>
-                <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Please sign up</a></p>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container">
     <div class="row">
@@ -222,10 +204,7 @@
             </div>
             
             <hr class="colorgraph">
-            <div class="row">
-                <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-                <div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
-            </div>
+            
         </form>
     </div>
 </div>
