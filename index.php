@@ -5,13 +5,14 @@
 <?php
  // MySQL Database Connect
  include 'datalogin.php';
+ include 'secure.php';
 
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $display_name = $_POST['display_name'];
- $email = $_POST['email'];
- $password = $_POST['password'];
- $password_confirmation = $_POST['password_confirmation'];
+ $first_name = cleanStringInput($_POST['first_name']);
+ $last_name = cleanStringInput($_POST['last_name']);
+ $display_name = cleanStringInput($_POST['display_name']);
+ $email = cleanStringInput($_POST['email']);
+ $password = hashPassword($_POST['password']);
+ $password_confirmation = hashPassword($_POST['password_confirmation']);
 ?>
 
 <head>
@@ -146,7 +147,7 @@
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
         <form role="form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <h2>Please Sign Up <small>It's free and always will be.</small></h2>
-            
+
             <hr class="colorgraph">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
@@ -180,7 +181,7 @@
             </div>
 
             <?php
-                if (strcmp($password, $password_confirmation) !== 0){ 
+                if (strcmp($password, $password_confirmation) !== 0){
             ?>
                 <div class="row">
                     <div class="col-xs-8 col-sm-9 col-md-9">
@@ -202,7 +203,7 @@
                      By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
                 </div>
             </div>
-            
+
             <hr class="colorgraph">
             <div class="row">
                 <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
