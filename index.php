@@ -11,8 +11,8 @@
  $last_name = cleanStringInput($_POST['last_name']);
  $display_name = cleanStringInput($_POST['display_name']);
  $email = cleanStringInput($_POST['email']);
- $password = cleanStringInput($_POST['password']);
- $password_confirmation = cleanStringInput($_POST['password_confirmation']);
+ $password = $_POST['password'];
+ $password_confirmation = $_POST['password_confirmation'];
  echo " ";
  echo $password_confirmation;
  echo " ";
