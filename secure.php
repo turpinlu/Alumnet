@@ -32,7 +32,7 @@ function cleanStringInput ($input)
     echo "(stripslashes)    ";
 	}
 	$input = mysql_real_escape_string($input);
-  echo $input
+  echo $input;
   echo "(real_escape)    ";
 
   //Prevent Cross Site Scripting by converting any JavaScript symbols into their html entities
