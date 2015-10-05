@@ -189,7 +189,7 @@
             ?>
                 <div class="row">
                     <div class="col-xs-8 col-sm-9 col-md-9">
-                        <p> *** The passwords must match</p>
+                        <p> ** The passwords must match</p>
                     </div>
                 </div>
             <?php
