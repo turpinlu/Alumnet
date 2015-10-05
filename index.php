@@ -182,6 +182,8 @@
 
             <?php
                 if (strcmp($password, $password_confirmation) !== 0){
+                    echo $password;
+                    echo $password_confirmation;
             ?>
                 <div class="row">
                     <div class="col-xs-8 col-sm-9 col-md-9">
