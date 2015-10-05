@@ -182,7 +182,7 @@
 
             <?php
                 if (strcmp($password, $password_confirmation) !== 0){
-                    echo $password;
+                    echo $password "\r\n";
                     echo $password_confirmation;
             ?>
                 <div class="row">
