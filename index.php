@@ -15,7 +15,7 @@
  $password_confirmation = cleanStringInput($_POST['password_confirmation']);
  $pwmatch = strcmp($password_confirmation, $password);
  $password = hashPassword($password);
- $password_confirmation = hashPassword($password_confirmation]);
+ $password_confirmation = hashPassword($password_confirmation);
 ?>
 
 <head>
