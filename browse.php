@@ -3,7 +3,7 @@
 <link rel="shortcut icon" href="favicon.ico">
 
 <head>
-<title>Alumnet - Networking Made Easy</title>
+<title>Alumnet&trade - Networking Made Easy</title>
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
