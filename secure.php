@@ -29,7 +29,8 @@ function cleanStringInput ($input)
 	if (get_magic_quotes_gpc()){
 		$input = stripslashes ($input);
 	}
-	$input = mysqli_real_escape_string($input);
+  //is broken - requires more investigation
+	//$input = mysql_real_escape_string($input);
 
   //Prevent Cross Site Scripting by converting any JavaScript symbols into their html entities
   $input = htmlentities($input);
