@@ -11,8 +11,11 @@
  $last_name = cleanStringInput($_POST['last_name']);
  $display_name = cleanStringInput($_POST['display_name']);
  $email = cleanStringInput($_POST['email']);
- $password = hashPassword($_POST['password']);
- $password_confirmation = hashPassword($_POST['password_confirmation']);
+ $password = cleanStringInput($_POST['password']);
+ $password_confirmation = cleanStringInput($_POST['password_confirmation']);
+ $pwmatch = strcmp($password_confirmation, $password);
+ $password = hashPassword($password);
+ $password_confirmation = hashPassword($password_confirmation]);
 ?>
 
 <head>
@@ -181,10 +184,7 @@
             </div>
 
             <?php
-                if (strcmp($password, $password_confirmation) !== 0){
-                    echo $password;
-                    echo "                 ";
-                    echo $password_confirmation;
+                if (!$pwmatch){
             ?>
                 <div class="row">
                     <div class="col-xs-8 col-sm-9 col-md-9">
