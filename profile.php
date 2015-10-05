@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="shortcut icon" href="favicon.ico">
+
 <head>
 <title>Alumnet - Networking Made Easy</title>
 <link rel="stylesheet" href="theme.css">

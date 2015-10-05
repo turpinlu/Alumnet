@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="shortcut icon" href="logo.ico">
+<link rel="shortcut icon" href="favicon.ico">
 
 <?php
  // MySQL Database Connect
