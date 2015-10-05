@@ -28,17 +28,11 @@ function cleanStringInput ($input)
   //Prevent SQL injection by stripping any user generated strings of SQL-recognized characters
 	if (get_magic_quotes_gpc()){
 		$input = stripslashes ($input);
-    echo $input;
-    echo "(stripslashes)    ";
 	}
-	//$input = mysql_real_escape_string($input);
-  echo $input;
-  echo "(real_escape)    ";
+	$input = mysqli_real_escape_string($input);
 
   //Prevent Cross Site Scripting by converting any JavaScript symbols into their html entities
   $input = htmlentities($input);
-  echo $input;
-  echo "(html)    ";
   return $input;
 }
 
