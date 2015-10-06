@@ -102,7 +102,7 @@
 </style>
 </head>
 <body>
-<div class="container">
+<nav class="navbar navbar-custom navbar-static-top">
     <nav role="navigation" class="navbar navbar-inverse navbar-static-top">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -132,7 +132,7 @@
             </form>
         </div>
     </nav>
-</div>
+</nav>
 
 <div class="container">
     <div class="row">
