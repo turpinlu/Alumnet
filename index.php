@@ -119,19 +119,7 @@
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Home</a></li>
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="browse.php">Browse</a></li>
-                <!-- <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages<b class="caret"></b></a>
-                    <ul role="menu" class="dropdown-menu">
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">Drafts</a></li>
-                        <li><a href="#">Sent Items</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Trash</a></li>
-                    </ul>
-                </li> -->
+                
             </ul>
             <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
