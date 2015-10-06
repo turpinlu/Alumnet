@@ -136,7 +136,7 @@
 
 <div class="container">
     <div class="row">
-        <!--<div class="col-xs-12">-->
+        <div class="col-xs-12">
             <div class="jumbotron">
 
 <div class="row">
@@ -146,7 +146,7 @@
 
             <hr class="colorgraph">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-sm-6 col-md-6">
                     <div class="form-group">
                         <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" value = "<?echo $first_name ?>" required tabindex="1">
                     </div>
@@ -231,7 +231,7 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 </div>
-<!--</div>-->
+</div>
 </div>
 </div>
 </body>
