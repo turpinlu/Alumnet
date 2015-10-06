@@ -94,7 +94,7 @@
 </script>
 <style type="text/css">
     .navbar{
-        margin-top: 20px;
+        margin-top: 0px;
     }
     .jumbotron{
         margin-top: 15px;
@@ -110,13 +110,14 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Title</a>
+    <a href="index.php">
+        <img src="logo2.png" style="max-height:50px;max-width:200px;padding-left:10px;">
+    </a>
   </div>
   <div class="collapse navbar-collapse">
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:10px;">Login <b class="caret"></b></a>
         <ul class="dropdown-menu pull-right">
           <li><a href="#">Action</a></li>
           <li><a href="#">Another action</a></li>
