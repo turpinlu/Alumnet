@@ -4987,7 +4987,6 @@ a.badge:focus {
 .jumbotron {
   width: 90%;
   padding-top: 30px;
-  padding: 0;
   padding-bottom: 30px;
   margin-left: 30px;
   margin-right: 30px;
@@ -5014,7 +5013,7 @@ a.badge:focus {
 .jumbotron .container {
   max-width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 300px) {
   .jumbotron {
     padding-top: 48px;
     padding-bottom: 48px;
