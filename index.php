@@ -115,16 +115,17 @@
     </a>
   </div>
   <div class="collapse navbar-collapse">
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:10px;">Login <b class="caret"></b></a>
-        <ul class="dropdown-menu pull-right">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
+    <ul class="nav pull-right">
+        <li class="dropdown" id="menuLogin">
+         <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
+         <div class="dropdown-menu" style="padding:17px;">
+             <form class="form" id="formLogin"> 
+             <input name="username" id="username" type="text" placeholder="Username"> 
+             <input name="password" id="password" type="password" placeholder="Password"><br>
+             <button type="button" id="btnLogin" class="btn">Login</button>
+            </form>
+         </div>
+        </li>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
