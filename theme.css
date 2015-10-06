@@ -6787,7 +6787,7 @@ button.close {
 
 .navbar-custom {
   background-color:#000000;
-    color:#ffffff;
+    color:#696969;
     border-radius:0;
 }
   
@@ -6797,7 +6797,7 @@ button.close {
     padding-right:20px;
 }
 .navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-    color: #ffffff;
+    color: #696969;
   background-color:transparent;
 }
       
@@ -6810,7 +6810,7 @@ button.close {
     color:#eeeeee;
 }
 .navbar-custom .navbar-toggle {
-    background-color:#eeeeee;
+    background-color:#696969;
 }
 .navbar-custom .icon-bar {
     background-color:#33aa33;
