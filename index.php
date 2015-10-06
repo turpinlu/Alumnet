@@ -156,8 +156,9 @@ $(document).ready(function(){
 
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="col-md-7">
-            <div class="jumbotron">
+        <div class="row-height">
+            <div class="col-md-7">
+                <div class="jumbotron">
 
 <div class="row">
     <div class="col-md-12 col-sm-offset-0 col-md-offset-0">
@@ -259,6 +260,7 @@ $(document).ready(function(){
         <p>For those who leave Salisbury, but for whom Salisbury never leaves, this is where you belong: Salisbury University's Alumni Network (Alumnet, for short). Strengthen your Salisbury connection and help support activities of other alumni by becoming a member.</p>
         <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Get started today</a></p>
     </div>
+</div>
 </div>
 </div>
 </div>
