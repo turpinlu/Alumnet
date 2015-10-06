@@ -155,7 +155,7 @@ $(document).ready(function(){
 </nav>
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row-fluid">
         <div class="col-md-7">
             <div class="jumbotron">
 
