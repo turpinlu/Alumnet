@@ -124,7 +124,7 @@ $(document).ready(function(){
   <div class="collapse navbar-collapse">
     <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown">
-                     <a href="http://www.jquery2dotnet.com" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:15px;">Sign in <b class="caret" style="padding-right:15px;"></b></a>
+                     <a href="http://www.jquery2dotnet.com" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:15px;">Sign in <b class="caret"></b style="padding-right:15px;"></a>
                      <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
                         <li>
                            <div class="row">
