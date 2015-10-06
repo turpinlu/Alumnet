@@ -4999,7 +4999,6 @@ a.badge:focus {
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
-  padding-left: 10px;
 }
 .jumbotron > hr {
   border-top-color: #d5d5d5;
@@ -5007,7 +5006,6 @@ a.badge:focus {
 .container .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 6px;
-  padding-left: 10px;
 }
 .jumbotron .container {
   max-width: 100%;
