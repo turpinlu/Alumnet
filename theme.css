@@ -4985,6 +4985,8 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
+  display:inline-block;
+  width: 90%;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
