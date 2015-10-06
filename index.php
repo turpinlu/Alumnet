@@ -157,12 +157,12 @@ $(document).ready(function(){
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="row-height">
-            <div class="inside">
-                <div class="col-md-7">
-                    <div class="jumbotron">
+            <div class="col-md-7">
+                <div class="jumbotron">
 
 <div class="row">
     <div class="col-md-12 col-xs-height col-sm-offset-0 col-md-offset-0">
+            <div class="inside">
         <form role="form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <h2>Please Sign Up <small>It's free and always will be.</small></h2>
 
@@ -254,12 +254,15 @@ $(document).ready(function(){
 </div><!-- /.modal -->
 </div>
 </div>
+</div>
 
 <div class="col-md-5 col-xs-height col-sm-offset-0">
     <div class="jumbotron">
-        <h1>Wow! A profile page!</h1>
-        <p>For those who leave Salisbury, but for whom Salisbury never leaves, this is where you belong: Salisbury University's Alumni Network (Alumnet, for short). Strengthen your Salisbury connection and help support activities of other alumni by becoming a member.</p>
-        <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Get started today</a></p>
+        <div class="inside">
+            <h1>Wow! A profile page!</h1>
+            <p>For those who leave Salisbury, but for whom Salisbury never leaves, this is where you belong: Salisbury University's Alumni Network (Alumnet, for short). Strengthen your Salisbury connection and help support activities of other alumni by becoming a member.</p>
+            <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Get started today</a></p>
+        </div>
     </div>
 </div>
 </div>
