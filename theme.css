@@ -5033,6 +5033,9 @@ a.badge:focus {
   }
 }
 
+
+
+
 /* USAGE
 <div class="row">
   <div class="row-height">
@@ -5185,37 +5188,12 @@ a.badge:focus {
   }
 }
 
-/* visual styles */
 
-body {
-  padding-bottom: 40px;
-}
-h1 {
-  margin: 40px 0px 20px 0px;
-  color: #95c500;
-  font-size: 28px;
-  line-height: 34px;
-  text-align: center;
-}
-[class*="col-"] {
-  border: 1px solid #80aa00;
-  background: #d6ec94;
-}
 
-/* centering styles for jsbin */
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-html {
-  display: table;
-}
-body {
-  display: table-cell;
-  vertical-align: middle;
-}
+
+
+
 .thumbnail {
   display: block;
   padding: 4px;
@@ -6982,7 +6960,7 @@ button.close {
 }
 .navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
     color: #696969;
-  background-color:#696969;
+  background-color:transparent;
 }
       
 .navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
