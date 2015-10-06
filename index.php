@@ -140,7 +140,7 @@
             <div class="jumbotron">
 
 <div class="row">
-    <div class="col-md-6 col-sm-offset-2 col-md-offset-3">
+    <div class="col-sm-offset-2 col-md-offset-3">
         <form role="form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <h2>Please Sign Up <small>It's free and always will be.</small></h2>
 
@@ -151,7 +151,7 @@
                         <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" value = "<?echo $first_name ?>" required tabindex="1">
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-sm-6 col-md-6">
                     <div class="form-group">
                         <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" value = "<?echo $last_name ?>" required tabindex="2">
                     </div>
@@ -164,12 +164,12 @@
                 <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" value = "<?echo $email ?>" required tabindex="4">
             </div>
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-sm-6 col-md-6">
                     <div class="form-group">
                         <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" required tabindex="5">
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-sm-6 col-md-6">
                     <div class="form-group">
                         <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" required tabindex="6">
                     </div>
