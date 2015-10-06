@@ -135,7 +135,12 @@
             </ul>
             <form role="search" class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input type="text" placeholder="Search" class="form-control">
+                    <input type="text" placeholder="Username" label="login" class="form-control">
+                </div>
+            </form>
+            <form role="search" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Password" label="password" class="form-control">
                 </div>
             </form>
         </div>
