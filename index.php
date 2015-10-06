@@ -121,10 +121,10 @@ $(document).ready(function(){
         <img src="logo2.png" style="max-height:50px;max-width:200px;padding-left:10px;">
     </a>
   </div>
-  <div class="collapse navbar-collapse">
+  <div class="collapse navbar-collapse" style="padding-right:15px;">
     <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                     <a href="http://www.jquery2dotnet.com" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:15px;">Sign in <b class="caret"></b style="padding-right:15px;"></a>
+                  <li class="dropdown" style="padding-right:15px;">
+                     <a href="http://www.jquery2dotnet.com" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:15px;">Sign in <b class="caret"></b></a>
                      <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
                         <li>
                            <div class="row">
