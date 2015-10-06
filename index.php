@@ -133,15 +133,14 @@
                     </ul>
                 </li> -->
             </ul>
-            <form role="search" class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Username" label="login" class="form-control">
-                </div>
-            </form>
-            <form role="search" class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Password" label="password" class="form-control">
-                </div>
+            <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign In</button>
             </form>
         </div>
     </nav>
