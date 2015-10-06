@@ -234,12 +234,12 @@
 </div>
 
 <div class="col-md-5">
-            <div class="jumbotron">
-                <h1>Wow! A profile page!</h1>
-                <p>For those who leave Salisbury, but for whom Salisbury never leaves, this is where you belong: Salisbury University's Alumni Network (Alumnet, for short). Strengthen your Salisbury connection and help support activities of other alumni by becoming a member.</p>
-                <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Get started today</a></p>
-            </div>
-        </div>
+    <div class="jumbotron">
+        <h1>Wow! A profile page!</h1>
+        <p>For those who leave Salisbury, but for whom Salisbury never leaves, this is where you belong: Salisbury University's Alumni Network (Alumnet, for short). Strengthen your Salisbury connection and help support activities of other alumni by becoming a member.</p>
+        <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Get started today</a></p>
+    </div>
+</div>
 </div>
 </div>
 </body>
