@@ -5009,7 +5009,8 @@ a.badge:focus {
 .container .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 6px;
-  margin-left: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 15px;
 }
 .jumbotron .container {
