@@ -126,7 +126,7 @@
                         <input type="text" class="form-control" name="username" placeholder="Username">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="password" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
                     <button type="submit" class="btn btn-default">Sign In</button>
             </form>
@@ -146,12 +146,12 @@
 
             <hr class="colorgraph">
             <div class="row">
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-3 col-md-9">
                     <div class="form-group">
                         <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" value = "<?echo $first_name ?>" required tabindex="1">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-3 col-md-9">
                     <div class="form-group">
                         <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" value = "<?echo $last_name ?>" required tabindex="2">
                     </div>
@@ -164,12 +164,12 @@
                 <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" value = "<?echo $email ?>" required tabindex="4">
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-3 col-md-9">
                     <div class="form-group">
                         <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" required tabindex="5">
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-3 col-md-9">
                     <div class="form-group">
                         <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" required tabindex="6">
                     </div>
