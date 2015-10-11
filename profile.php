@@ -38,6 +38,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li class="active"><a href="profile.php">Profile</a></li>
                 <li><a href="browse.php">Browse</a></li>
+                <li><a href="index.php">Log Out</a></li>
                 <!-- <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
@@ -57,22 +58,71 @@
         </div>
     </nav>
 </div>
-<div class="row">
-    <div class="container">
-        <div class="col-md-6">
-            <div class="jumbotron">
-                <h1>Wow! A profile page!</h1>
-                <p>For those who leave Salisbury, but for whom Salisbury never leaves, this is where you belong: Salisbury University's Alumni Network (Alumnet, for short). Strengthen your Salisbury connection and help support activities of other alumni by becoming a member.</p>
-                <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Get started today</a></p>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Juliet Ramsey</h3>
+              <A href="edit.html" >Edit Profile</A>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="jumbotron">
-                <h1>Trust Us, It's Really Easy</h1>
-                <p>Within minutes, you can be connecting with other alumni. Remember that girl from your Econ class Sophomore year? She's already landed a job in Newark because she contacted another graduate. It's time to get the ball rolling. Sign up with Alumnet today! It's easy!</p>
-                <p><a href="http://alumnet.xyz" target="_blank" class="btn btn-primary btn-lg">Please sign up</a></p>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> </div>
+                
+                <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
+                  <dl>
+                    <dt>DEPARTMENT:</dt>
+                    <dd>Administrator</dd>
+                    <dt>HIRE DATE</dt>
+                    <dd>11/12/2013</dd>
+                    <dt>DATE OF BIRTH</dt>
+                       <dd>11/12/2013</dd>
+                    <dt>GENDER</dt>
+                    <dd>Male</dd>
+                  </dl>
+                </div>-->
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Degree:</td>
+                        <td>Computer Science</td>
+                      </tr>
+                    <tr>
+                        <td>Grad Year</td>
+                        <td>2014</td>
+                      </tr>
+                       <tr>
+                        <td>City,State</td>
+                        <td>Salisbury, Maryland</td>
+                      </tr>
+                      <tr>
+                        <td>Reason:</td>
+                        <td>Seeking Employment</td>
+                      </tr>
+                       <tr>
+                        <td>Description:</td>
+                        <td>Hello my name is Juliet, I just moved to the DC metro area looking for employment in the programming field.</td>
+                      </tr>
+                      <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:info@support.com">Juliet@gmail.com</a></td>
+                      </tr>
+                        <td>Phone Number</td>
+                        <td><br>555-4567-890(Mobile)
+                        </td>                           
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
+            
+          </div>
         </div>
+      </div>
     </div>
 </div>
 </body>
