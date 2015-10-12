@@ -4,7 +4,7 @@
 
 <?php
  // MySQL Database Connect
- include 'datalogin.php';
+ include 'dataLogin.php';
  include 'secure.php';
 
 //cleanStringInput is broken - currently it strips all characters and returns nothing
