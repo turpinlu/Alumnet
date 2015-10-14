@@ -4,8 +4,8 @@
 
 <?php
  // MySQL Database Connect
- //include 'datalogin.php';
- include 'myDataLogin.php';
+ include 'datalogin.php';
+
  include 'secure.php';
  session_start();
 
