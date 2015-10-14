@@ -66,7 +66,7 @@ function cleanStringInput ($input)
 	if (get_magic_quotes_gpc()){
 		$input = stripslashes ($input);
 	}
-	$input = mysql_real_escape_string($input);
+	//$input = mysql_real_escape_string($input);
 
   //Prevent Cross Site Scripting by converting any JavaScript symbols into their html entities
   $input = htmlentities($input);
