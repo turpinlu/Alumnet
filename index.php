@@ -4,8 +4,8 @@
 
 <?php
  // MySQL Database Connect
-include 'datalogin.php';
- //include 'myDataLogin.php';
+//include 'datalogin.php';
+include 'myDataLogin.php';
  include 'secure.php';
  session_start();
 
@@ -39,7 +39,7 @@ if(!$error && !$pwmatch && $count_email==0){
 
     mysql_query("LOCK TABLES account WRITE");
 	  $query="INSERT INTO account (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
-
+      echo $query;
     if (mysql_query($query)){
     //automatically login--create new session
       $_SESSION['email'] = $email;
