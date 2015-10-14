@@ -42,6 +42,7 @@ if(!$error && !$pwmatch && $count_email==0){
       echo $query;
     if (mysql_query($query)){
     //automatically login--create new session
+    echo 'success';
       $_SESSION['email'] = $email;
       $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
       $time =new DateTime();
