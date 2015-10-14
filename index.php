@@ -4,10 +4,17 @@
 
 <?php
  // MySQL Database Connect
- include 'datalogin.php';
+ //include 'datalogin.php';
+ include 'myDataLogin.php';
  include 'secure.php';
+ session_start();
 
-//cleanStringInput is broken - currently it strips all characters and returns nothing
+$register=$_POST['reg'];
+
+ if ($register){
+
+
+
  $first_name = cleanStringInput($_POST['first_name']);
  $last_name = cleanStringInput($_POST['last_name']);
  $display_name = cleanStringInput($_POST['display_name']);
@@ -15,8 +22,39 @@
  $password = $_POST['password'];
  $password_confirmation = $_POST['password_confirmation'];
  $pwmatch = strcmp($password_confirmation, $password);
- $password = hashPassword($password);
- $password_confirmation = hashPassword($password_confirmation);
+
+
+  //check to see if alredy have account using that email
+  $email_check_query=mysql_query("SELECT EMAIL FROM account WHERE EMAIL='$email'");
+  $count_email = mysql_num_rows($email_check_query);    //if not 0. email already in use
+
+  //Validate Password
+  $error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
+
+  //hash password
+  $password = hashPassword($password);    //hashes password for storage into database
+
+if(!$error && !$pwmatch && $count_email==0){
+  //insert into database--create account
+
+    mysql_query("LOCK TABLES account WRITE");
+	  $query="INSERT INTO account (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
+    echo $query;
+    if (mysql_query($query)){
+      echo "Success";
+      //automatically login--create new session
+      $_SESSION['email'] = $email;
+      $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
+      $time =new DateTime();
+      $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
+      header("Location: http://alumnet.xyz/profile.php");
+    }
+	  mysql_query("UNLOCK TABLES");
+}
+
+}
+
+
 ?>
 
 <head>
@@ -129,14 +167,14 @@ $(document).ready(function(){
                         <li>
                            <div class="row">
                               <div class="col-md-12">
-                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                 <form class="form" role="form" method="post" action="login.php" accept-charset="UTF-8" id="login-nav">
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                       <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                       <input type="email" class="form-control" id="exampleInputEmail2" name="user-email" placeholder="Email address" required>
                                     </div>
                                     <div class="form-group">
                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                       <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                       <input type="password" class="form-control" id="exampleInputPassword2" name= "user-password" placeholder="Password" required>
                                     </div>
                                     <div class="checkbox">
                                        <label>
@@ -144,7 +182,7 @@ $(document).ready(function(){
                                        </label>
                                     </div>
                                     <div class="form-group">
-                                       <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                       <button type="submit" class="btn btn-primary btn-block" name="sign_in">Sign in</button>
                                     </div>
                                  </form>
                               </div>
@@ -169,20 +207,20 @@ $(document).ready(function(){
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" value = "<?echo $first_name ?>" required tabindex="1">
+                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" value = "<?php echo $first_name ?>" required tabindex="1">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
-                        <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" value = "<?echo $last_name ?>" required tabindex="2">
+                        <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" value = "<?php echo $last_name ?>" required tabindex="2">
                     </div>
                 </div>
             </div>
             <div class="form-group">
-                <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" value = "<?echo $display_name ?>" required tabindex="3">
+                <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" value = "<?php echo $display_name ?>" required tabindex="3">
             </div>
             <div class="form-group">
-                <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" value = "<?echo $email ?>" required tabindex="4">
+                <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" value = "<?php echo $email ?>" required tabindex="4">
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
@@ -208,6 +246,29 @@ $(document).ready(function(){
             <?php
                 }
             ?>
+            <?php
+                if ($count_email!=0){
+            ?>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-9 col-md-9">
+                        <p> *** Email is already taken</p>
+                    </div>
+                </div>
+            <?php
+                }
+            ?>
+            <?php
+                if ($error){
+            ?>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-9 col-md-9">
+                        <p> *** <?php echo "Password Choice Weak: $error"?></p>
+                    </div>
+                </div>
+            <?php
+                }
+            ?>
+
 
             <div class="row">
                 <div class="col-xs-4 col-sm-3 col-md-3">
@@ -223,7 +284,7 @@ $(document).ready(function(){
 
             <hr class="colorgraph">
             <div class="row">
-                <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                <div class="col-xs-12 col-md-6"><input type="submit" value="Register" name="reg" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
             </div>
         </form>
     </div>

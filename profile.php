@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
+
 <html lang="en">
 <link rel="shortcut icon" href="favicon.ico">
 
@@ -38,7 +42,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li class="active"><a href="profile.php">Profile</a></li>
                 <li><a href="browse.php">Browse</a></li>
-                <li><a href="index.php">Log Out</a></li>
+                <li><a href="logout.php">Log Out</a></li>
                 <!-- <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">Messages<b class="caret"></b></a>
                     <ul role="menu" class="dropdown-menu">
@@ -59,8 +63,8 @@
     </nav>
 </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
-   
-   
+
+
           <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title">Juliet Ramsey</h3>
@@ -69,7 +73,7 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> </div>
-                
+
                 <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                   <dl>
                     <dt>DEPARTMENT:</dt>
@@ -82,7 +86,7 @@
                     <dd>Male</dd>
                   </dl>
                 </div>-->
-                <div class=" col-md-9 col-lg-9 "> 
+                <div class=" col-md-9 col-lg-9 ">
                   <table class="table table-user-information">
                     <tbody>
                       <tr>
@@ -111,15 +115,15 @@
                       </tr>
                         <td>Phone Number</td>
                         <td><br>555-4567-890(Mobile)
-                        </td>                           
+                        </td>
                       </tr>
-                     
+
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
