@@ -38,7 +38,7 @@ if(!$error && !$pwmatch && $count_email==0){
   //insert into database--create account
 
     mysql_query("LOCK TABLES account WRITE");
-	  $query="INSERT INTO account (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
+	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
       echo $query;
     if (mysql_query($query)){
     //automatically login--create new session
