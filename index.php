@@ -47,7 +47,7 @@ if(!$error && !$pwmatch && $count_email==0){
       $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
       $time =new DateTime();
       $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-      exit(header("Location: http://alumnet.xyz/profile.php"));
+      header("Location: http://alumnet.xyz/profile.php");
     }
 	  mysql_query("UNLOCK TABLES");
 }
