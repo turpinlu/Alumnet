@@ -19,7 +19,8 @@ echo $password;
 $result = mysql_query($query);
 if ($result == NULL){
   echo 'Wrong email or password';
-  header("Location: http://alumnet.xyz/index.php");
+  echo "WRONG !";
+  die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 }
 $numrows = mysql_num_rows($result);
 echo $numrows;
@@ -41,13 +42,12 @@ if ($numrows!=0){
 				$time =new DateTime();
 				$_SESSION['start_time']=$time->format('Y-m-d H:i:s');
         echo 'success';
-        //header("Location: http://alumnet.xyz/profile.php");
-        header("Location: http://localhost:8080/Alumnet/profile.php");
+        die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
 
 		}
       else{
         echo 'Wrong email or password';
-        header("Location: http://alumnet.xyz/index.php");
+        die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
       }
 }
 //}
