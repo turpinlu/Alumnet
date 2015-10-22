@@ -7,7 +7,8 @@ session_start();
 
 
 
-$email = cleanStringInput($_POST['user-email']);
+//$email = cleanStringInput($_POST['user-email']);
+$email = $_POST['user-email'];
 $password = $_POST['user-password'];
 
 //$query = "SELECT * FROM ACCOUNT WHERE EMAIL='$email'";
