@@ -46,7 +46,7 @@ $register=$_POST['reg'];
           $time =new DateTime();
           $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
           //header("Location: http://alumnet.xyz/profile.php");
-          die("Location: http://alumnet.xyz/profile.php");
+          die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
         }
     	  mysql_query("UNLOCK TABLES");
     }
