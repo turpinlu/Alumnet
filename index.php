@@ -6,53 +6,50 @@
  // MySQL Database Connect
 include 'dataLogin.php';
 //include 'myDataLogin.php';
- include 'secure.php';
+include 'secure.php';
  session_start();
 
 $register=$_POST['reg'];
 
  if ($register){
 
+     $first_name = cleanStringInput($_POST['first_name']);
+     $last_name = cleanStringInput($_POST['last_name']);
+     $display_name = cleanStringInput($_POST['display_name']);
+     $email = cleanStringInput($_POST['email']);
+     $password = $_POST['password'];
+     $password_confirmation = $_POST['password_confirmation'];
+     $pwmatch = strcmp($password_confirmation, $password);
 
 
- $first_name = cleanStringInput($_POST['first_name']);
- $last_name = cleanStringInput($_POST['last_name']);
- $display_name = cleanStringInput($_POST['display_name']);
- $email = cleanStringInput($_POST['email']);
- $password = $_POST['password'];
- $password_confirmation = $_POST['password_confirmation'];
- $pwmatch = strcmp($password_confirmation, $password);
+      //check to see if alredy have account using that email
+      $email_check_query=mysql_query("SELECT EMAIL FROM account WHERE EMAIL='$email'");
+      $count_email = mysql_num_rows($email_check_query);    //if not 0. email already in use
 
+      //Validate Password
+      $error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
 
-  //check to see if alredy have account using that email
-  $email_check_query=mysql_query("SELECT EMAIL FROM account WHERE EMAIL='$email'");
-  $count_email = mysql_num_rows($email_check_query);    //if not 0. email already in use
+      //hash password
+      $password = hashPassword($password);    //hashes password for storage into database
 
-  //Validate Password
-  $error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
+    if(!$error && !$pwmatch && $count_email==0){
+      //insert into database--create account
 
-  //hash password
-  $password = hashPassword($password);    //hashes password for storage into database
-
-if(!$error && !$pwmatch && $count_email==0){
-  //insert into database--create account
-
-    mysql_query("LOCK TABLES account WRITE");
-	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
-      echo $query;
-    if (mysql_query($query)){
-    //automatically login--create new session
-    echo 'success';
-      $_SESSION['email'] = $email;
-      $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
-      $time =new DateTime();
-      $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-      //header("Location: http://alumnet.xyz/profile.php");
-      die("Location: http://alumnet.xyz/profile.php");
+        mysql_query("LOCK TABLES account WRITE");
+    	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
+          echo $query;
+        if (mysql_query($query)){
+        //automatically login--create new session
+          echo 'success';
+          $_SESSION['email'] = $email;
+          $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
+          $time =new DateTime();
+          $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
+          //header("Location: http://alumnet.xyz/profile.php");
+          die("Location: http://alumnet.xyz/profile.php");
+        }
+    	  mysql_query("UNLOCK TABLES");
     }
-	  mysql_query("UNLOCK TABLES");
-}
-
 }
 
 
