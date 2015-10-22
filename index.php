@@ -39,9 +39,6 @@ $register=$_POST['reg'];
         if(mysql_query("LOCK TABLES account WRITE")){
             echo "hi"; 
         }
-        if(mysql_query("SELECT * FROM ACCOUNT")){
-            echo "nonononononon";
-        }
      	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
           echo $query;
         if (mysql_query($query)){
@@ -51,8 +48,7 @@ $register=$_POST['reg'];
           $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
           $time =new DateTime();
           $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-          header("Location: http://alumnet.xyz/profile.php");
-          //die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+          die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
         }
     	  mysql_query("UNLOCK TABLES");
     }
