@@ -16,8 +16,7 @@ echo $email;
 echo " ";
 echo $password;
 
-$result = mysql_query($query);
-if ($result == NULL){
+if (mysql_query($query)){
   echo 'Wrong email or password';
   echo "WRONG !";
   die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
