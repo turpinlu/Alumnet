@@ -27,7 +27,8 @@ $register=$_POST['reg'];
       $count_email = mysql_num_rows($email_check_query);    //if not 0. email already in use
 
       //Validate Password
-      $error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
+      //$error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
+      $error = NULL;
 
       //hash password
       $password = hashPassword($password);    //hashes password for storage into database
@@ -35,8 +36,13 @@ $register=$_POST['reg'];
     if(!$error && !$pwmatch && $count_email==0){
       //insert into database--create account
 
-        mysql_query("LOCK TABLES account WRITE");
-    	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
+        if(mysql_query("LOCK TABLES account WRITE")){
+            echo "hi"; 
+        }
+        if(mysql_query("SELECT * FROM ACCOUNT")){
+            echo "nonononononon";
+        }
+     	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
           echo $query;
         if (mysql_query($query)){
         //automatically login--create new session
@@ -45,8 +51,8 @@ $register=$_POST['reg'];
           $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
           $time =new DateTime();
           $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-          //header("Location: http://alumnet.xyz/profile.php");
-          die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+          header("Location: http://alumnet.xyz/profile.php");
+          //die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
         }
     	  mysql_query("UNLOCK TABLES");
     }
