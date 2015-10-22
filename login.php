@@ -19,7 +19,7 @@ echo $password;
 if (!mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'")){
   echo 'Wrong email or password';
   echo "WRONG !";
-  die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+  //die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 }
 $numrows = mysql_num_rows($result);
 echo $numrows;
