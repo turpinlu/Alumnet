@@ -7,17 +7,13 @@ session_start();
 
 
 
-//$email = cleanStringInput($_POST['user-email']);
-$email = $_POST['user-email'];
+$email = cleanStringInput($_POST['user-email']);
 $password = $_POST['user-password'];
 
 //$query = "SELECT * FROM ACCOUNT WHERE EMAIL='$email'";
-          
-echo $email;
-echo " ";
-echo $password;
-
-if (!mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'")){
+ 
+$result = mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'");
+if (!$result){
   echo 'Wrong email or password';
   echo "WRONG !";
   //die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
@@ -29,10 +25,11 @@ if ($numrows!=0){
 		$mail = $row['EMAIL'];
 		$pass = $row['PASSWORD'];
 	}
-
+}
 
 
   //check to see if they match
+
 		if ($email==$mail && password_verify($password, $pass)){
         //login
         echo 'logged in!';
@@ -49,7 +46,7 @@ if ($numrows!=0){
         echo 'Wrong email or password';
         die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
       }
-}
+
 //}
 
 ?>
