@@ -11,13 +11,18 @@ $email = cleanStringInput($_POST['user-email']);
 $password = $_POST['user-password'];
 
 //$query = "SELECT * FROM ACCOUNT WHERE EMAIL='$email'";
- 
+          
+echo $email;
+echo " ";
+echo $password;
+
 $result = mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'");
 if (!$result){
   echo 'Wrong email or password';
   echo "WRONG !";
   //die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 }
+echo "1";
 $numrows = mysql_num_rows($result);
 echo $numrows;
 if ($numrows!=0){
@@ -29,7 +34,10 @@ if ($numrows!=0){
 
 
   //check to see if they match
-
+echo $email;
+echo " ";
+echo $mail;
+echo $pass;
 		if ($email==$mail && password_verify($password, $pass)){
         //login
         echo 'logged in!';
@@ -39,12 +47,12 @@ if ($numrows!=0){
 				$time =new DateTime();
 				$_SESSION['start_time']=$time->format('Y-m-d H:i:s');
         echo 'success';
-        die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+        //die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
 
 		}
       else{
         echo 'Wrong email or password';
-        die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+        //die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
       }
 
 //}
