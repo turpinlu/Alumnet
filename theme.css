@@ -1593,6 +1593,7 @@ pre code {
   }
 }
 .container-fluid {
+  height:90%;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -4986,6 +4987,7 @@ a.badge:focus {
 }
 .jumbotron {
   width: 90%;
+  height: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-left: 30px;

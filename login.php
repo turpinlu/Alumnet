@@ -10,10 +10,17 @@ session_start();
 $email = cleanStringInput($_POST['user-email']);
 $password = $_POST['user-password'];
 
+$query = "SELECT * FROM ACCOUNT WHERE EMAIL='$email'";
 
-$query = "SELECT * FROM account WHERE EMAIL='$email'";
+echo $email;
+echo " ";
+echo $password;
 
 $result = mysql_query($query);
+if ($result == NULL){
+  echo 'Wrong email or password';
+  header("Location: http://alumnet.xyz/index.php");
+}
 $numrows = mysql_num_rows($result);
 echo $numrows;
 if ($numrows!=0){
