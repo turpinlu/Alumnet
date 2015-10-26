@@ -3,7 +3,7 @@
 include 'datalogin.php';
 //include 'myDataLogin.php'
 include 'secure.php';
-session_start();
+//session_start();
 
 
 
