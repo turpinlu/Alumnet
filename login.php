@@ -1,6 +1,6 @@
 <?php
 
-include 'datalogin.php';
+include 'dataLogin.php';
 //include 'myDataLogin.php'
 include 'secure.php';
 //session_start();
