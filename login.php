@@ -1,11 +1,9 @@
 <?php
-
-include 'datalogin.php';
-//include 'myDataLogin.php'
+ // MySQL Database Connect
+include 'dataLogin.php';
+//include 'myDataLogin.php';
 include 'secure.php';
 session_start();
-
-
 
 $email = cleanStringInput($_POST['user-email']);
 $password = $_POST['user-password'];
@@ -17,7 +15,7 @@ echo "<br>";
 echo $password;
 echo "<br>";
 
-$result = mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'");
+$result = mysqli_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'");
 echo "<br>";
 echo $result;
 echo "<br>";
