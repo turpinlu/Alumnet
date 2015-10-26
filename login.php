@@ -19,6 +19,7 @@ echo "<br>";
 
 $result = mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'");
 echo "<br>";
+echo $result;
 echo "<br>";
 
 if (!$result){
