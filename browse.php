@@ -1,6 +1,13 @@
 <!DOCTYPE html>
+<?php include "datalogin.php";?>
 <html lang="en">
 <link rel="shortcut icon" href="favicon.ico">
+<?php $fname = $_POST['fname'];?>
+<?php $lname = $_POST['lname'];?>
+<?php $degree = $_POST['degree'];?>
+<?php $grad = $_POST['grad'];?>
+<?php $city = $_POST['city'];?>
+<?php $state = $_POST['state'];?>
 
 <head>
 <title>Alumnet&#153 - Networking Made Easy</title>
@@ -18,7 +25,7 @@
     }
 </style>
 </head>
-<body>
+
 <div class="container">
     <nav role="navigation" class="navbar navbar-inverse">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,49 +61,84 @@
         </div>
     </nav>
 </div>
-<div class="row">
-    <div class="container">
-        <div class="row-md-6">
-            <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="input-group" id="adv-search">
-                <input type="text" class="form-control" placeholder="Search keywords" />
-                <div class="input-group-btn">
-                    <div class="btn-group" role="group">
-                        <div class="dropdown dropdown-lg">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <form class="form-horizontal" role="form">
-                                 <div class="form-group">
-                                    <label for="filter">Search by</label>
-                                    <select class="form-control">
-                                        <option value="0" selected>Select</option>
-                                        <option value="1">Name</option>
-                                        <option value="2">Zip Code</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <select class="form-control">
-                                        <option value="0" selected>Select</option>
-                                        <option value="1">Hiring</option>
-                                        <option value="2">Seeking</option>
-                                    </select>
-                                    </div>    
-
-                                </form>
-                            </div>
-                        </div>
-                        <button type="button" onclick=" window.location.href= 'browseresults.php'" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                    </div>
+<div class="container">
+    <div class="bs-docs-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1 id="forms">Search Page!!</h1>
                 </div>
             </div>
-          </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="well bs-component">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
+                          <fieldset>
+                              <div class="form-group">
+                                  <label for="fname" class="col-lg-2 control-label">First Name</label>
+                                  <div class="col-lg-10">
+                                      <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" value="<?php if(isset($fname)){ echo htmlspecialchars($fname);} ?>">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="lname" class="col-lg-2 control-label">Last Name</label>
+                                  <div class="col-lg-10">
+                                      <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" value="<?php if(isset($lname)){ echo htmlspecialchars($lname);} ?>">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="degree" class="col-lg-2 control-label">Degree</label>
+                                  <div class="col-lg-10">
+                                      <input type="text" class="form-control" id="degree" name="degree" placeholder="Degree" value="<?php if(isset($degree)){ echo htmlspecialchars($degree);} ?>">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="grad" class="col-lg-2 control-label">Graduation Year</label>
+                                  <div class="col-lg-10">
+                                      <input type="text" class="form-control" id="grad" name="grad" placeholder="Graduation" value="<?php if(isset($grad)){ echo htmlspecialchars($grad);} ?>">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="city" class="col-lg-2 control-label">City</label>
+                                  <div class="col-lg-10">
+                                      <input type="text" class="form-control" id="city" name="city" placeholder="City" value="<?php if(isset($city)){ echo htmlspecialchars($city);} ?>">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="state" class="col-lg-2 control-label">State</label>
+                                  <div class="col-lg-10">
+                                      <input type="text" class="form-control" id="state" name="state" placeholder="State" value="<?php if(isset($city)){ echo htmlspecialchars($city);} ?>">
+                                  </div>
+                              </div>
+                               <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <button type="submit" name="search" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+                </fieldset>
+                </form>
+
+                       
+    <?php include "browse_form.php";?>
+
+                </div>             
+
+
+
+  
+      </div>            
 </div>
-        </div>
-    </div>
 </div>
-</body>
+</div>
+</div>
+</div>
+</div>
+</div>
+    
+    
 </html>
+
+
