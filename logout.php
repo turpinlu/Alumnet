@@ -4,8 +4,7 @@ session_start();
 echo 'Logged out.';
 session_destroy();
 
-//header("Refresh: 1; URL=http://alumnet.xyz/index.php");
-die("Refresh: 1; URL=http://alumnet.xyz/index.php");
+  die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 
 
  ?>
