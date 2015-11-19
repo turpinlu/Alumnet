@@ -10,7 +10,7 @@ if (!$_SESSION['email']) {
 	echo $_SESSION['email'];
 	//die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 }
-
+	echo $_SESSION['email'];
 ?>
 
 
