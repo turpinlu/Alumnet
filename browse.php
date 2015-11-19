@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php 
+session_start();
 include "datalogin.php";
 if (!$_SESSION['email']) {
   die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
