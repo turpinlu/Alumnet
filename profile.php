@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
 session_start();
+include "datalogin.php";
+include "pageVerification.php";
 ?>
 
 <html lang="en">

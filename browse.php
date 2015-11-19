@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<?php include "datalogin.php";?>
+<?php 
+include "datalogin.php";
+include "pageVerification.php";
+?>
 <html lang="en">
 <link rel="shortcut icon" href="favicon.ico">
 <?php $fname = $_POST['fname'];?>
@@ -44,7 +47,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li class="active"><a href="browse.php">Browse</a></li>
-                <li><a href="index.php">Log Out</a></li>
+                <li><a href="logout.php">Log Out</a></li>
             </ul>
         </div>
     </nav>
