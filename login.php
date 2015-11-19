@@ -56,14 +56,14 @@ echo "<br>";
 				$_SESSION['start_time']=$time->format('Y-m-d H:i:s');
         echo "<br>";
         echo 'success';
-        die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+        //die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
 
 		}
       else{
         echo 'Wrong email or password';
-        die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+       // die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
       }
-
+      echo $_SESSION['email'];
 //}
 
 ?>
