@@ -6,7 +6,8 @@ include 'dataLogin.php';
 include 'secure.php';
 session_start();
 if (!$_SESSION['email']) {
-	die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+	echo " REDIRECTING TO INDEX, NO EMAIL";
+	//die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 }
 
 ?>
