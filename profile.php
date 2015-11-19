@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-include "datalogin.php";
+include "dataLogin.php";
 include "pageVerification.php";
 ?>
 
