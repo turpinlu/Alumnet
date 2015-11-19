@@ -2,7 +2,8 @@
 <?php
 session_start();
 include "dataLogin.php";
-include "pageVerification.php";
+ echo $_SESSION['email'];
+//include "pageVerification.php";
 ?>
 
 <html lang="en">
