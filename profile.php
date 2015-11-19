@@ -2,8 +2,9 @@
 <?php
 session_start();
 include "dataLogin.php";
- echo $_SESSION['email'];
-//include "pageVerification.php";
+if (!$_SESSION['email']) {
+  die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+}
 ?>
 
 <html lang="en">
