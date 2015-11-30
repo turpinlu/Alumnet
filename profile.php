@@ -1,10 +1,33 @@
 <!DOCTYPE html>
+<html lang="en">
+<link rel="shortcut icon" href="favicon.ico">
+
 <?php
 session_start();
 include "dataLogin.php";
-if (!$_SESSION['email']) {
-  die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+
+$email = cleanStringInput($_POST['user-email']);
+
+$fname = mysql_query("SELECT FNAME FROM ACCOUNT WHERE EMAIL='$email'");
+
+$lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE EMAIL='$email'");
+
+$degree = mysql_query("SELECT DEGNAME FROM DEGNAME WHERE DEGNAME.DEGREE = ACCDEG.DEGNUM AND ACCDEG.ACCOUNTNUM = ACCOUNT.ACOUNTNUM WHERE ACCOUNT.EMAIL='$email'");
+
+$reason = mysql_query("SELECT INTVALUE FROM INTEREST WHERE INTEREST.INTNUM = ACCOUNT.NUM AND ACCOUNT.EMAIL='$email'");
+
+$gradyear = mysql_query("SELECT GRADDATE FROM DEGREE WHERE DEGREE.DEGNUM = ACCDEG.DEGNUM AND ACCOUNT WHERE EMAIL='$email'");
+
+$city = mysql_query("SELECT CITY FROM ACCOUNT WHERE EMAIL='$email'");
+
+$state = mysql_query("SELECT STATE FROM ACCOUNT WHERE EMAIL='$email'");
+
+$description = mysql_query("SELECT COVERSUM FROM ACCOUNT WHERE EMAIL='$email'");
+
+$phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE EMAIL='$email'");
+
 }
+
 ?>
 
 <html lang="en">
@@ -60,8 +83,8 @@ if (!$_SESSION['email']) {
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title">Juliet Ramsey</h3>
-              <A href="edit.html" >Edit Profile</A>
+              <h3 class="panel-title"><?php echo $fname; ?></h3>
+              <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -84,30 +107,30 @@ if (!$_SESSION['email']) {
                     <tbody>
                       <tr>
                         <td>Degree:</td>
-                        <td>Computer Science</td>
+                        <td><?php echo $degree; ?></td>
                       </tr>
                     <tr>
                         <td>Grad Year</td>
-                        <td>2014</td>
+                        <td><?php echo $grad; ?></td>
                       </tr>
                        <tr>
                         <td>City,State</td>
-                        <td>Salisbury, Maryland</td>
+                        <td><?php echo $city; ?>, <?php echo $state; ?></td>
                       </tr>
                       <tr>
                         <td>Reason:</td>
-                        <td>Seeking Employment</td>
+                        <td><?php echo $reason; ?></td>
                       </tr>
                        <tr>
                         <td>Description:</td>
-                        <td>Hello my name is Juliet, I just moved to the DC metro area looking for employment in the programming field.</td>
+                        <td><?php echo $description; ?></td>
                       </tr>
                       <tr>
                         <td>Email</td>
-                        <td><a href="mailto:info@support.com">Juliet@gmail.com</a></td>
+                        <td><?php echo $email; ?></td>
                       </tr>
                         <td>Phone Number</td>
-                        <td><br>555-4567-890(Mobile)
+                        <td><br><?php echo $phoneNum; ?>
                         </td>
                       </tr>
 
