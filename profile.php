@@ -6,25 +6,27 @@
 session_start();
 include "dataLogin.php";
 
-$email = cleanStringInput($_POST['user-email']);
+$i = $_SESSION['userID'];
 
-$fname = mysql_query("SELECT FNAME FROM ACCOUNT WHERE EMAIL='$email'");
+$email = "SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
-$lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE EMAIL='$email'");
+$fname = "SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
-$degree = mysql_query("SELECT DEGNAME FROM DEGNAME WHERE DEGNAME.DEGREE = ACCDEG.DEGNUM AND ACCDEG.ACCOUNTNUM = ACCOUNT.ACOUNTNUM WHERE ACCOUNT.EMAIL='$email'");
+$lname = "SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
-$reason = mysql_query("SELECT INTVALUE FROM INTEREST WHERE INTEREST.INTNUM = ACCOUNT.NUM AND ACCOUNT.EMAIL='$email'");
+$degree = "SELECT DEGNAME FROM DEGNAME WHERE DEGNAME.DEGREE = DEGREE.DEGREE AND ACCOUNTNUM = '$i'";
 
-$gradyear = mysql_query("SELECT GRADDATE FROM DEGREE WHERE DEGREE.DEGNUM = ACCDEG.DEGNUM AND ACCOUNT WHERE EMAIL='$email'");
+$reason = "SELECT INTVALUE FROM INTEREST WHERE INTEREST.INTNUM = ACCDEG.DEGNUM AND ACCDEG.ACCOUNTNUM = ACCOUNT.ACCOUTNUM AND ACCOUNTNUM = '$i'";
 
-$city = mysql_query("SELECT CITY FROM ACCOUNT WHERE EMAIL='$email'");
+$gradyear = "SELECT GRADDATE FROM DEGREE WHERE DEGREE.DEGNUM =  WHERE ACCOUNTNUM = '$i'";
 
-$state = mysql_query("SELECT STATE FROM ACCOUNT WHERE EMAIL='$email'");
+$city = "SELECT CITY FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
-$description = mysql_query("SELECT COVERSUM FROM ACCOUNT WHERE EMAIL='$email'");
+$state = "SELECT STATE FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
-$phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE EMAIL='$email'");
+$description = "SELECT COVERSUM FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
+
+$phoneNum = "SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
 }
 
@@ -83,7 +85,7 @@ $phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE EMAIL='$email'");
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title"><?php echo $fname; ?></h3>
+              <h3 class="panel-title"><?php echo $fname; echo $lname?></h3>
               <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">
@@ -107,30 +109,30 @@ $phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE EMAIL='$email'");
                     <tbody>
                       <tr>
                         <td>Degree:</td>
-                        <td><?php echo $degree; ?></td>
+                        <td><? echo $degree ?></td>
                       </tr>
                     <tr>
-                        <td>Grad Year</td>
-                        <td><?php echo $grad; ?></td>
+                        <td>Grad Year:</td>
+                        <td><? echo $gradyear ?></td>
                       </tr>
                        <tr>
-                        <td>City,State</td>
-                        <td><?php echo $city; ?>, <?php echo $state; ?></td>
+                        <td>City,State:</td>
+                        <td><? echo $city ?>, <? echo $state; ?></td>
                       </tr>
                       <tr>
                         <td>Reason:</td>
-                        <td><?php echo $reason; ?></td>
+                        <td><? echo $reason ?></td>
                       </tr>
                        <tr>
                         <td>Description:</td>
-                        <td><?php echo $description; ?></td>
+                        <td><? echo $description ?></td>
                       </tr>
                       <tr>
-                        <td>Email</td>
-                        <td><?php echo $email; ?></td>
+                        <td>Email:</td>
+                        <td><?  echo $email ?></td>
                       </tr>
-                        <td>Phone Number</td>
-                        <td><br><?php echo $phoneNum; ?>
+                        <td>Phone Number:</td>
+                        <td><br><? echo $phoneNum ?>
                         </td>
                       </tr>
 
