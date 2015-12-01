@@ -6,9 +6,11 @@
 session_start();
 include "dataLogin.php";
 
-$i = $_SESSION['userID'];
+if (!$_SESSION['email']) {
+  die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+}
 
-$email = mysql_query("SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
+$email = mysql_query("SELECT EMAIL FROM ACCOUNT WHERE ACCOUNT.EMAIL = '$email'");
 
 $fname = "SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
