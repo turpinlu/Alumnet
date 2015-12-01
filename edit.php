@@ -34,21 +34,6 @@ $userID = $_POST['userID'];
 $securityHolder = $_POST['securityHolder'];
 $password = $_POST['password'];
 
-if (isset($_POST['update'])){
-
-      $sql = "UPDATE ACCOUNT SET USERNAME ='$newphoneNum', EMAIL='$newemail', SECURITY = '$newdegree', SECURITY = '$newgradyear', SECURITY = '$newcity', SECURITY = '$newstate', SECURITY = '$newdescription', PASSWORD = '$password' WHERE USER_ID = '$userID'";
-
-      
-      if (mysql_query($sql, $connection)) {
-        echo "";          
-      } 
-      else {
-        echo "";
-      } 
-
-    } 
-
-
 ?>
 
 <html lang="en">

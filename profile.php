@@ -6,7 +6,7 @@
 session_start();
 include "dataLogin.php";
 
-$i = $_SESSION['userID'];
+$i = $_SESSION['ACCOUNTNUM'];
 
 $email = mysql_query("SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
@@ -27,7 +27,6 @@ $state = mysql_query("SELECT STATE FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 $description = mysql_query("SELECT COVERSUM FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
 $phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
 
 ?>
 
