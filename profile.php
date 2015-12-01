@@ -28,7 +28,6 @@ $description = "SELECT COVERSUM FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
 $phoneNum = "SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
-}
 
 ?>
 
