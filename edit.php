@@ -6,10 +6,11 @@
 session_start();
 include "dataLogin.php";
 
+$query = "SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
+$email = mysql_query($query);
 
-$email = "SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
-
-$fname = "SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
+$query1 = "SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
+$fname = mysql_query($query1);
 
 $lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
