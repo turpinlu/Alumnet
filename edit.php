@@ -6,10 +6,11 @@
 session_start();
 include "dataLogin.php";
 
+
 $query = "SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 $email = mysql_query($query);
 
-$fname =mysql_result(mysql_query("SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i' LIMIT 1"),0);
+$fname = mysql_result(mysql_query("SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i' LIMIT 1"),0);
 
 $lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
@@ -180,7 +181,7 @@ $password = $_POST['password'];
           <div class="form-group">
             <label class="col-md-3 control-label">Password:</label>
             <div class="col-md-8">
-              <input class="form-control" name="newPassword" type="password" value="<?echo $password ?>">
+              <input class="form-control" name="newPassword" type="password" value="<?echo $password[1] ?>">
             </div>
           </div>
 
@@ -188,7 +189,7 @@ $password = $_POST['password'];
           <div class="form-group">
             <label class="col-md-3 control-label">Confirm password:</label>
             <div class="col-md-8">
-              <input class="form-control" name="newPassword" type="password" value="<?echo $password ?>">
+              <input class="form-control" name="newPassword" type="password" value="<?echo $password[1] ?>">
             </div>
           </div>
 
