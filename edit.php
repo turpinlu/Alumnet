@@ -9,8 +9,7 @@ include "dataLogin.php";
 $query = "SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 $email = mysql_query($query);
 
-$query1 = "SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
-$fname = mysql_query($query1);
+$fname =mysql_result(mysql_query("SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i' LIMIT 1"),0);
 
 $lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
