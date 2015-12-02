@@ -7,9 +7,9 @@ session_start();
 include "dataLogin.php";
 
 
-$email = mysql_fetch_assoc("SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
+$email = "SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
-$fname = mysql_fetch_assoc("SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
+$fname = "SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 
 $lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
