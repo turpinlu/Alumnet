@@ -109,7 +109,7 @@ $password = $_POST['password'];
         </div>
         <h3>Personal info</h3>
         
-        <form class="form-horizontal" role="form" action="<?php echo $_SERVER['PHP_SELF'];?>"" method = "post">
+        <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
 
             <div class="form-group">
             <label class="col-lg-3 control-label">Phone Number:</label>
