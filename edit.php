@@ -181,7 +181,7 @@ $password = $_POST['password'];
           <div class="form-group">
             <label class="col-md-3 control-label">Password:</label>
             <div class="col-md-8">
-              <input class="form-control" name="newPassword" type="password" value="<?echo $password[1] ?>">
+              <input class="form-control" name="newPassword" type="password" value="<?echo $password ?>">
             </div>
           </div>
 
@@ -189,7 +189,7 @@ $password = $_POST['password'];
           <div class="form-group">
             <label class="col-md-3 control-label">Confirm password:</label>
             <div class="col-md-8">
-              <input class="form-control" name="newPassword" type="password" value="<?echo $password[1] ?>">
+              <input class="form-control" name="newPassword" type="password" value="<?echo $password ?>">
             </div>
           </div>
 

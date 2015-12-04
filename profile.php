@@ -6,11 +6,12 @@
 session_start();
 include "dataLogin.php";
 
-$i = $_SESSION['ACCOUNTNUM'];
+$i = $_SESSION['email'];
 
 $email = mysql_query("SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
 $fname = mysql_query("SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
+$result = mysql_fetch_array($fname);
 
 $lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
@@ -83,7 +84,7 @@ $phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title"><?php echo $fname; echo $lname?></h3>
+              <h3 class="panel-title"><?php echo $result['fname']; ?></h3>
               <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">
