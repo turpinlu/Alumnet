@@ -6,28 +6,18 @@
 session_start();
 include "dataLogin.php";
 
-$i = $_SESSION['userID'];
+$i = $_SESSION['email'];
 
-$query = "SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
-$email = mysql_query($query);
-
-$fname = mysql_result(mysql_query("SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i' LIMIT 1"),0);
-
-$lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$degree = mysql_query("SELECT DEGNAME FROM DEGNAME WHERE DEGNAME.DEGREE = DEGREE.DEGREE AND ACCOUNTNUM = '$i'");
-
-$reason = mysql_query("SELECT INTVALUE FROM INTEREST WHERE INTEREST.INTNUM = ACCDEG.DEGNUM AND ACCDEG.ACCOUNTNUM = ACCOUNT.ACCOUTNUM AND ACCOUNTNUM = '$i'");
-
-$gradyear = mysql_query("SELECT GRADDATE FROM DEGREE WHERE DEGREE.DEGNUM =  WHERE ACCOUNTNUM = '$i'");
-
-$city = mysql_query("SELECT CITY FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$state = mysql_query("SELECT STATE FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$description = mysql_query("SELECT COVERSUM FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
+    $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$i'";
+    $r = mysql_query($query);
+    $row = mysql_fetch_array($r);
+    $email = $row['EMAIL'];
+    $fname = $row['FNAME']; 
+    $lname = $row['LNAME'];
+    $city = $row['CITY'];
+    $state = $row['STATE'];
+    $description = $row['COVERSUM'];
+    $password = $row['PASSWORD'];   
 
 
 if (isset($_POST['update'])){
