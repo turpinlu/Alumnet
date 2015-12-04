@@ -22,7 +22,7 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $description = $row['COVERSUM'];   
 
-    $query1 = "SELECT DEGNAME FROM DEGNAME WHERE DEGNAME.DEGREE = DEGREE.DEGREE AND DEGREE.DEGNUM = ACCDEG.DEGNUM AND ACCDEG.ACCOUNTNUM = '$accountnum' ";
+    $query1 = "SELECT DEGNAME FROM DEGNAME WHERE ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE AND ACCDEG.ACCOUNTNUM = '$accountnum' ";
     $degree = mysql_query($query1);
     //$row1 = mysql_fetch_array($s);
 
