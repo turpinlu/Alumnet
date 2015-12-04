@@ -16,8 +16,7 @@ $i = $_SESSION['email'];
     $lname = $row['LNAME'];
     $city = $row['CITY'];
     $state = $row['STATE'];
-    $description = $row['COVERSUM'];
-    $password = $row['PASSWORD'];    
+    $description = $row['COVERSUM'];   
 
 ?>
 
@@ -74,7 +73,7 @@ $i = $_SESSION['email'];
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title"><? echo $fname; echo " "; echo $lname; ?></h3>
+              <h3 class="panel-title"><? echo $fname; echo " "; echo $lname; echo $city?></h3>
               <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">
