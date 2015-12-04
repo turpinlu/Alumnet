@@ -13,6 +13,7 @@ $i = $_SESSION['email'];
     $row = mysql_fetch_array($r);
 
     $city = $row['CITY'];
+    $accountnum = $row['ACCOUNTNUM'];
     $state = $row['STATE'];
     $zip = $row['ZIP'];
     $email = $row['EMAIL'];
@@ -20,6 +21,12 @@ $i = $_SESSION['email'];
     $lname = $row['LNAME'];
     $intnum = $row['INTNUM'];
     $description = $row['COVERSUM'];   
+
+    $query1 = "SELECT DEGNAME FROM DEGNAME WHERE DEGNAME.DEGREE = DEGREE.DEGREE AND DEGREE.DEGNUM = ACCDEG.DEGNUM AND ACCDEG.ACCOUNTNUM = '$accountnum' ";
+    $degree = mysql_query($query1);
+    //$row1 = mysql_fetch_array($s);
+
+
 
 ?>
 
