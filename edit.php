@@ -17,6 +17,7 @@ $i = $_SESSION['email'];
     $city = $row['CITY'];
     $state = $row['STATE'];
     $description = $row['COVERSUM'];
+    $intnum = $row['INTNUM'];
     $password = $row['PASSWORD'];   
 
 
@@ -84,8 +85,7 @@ if (isset($_POST['update'])){
       <!-- left column -->
       <div class="col-md-3">
         <div class="text-center">
-<div class="col-md-10 col-lg-10 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> </div>
-          <h6>Upload a different photo...</h6>
+<div class="col-md-10 col-lg-10 " align="center">h6>Upload a different photo...</h6> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> </div>
           
           <input type="file" class="form-control">
         </div>
@@ -97,13 +97,6 @@ if (isset($_POST['update'])){
         <h3>Personal info</h3>
         
         <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
-
-            <div class="form-group">
-            <label class="col-lg-3 control-label">Phone Number:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="newphoneNum" value = "<? echo $phoneNum ?>">
-            </div>
-          </div>
 
 
           <div class="form-group">
