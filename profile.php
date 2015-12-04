@@ -25,14 +25,11 @@ $i = $_SESSION['email'];
     $query1 = "SELECT DEGNAME.DEGNAME DEGREE.GRADDATE WHERE ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE AND ACCOUNT.EMAIL = '$i' ";
     $s = mysql_query($query1);
     $row2 = mysql_fetch_array($s)
-    $degree = $row2['DEGNAME'];
-    $graddate = $row2['GRADDATE']
-
 
     $query2 = "SELECT INTVALUE FROM INTEREST WHERE INTEREST.INTNUM = ACCOUNT.INTNUM AND ACCOUNT.EMAIL = '$i' ";
     $v = mysql_query($query2);
     $row3 = mysql_fetch_array($v);
-    $nterest = $row3['INTVALUE'];
+
 
 ?>
 
