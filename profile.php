@@ -6,28 +6,18 @@
 session_start();
 include "dataLogin.php";
 
-$i = $_SESSION['email'];
+$i = $_SESSION['userID'];
 
-$email = mysql_query("SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$fname = mysql_query("SELECT FNAME FROM ACCOUNT WHERE EMAIL = '$i'");
-$result = mysql_fetch_array($fname);
-
-$lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$degree = mysql_query("SELECT DEGNAME FROM DEGNAME WHERE DEGNAME.DEGREE = DEGREE.DEGREE AND ACCOUNTNUM = '$i'");
-
-$reason = mysql_query("SELECT INTVALUE FROM INTEREST WHERE INTEREST.INTNUM = ACCDEG.DEGNUM AND ACCDEG.ACCOUNTNUM = ACCOUNT.ACCOUTNUM AND ACCOUNTNUM = '$i'");
-
-$gradyear = mysql_query("SELECT GRADDATE FROM DEGREE WHERE DEGREE.DEGNUM =  WHERE ACCOUNTNUM = '$i'");
-
-$city = mysql_query("SELECT CITY FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$state = mysql_query("SELECT STATE FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$description = mysql_query("SELECT COVERSUM FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
-
-$phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
+    $query = "SELECT * FROM ACCOUNT WHERE ACCOUNTNUM = '$userID'";
+    $r = mysql_query($query);
+    $row = mysql_fetch_array($r);
+    $email = $row['EMAIL'];
+    $fname = $row['USERNAME']; 
+    $lname = $row['SECURITY'];
+    $password = $row['PASSWORD'];
+    $city = $row['PASSWORD'];
+    $state = $row['PASSWORD'];
+    $description = $row['PASSWORD'];
 
 ?>
 
@@ -84,7 +74,7 @@ $phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title"><?php echo $result['fname']; ?></h3>
+              <h3 class="panel-title"><?php echo $fname; echo $lname ?></h3>
               <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">

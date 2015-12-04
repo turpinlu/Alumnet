@@ -6,6 +6,7 @@
 session_start();
 include "dataLogin.php";
 
+$i = $_SESSION['userID'];
 
 $query = "SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'";
 $email = mysql_query($query);
@@ -29,11 +30,19 @@ $description = mysql_query("SELECT COVERSUM FROM ACCOUNT WHERE ACCOUNTNUM = '$i'
 $phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
 
-$email = $_POST['email'];
-$usernameHOLDER = $_POST['usernameHOLDER'];
-$userID = $_POST['userID'];
-$securityHolder = $_POST['securityHolder'];
-$password = $_POST['password'];
+else if (isset($_POST['update'])){
+
+      $sql = "UPDATE USERS SET USERNAME='$usernameHOLDER', EMAIL='$email', SECURITY = '$securityHolder', PASSWORD = '$password' WHERE USER_ID = '$userID'";
+
+      
+      if (mysql_query($sql, $connection)) {
+        echo "";          
+      } 
+      else {
+        echo "";
+      } 
+
+    }
 
 ?>
 

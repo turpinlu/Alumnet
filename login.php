@@ -31,6 +31,9 @@ echo "Setting Values from $result";
 echo "<br>";
 $numrows = mysql_num_rows($result);
 if ($numrows!=0){
+
+
+
 	while($row=mysql_fetch_array($result)){
 		$mail = $row['EMAIL'];
 		$pass = $row['PASSWORD'];
@@ -50,6 +53,8 @@ echo "<br>";
         echo "<br>";  
         echo 'logged in!';
 			  $_SESSION['email'] = $email;
+
+        $_SESSION['userID'] = "{$row[2]}"; //For edit and profile page
 
         $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";             //should keep security log-will need this information
 				$time =new DateTime();
