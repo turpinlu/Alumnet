@@ -74,7 +74,7 @@ $i = $_SESSION['email'];
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title"><?php echo $fname; echo " "; echo $lname ?></h3>
+              <h3 class="panel-title"><? echo $fname; echo " "; echo $lname; ?></h3>
               <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">
@@ -85,7 +85,7 @@ $i = $_SESSION['email'];
                     <tbody>
                       <tr>
                         <td>Degree:</td>
-                        <td><? echo $degree ?></td>
+                        <td> <? echo $degree ?> </td>
                       </tr>
                     <tr>
                         <td>Grad Year:</td>
