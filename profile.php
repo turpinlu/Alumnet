@@ -107,10 +107,6 @@ $i = $_SESSION['email'];
                         <td>Email:</td>
                         <td><?  echo $email ?></td>
                       </tr>
-                        <td>Phone Number:</td>
-                        <td><br><? echo $phoneNum ?>
-                        </td>
-                      </tr>
 
                     </tbody>
                   </table>
