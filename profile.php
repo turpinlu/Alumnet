@@ -15,9 +15,9 @@ $i = $_SESSION['userID'];
     $fname = $row['USERNAME']; 
     $lname = $row['SECURITY'];
     $password = $row['PASSWORD'];
-    $city = $row['PASSWORD'];
-    $state = $row['PASSWORD'];
-    $description = $row['PASSWORD'];
+    $city = $row['CITY'];
+    $state = $row['STATE'];
+    $description = $row['COVERSUM'];
 
 ?>
 

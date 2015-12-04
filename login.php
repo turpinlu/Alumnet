@@ -54,7 +54,7 @@ echo "<br>";
         echo 'logged in!';
 			  $_SESSION['email'] = $email;
 
-        $_SESSION['userID'] = "{$row[2]}"; //For edit and profile page
+        $_SESSION['userID'] = "{$row[1]}"; //For edit and profile page
 
         $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";             //should keep security log-will need this information
 				$time =new DateTime();
