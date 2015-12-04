@@ -14,10 +14,10 @@ $i = $_SESSION['email'];
     $email = $row['EMAIL'];
     $fname = $row['FNAME']; 
     $lname = $row['LNAME'];
-    $password = $row['PASSWORD'];
     $city = $row['CITY'];
     $state = $row['STATE'];
     $description = $row['COVERSUM'];
+    $password = $row['PASSWORD'];    
 
 ?>
 
