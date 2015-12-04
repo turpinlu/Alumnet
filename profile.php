@@ -10,7 +10,7 @@ $i = $_SESSION['email'];
 
 $email = mysql_query("SELECT EMAIL FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
-$fname = mysql_query("SELECT FNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
+$fname = mysql_query("SELECT FNAME FROM ACCOUNT WHERE EMAIL = '$i'");
 $result = mysql_fetch_array($fname);
 
 $lname = mysql_query("SELECT LNAME FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
