@@ -11,11 +11,14 @@ $i = $_SESSION['email'];
     $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$i'";
     $r = mysql_query($query);
     $row = mysql_fetch_array($r);
+
+    $city = $row['CITY'];
+    $state = $row['STATE'];
+    $zip = $row['ZIP'];
     $email = $row['EMAIL'];
     $fname = $row['FNAME']; 
     $lname = $row['LNAME'];
-    $city = $row['CITY'];
-    $state = $row['STATE'];
+
     $description = $row['COVERSUM'];   
 
 ?>
@@ -73,7 +76,7 @@ $i = $_SESSION['email'];
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title"><? echo $fname; echo " "; echo $lname; echo $city?></h3>
+              <h3 class="panel-title"><? echo $fname; echo " "; echo $lname; ?></h3>
               <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">
@@ -92,7 +95,7 @@ $i = $_SESSION['email'];
                       </tr>
                        <tr>
                         <td>City,State:</td>
-                        <td><? echo $city ?>, <? echo $state; ?></td>
+                        <td><? echo $city ?>, <? echo $state; ?>, <?echo $zip?></td>
                       </tr>
                       <tr>
                         <td>Reason:</td>
