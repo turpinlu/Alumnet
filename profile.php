@@ -22,11 +22,15 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $description = $row['COVERSUM'];   
 
-    $query1 = "SELECT DEGNAME FROM DEGNAME WHERE ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE AND ACCDEG.ACCOUNTNUM = '$accountnum' ";
-    $degree = mysql_query($query1);
+    $query1 = "SELECT DEGNAME FROM DEGNAME WHERE ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE AND ACCOUNT.EMAIL = '$i' ";
+    $r = mysql_query($query1);
+    while($row = mysql_fetch_array($r)){
+      $degree = "{$row[0]}";
+    }
+
+    $query2 = "SELECT INTVALUE FROM INTEREST WHERE INTEREST.INTNUM = ACCOUNT.INTNUM AND ACCOUNT.EMAIL = '$i' ";
+    $reason = mysql_query($query2);
     //$row1 = mysql_fetch_array($s);
-
-
 
 ?>
 
