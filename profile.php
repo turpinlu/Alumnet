@@ -74,7 +74,7 @@ $i = $_SESSION['email'];
 
           <div class="panel panel-info">
             <div class="panel-heading">
-              <h3 class="panel-title"><?php echo $fname; echo $lname ?></h3>
+              <h3 class="panel-title"><?php echo $fname; echo " "; echo $lname ?></h3>
               <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">
@@ -85,19 +85,19 @@ $i = $_SESSION['email'];
                     <tbody>
                       <tr>
                         <td>Degree:</td>
-                        <td><?php echo $degree ?></td>
+                        <td><? echo $degree ?></td>
                       </tr>
                     <tr>
                         <td>Grad Year:</td>
-                        <td><?php echo $gradyear ?></td>
+                        <td><? echo $gradyear ?></td>
                       </tr>
                        <tr>
                         <td>City,State:</td>
-                        <td><?php echo $city ?>, <? echo $state; ?></td>
+                        <td><? echo $city ?>, <? echo $state; ?></td>
                       </tr>
                       <tr>
                         <td>Reason:</td>
-                        <td><?php echo $reason ?></td>
+                        <td><? echo $reason ?></td>
                       </tr>
                        <tr>
                         <td>Description:</td>
