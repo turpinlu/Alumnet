@@ -98,19 +98,19 @@ $i = $_SESSION['userID'];
                     <tbody>
                       <tr>
                         <td>Degree:</td>
-                        <td><? echo $degree ?></td>
+                        <td><?php echo $degree ?></td>
                       </tr>
                     <tr>
                         <td>Grad Year:</td>
-                        <td><? echo $gradyear ?></td>
+                        <td><?php echo $gradyear ?></td>
                       </tr>
                        <tr>
                         <td>City,State:</td>
-                        <td><? echo $city ?>, <? echo $state; ?></td>
+                        <td><?php echo $city ?>, <? echo $state; ?></td>
                       </tr>
                       <tr>
                         <td>Reason:</td>
-                        <td><? echo $reason ?></td>
+                        <td><?php echo $reason ?></td>
                       </tr>
                        <tr>
                         <td>Description:</td>
