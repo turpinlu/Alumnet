@@ -30,17 +30,9 @@ $description = mysql_query("SELECT COVERSUM FROM ACCOUNT WHERE ACCOUNTNUM = '$i'
 $phoneNum = mysql_query("SELECT ZIP FROM ACCOUNT WHERE ACCOUNTNUM = '$i'");
 
 
-else if (isset($_POST['update'])){
+if (isset($_POST['update'])){
 
-      $sql = "UPDATE USERS SET USERNAME='$usernameHOLDER', EMAIL='$email', SECURITY = '$securityHolder', PASSWORD = '$password' WHERE USER_ID = '$userID'";
-
-      
-      if (mysql_query($sql, $connection)) {
-        echo "";          
-      } 
-      else {
-        echo "";
-      } 
+      // $sql = "UPDATE USERS SET USERNAME='$usernameHOLDER', EMAIL='$email', SECURITY = '$securityHolder', PASSWORD = '$password' WHERE USER_ID = '$userID'";
 
     }
 
