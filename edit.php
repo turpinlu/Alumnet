@@ -28,11 +28,11 @@ if (isset($_POST['update'])){
           $newcity = $_POST['newcity'];
           $newstate = $_POST['newstate'];
           $newdescription = $_POST['newdescripton'];
-          $newpassword = $_POST['newpPassword'];
+         // $newpassword = $_POST['newpPassword'];
 
-       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$newemail', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$newpassword' WHERE ACCOUNTNUM = '$accountnum'";
+       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$email', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
     
-        //die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+        die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
     }
 
 
@@ -108,12 +108,12 @@ if (isset($_POST['update'])){
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" enctype="multipart/form-data">
 
 
-          <div class="form-group">
+<!--           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newemail" type="text" value = "<? echo $email ?>">
+              <input class="form-control" name="newemail" type="text" value = "<? // echo $email ?>">
             </div>
-          </div>
+          </div> -->
 
 
           <div class="form-group">
