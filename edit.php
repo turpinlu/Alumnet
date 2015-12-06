@@ -41,7 +41,7 @@ if (isset($_POST['update'])){
           $interest = $$_POST['user_reason'];
 
 
-       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
+       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', INTNUM = '$interest', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
 
       
       if (mysql_query($sql, $connection)) {
