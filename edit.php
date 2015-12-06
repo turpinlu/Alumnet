@@ -20,18 +20,18 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $password = $row['PASSWORD'];   
 
+          $newemail = $_POST['newemail'];
+          $newcity = $_POST['newcity'];
+          $newstate = $_POST['newstate'];
+          $newdescription = $_POST['newdescripton'];
+          $newpassword = $_POST['newpassword'];
+
 
 if (isset($_POST['update'])){
 
-          $email = $_POST['email'];
-          $city = $_POST['city'];
-           $state = $_POST['state'];
-           $description = $_POST['descripton'];
-           $password = $_POST['password'];
+       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$newemail', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$newpassword' WHERE EMAIL = '$i'";
 
-       $sql = "UPDATE ACCOUNT SET CITY='$city', EMAIL='$email',COVERSUM ='$description' ,STATE = '$state', PASSWORD = '$password' WHERE EMAIL = '$i'";
-
-            if (mysql_query($sql, $connection)) {
+      if (mysql_query($sql, $connection)) {
         echo "";          
       } 
       else {
@@ -117,7 +117,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Email:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="email" type="text" value = "<? echo $email ?>">
+              <input class="form-control" name="newemail" type="text" value = "<? echo $email ?>">
             </div>
           </div>
 
@@ -125,7 +125,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Degree:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="degree" type="text" value = "<? echo $degree ?>">
+              <input class="form-control" name="newdegree" type="text" value = "<? echo $degree ?>">
             </div>
           </div>
 
@@ -133,14 +133,14 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Graduation Year:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="gradyear" type="text" value = "<? echo $gradyear ?>">
+              <input class="form-control" name="newgradyear" type="text" value = "<? echo $gradyear ?>">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-lg-3 control-label">City:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="city" type="text" value= "<? echo $city ?>" >
+              <input class="form-control" name="newcity" type="text" value= "<? echo $city ?>" >
             </div>
           </div>
 
@@ -148,14 +148,14 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">State:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="state" type="text" value= "<? echo $state ?>">
+              <input class="form-control" name="newstate" type="text" value= "<? echo $state ?>">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-lg-3 control-label">Description:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="description" type="textbox" value= "<? echo $description ?>">
+              <input class="form-control" name="newdescription" type="textbox" value= "<? echo $description ?>">
             </div>
           </div>
 
@@ -184,7 +184,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-md-3 control-label">Confirm password:</label>
             <div class="col-md-8">
-              <input class="form-control" name="Password" type="password" value="<?echo $password ?>">
+              <input class="form-control" name="newPassword" type="password" value="<?echo $password ?>">
             </div>
           </div>
 
