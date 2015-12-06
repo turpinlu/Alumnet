@@ -159,7 +159,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Description:</label>
             <div class="col-lg-8">
-              <textarea cols="40" rows="5" class="form-control" name="newdescript" type="text" <? echo $description ?>></textarea>
+              <textarea cols="40" rows="5" class="form-control" name="newdescript" type="text" ><? echo $description ?></textarea>
             </div>
           </div>
 
