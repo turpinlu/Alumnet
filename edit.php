@@ -32,7 +32,7 @@ if (isset($_POST['update'])){
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$newemail', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$newpassword' WHERE ACCOUNTNUM = '$accountnum'";
     
-        die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+        //die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
     }
 
 
