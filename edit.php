@@ -39,7 +39,7 @@ if (isset($_POST['update'])){
         echo "";
       }
 
-      header("Location: profile.php"); 
+      header("Location: /profile.php"); 
 
     }
 
