@@ -12,6 +12,7 @@ $i = $_SESSION['email'];
     $r = mysql_query($query);
     $row = mysql_fetch_array($r);
     $email = $row['EMAIL'];
+    $username =$row['USERNAME'];
     $accountnum = $row['ACCOUNTNUM'];
     $fname = $row['FNAME']; 
     $lname = $row['LNAME'];
@@ -27,12 +28,13 @@ if (isset($_POST['update'])){
           $newemail = $_POST['newemail'];
           $newcity = $_POST['newcity'];
           $newstate = $_POST['newstate'];
-          $newdescription = $_POST['newdescripton'];
+          $newdescript = $_POST['newdescript'];
+          $newusername = $_POST['newusername'];
          // $newpassword = $_POST['newpPassword'];
 
 
 
-       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$email', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
+       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
 
       
       if (mysql_query($sql, $connection)) {
@@ -116,12 +118,12 @@ if (isset($_POST['update'])){
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" enctype="multipart/form-data">
 
 
-<!--           <div class="form-group">
-            <label class="col-lg-3 control-label">Email:</label>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Username:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newemail" type="text" value = "<? // echo $email ?>">
+              <input class="form-control" name="newusername" type="text" value = "<?  echo $username ?>">
             </div>
-          </div> -->
+          </div>
 
 
           <div class="form-group">
@@ -157,7 +159,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Description:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newdescription" type="textbox" value= "<? echo $description ?>">
+              <input class="form-control" name="newdescript" type="textbox" value= "<? echo $description ?>">
             </div>
           </div>
 
