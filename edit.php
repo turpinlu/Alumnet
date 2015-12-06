@@ -52,17 +52,32 @@ if (isset($_POST['update'])){
           $newusername = $_POST['newusername'];
          // $newpassword = $_POST['newpPassword'];
           $newintnum = $_POST['newintnum'];
+          $newdegree = $_POST['newdegree'];
+          $newgradyear = $_POST['newgradyear'];
 
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', INTNUM = '$newintnum', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
 
       
+
       if (mysql_query($sql, $connection)) {
-       die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");    
+
+
+        $sql2 = "UPDATE DEGREE SET DEGREE = '$newdegree', GRADDATE = '$newgradyear' WHERE DEGNUM = '$accdeg'";      
+
+         if (mysql_query($sql2, $connection)) {
+              die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");    
+           } 
+         else {
+           echo "";
+          } 
+
       } 
       else {
         echo "";
       } 
+
+     
 
     }
 
@@ -150,6 +165,26 @@ if (isset($_POST['update'])){
             <label class="col-lg-3 control-label">Degree:</label>
             <div class="col-lg-8">
               <input class="form-control" name="newdegree" type="text" value = "<? echo $degreename ?>">
+            </div>
+          </div>
+
+                    <div class="form-group">
+            <label class="col-lg-3 control-label">Reason:</label>
+            <div class="col-lg-8">
+              <div class="ui-select">
+                <select name="newdegree" class="form-control">
+                  <option value="1" <?php if ($degree == 1 ) echo "selected" ; ?> >English</option>
+                  <option value="2" <?php if ($degree == 2 ) echo "selected" ; ?> >Photography</option>
+                  <option value="3" <?php if ($degree == 3 ) echo "selected" ; ?> >Finance</option>
+                  <option value="4" <?php if ($degree == 4 ) echo "selected" ; ?> >Biology</option>
+                  <option value="5" <?php if ($degree == 5 ) echo "selected" ; ?> >Enviromental Science</option>
+                  <option value="6" <?php if ($degree == 6 ) echo "selected" ; ?> >Math</option>
+                  <option value="7" <?php if ($degree == 7 ) echo "selected" ; ?> >Social Work</option>
+                  <option value="8" <?php if ($degree == 8 ) echo "selected" ; ?> >Spanish</option>
+                  <option value="9" <?php if ($degree == 9 ) echo "selected" ; ?> >Management</option>
+                  <option value="10"<?php if ($degree == 10 ) echo "selected" ; ?> >Business</option>
+                </select>
+              </div>
             </div>
           </div>
 
