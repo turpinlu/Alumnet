@@ -160,16 +160,8 @@ if (isset($_POST['update'])){
             </div>
           </div>
 
-
-          <div class="form-group">
-            <label class="col-lg-3 control-label">Degree:</label>
-            <div class="col-lg-8">
-              <input class="form-control" name="newdegree" type="text" value = "<? echo $degreename ?>">
-            </div>
-          </div>
-
                     <div class="form-group">
-            <label class="col-lg-3 control-label">Reason:</label>
+            <label class="col-lg-3 control-label">Degree:</label>
             <div class="col-lg-8">
               <div class="ui-select">
                 <select name="newdegree" class="form-control">
