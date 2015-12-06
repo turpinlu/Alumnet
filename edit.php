@@ -39,7 +39,7 @@ if (isset($_POST['update'])){
         echo "";
       }
 
-      header("Location: /profile.php"); 
+      header('Location: /profile.php'); 
 
     }
 
@@ -196,7 +196,7 @@ if (isset($_POST['update'])){
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
 
-              <input type="submit" value="Update" name="update" onclick="location='profile.php'">
+              <input type="submit" value="Update" name="update" ">
               <span></span>
 
               <input type="button" value="Cancel" onclick="location='profile.php'" > 
