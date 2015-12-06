@@ -102,6 +102,11 @@ $i = $_SESSION['email'];
                 <div class=" col-md-9 col-lg-9 ">
                   <table class="table table-user-information">
                     <tbody>
+                     <tr>
+                        <td>Username:</td>
+                        <td> <? echo $username ?> </td>
+                      </tr>
+                    <tr>
                       <tr>
                         <td>Degree:</td>
                         <td> <? echo $degree ?> </td>
