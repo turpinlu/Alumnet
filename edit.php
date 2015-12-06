@@ -31,10 +31,10 @@ if (isset($_POST['update'])){
           $newdescript = $_POST['newdescript'];
           $newusername = $_POST['newusername'];
          // $newpassword = $_POST['newpPassword'];
-          $interest = $_POST['reason'];
+          $newintnum = $_POST['newintnum'];
 
 
-       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', INTNUM = '$intnum', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
+       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', INTNUM = '$newintnum', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
 
       
       if (mysql_query($sql, $connection)) {
