@@ -8,6 +8,8 @@ include "dataLogin.php";
 
 $i = $_SESSION['email'];
 
+$num = 0;
+
     $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$i'";
     $r = mysql_query($query);
     $row = mysql_fetch_array($r);
@@ -31,9 +33,13 @@ if (isset($_POST['update'])){
           $newpassword = $_POST['newpPassword'];
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$newemail', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$newpassword' WHERE ACCOUNTNUM = '$accountnum'";
+      $num = 1;
+    
 
-     header("Location: profile.php");
+    }
 
+    if($num == 1){
+      header("Location: http://alumnet.xyz/profile.php");
     }
 
 
