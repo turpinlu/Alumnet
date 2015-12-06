@@ -156,7 +156,7 @@ $(document).ready(function(){
       <span class="icon-bar"></span>
     </button>
     <a href="index.php">
-        <img src="logo2.png" style="max-height:50px;max-width:200px;padding-left:10px;">
+        <img src="logo2.png" style="max-height:90px;max-width:250px;padding-left:20px;padding-top:5px;">
     </a>
   </div>
   <div class="collapse navbar-collapse" style="padding-right:15px;">
