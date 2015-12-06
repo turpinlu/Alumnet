@@ -102,7 +102,7 @@ if (isset($_POST['update'])){
 
         <h3>Personal info</h3>
         
-        <form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="form-horizontal" enctype="multipart/form-data">
 
 
           <div class="form-group">
