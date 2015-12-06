@@ -37,20 +37,9 @@ if (isset($_POST['update'])){
       } 
       else {
         echo "";
-      } 
+      }
 
-    $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$i'";
-    $r = mysql_query($query);
-    $row = mysql_fetch_array($r);
-    $email = $row['EMAIL'];
-    $accountnum = $row['ACCOUNTNUM'];
-    $fname = $row['FNAME']; 
-    $lname = $row['LNAME'];
-    $city = $row['CITY'];
-    $state = $row['STATE'];
-    $description = $row['COVERSUM'];
-    $intnum = $row['INTNUM'];
-    $password = $row['PASSWORD'];  
+      header("Location: profile.php"); 
 
     }
 
