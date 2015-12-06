@@ -152,7 +152,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">State:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newstate" type="text" value= "<? echo $state ?>">
+              <input class="form-control" maxlength="2" name="newstate" type="text" value= "<? echo $state ?>">
             </div>
           </div>
 
