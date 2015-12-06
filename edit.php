@@ -21,14 +21,14 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $password = $row['PASSWORD'];   
 
+
+if (isset($_POST['update'])){
+
           $newemail = $_POST['newemail'];
           $newcity = $_POST['newcity'];
           $newstate = $_POST['newstate'];
           $newdescription = $_POST['newdescripton'];
           $newpassword = $_POST['newpassword'];
-
-
-if (isset($_POST['update'])){
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$newemail', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$newpassword' WHERE ACCOUNTNUM = '$accountnum'";
 
@@ -194,7 +194,7 @@ if (isset($_POST['update'])){
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
 
-              <input type="submit" value="Update" name="update">
+              <input type="submit" value="Update" name="update" onclick="location='profile.php'">
               <span></span>
 
               <input type="button" value="Cancel" onclick="location='profile.php'" > 
