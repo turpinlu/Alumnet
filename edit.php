@@ -38,7 +38,7 @@ if (isset($_POST['update'])){
           $newdescript = $_POST['newdescript'];
           $newusername = $_POST['newusername'];
          // $newpassword = $_POST['newpPassword'];
-          $interest = $$_POST['user_reason'];
+          $interest = $_POST['user_reason'];
 
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', INTNUM = '$interest', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
