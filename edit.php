@@ -22,7 +22,12 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $password = $row['PASSWORD'];
 
-       
+    $query2 = "SELECT * FROM INTEREST WHERE INTNUM = '$intnum'";
+    $s = mysql_query($query2);
+    $row2 = mysql_fetch_array($s);
+
+    $interest = $row2['INTNUM']; 
+
 
 
 if (isset($_POST['update'])){
@@ -33,7 +38,7 @@ if (isset($_POST['update'])){
           $newdescript = $_POST['newdescript'];
           $newusername = $_POST['newusername'];
          // $newpassword = $_POST['newpPassword'];
-
+          $interest = $$_POST['user_reason'];
 
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
@@ -171,8 +176,8 @@ if (isset($_POST['update'])){
             <div class="col-lg-8">
               <div class="ui-select">
                 <select id="user_reason" class="form-control">
-                  <option value="looking">Looking</option>
-                  <option value="hiring">Hiring</option>
+                  <option <?php if ($interest == 0 ) echo 'selected' ; ?>value="0">Looking</option>
+                  <option <?php if ($interest == 1 ) echo 'selected' ; ?>value="1">Hiring</option>
                 </select>
               </div>
             </div>
