@@ -23,8 +23,6 @@ $i = $_SESSION['email'];
     $password = $row['PASSWORD'];
 
 
-
-
 if (isset($_POST['update'])){
 
           $newemail = $_POST['newemail'];
@@ -33,10 +31,10 @@ if (isset($_POST['update'])){
           $newdescript = $_POST['newdescript'];
           $newusername = $_POST['newusername'];
          // $newpassword = $_POST['newpPassword'];
-          $newintnum = $_POST['newintnum'];
+          $interest = $_POST['reason'];
 
 
-       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', INTNUM = '$newintnum', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
+       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', INTNUM = '$intnum', USERNAME ='$newusername', COVERSUM ='$newdescript' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
 
       
       if (mysql_query($sql, $connection)) {
@@ -171,8 +169,8 @@ if (isset($_POST['update'])){
             <div class="col-lg-8">
               <div class="ui-select">
                 <select id="newintnum" class="form-control">
-                  <option <?php if ($intnum == 0 ) echo 'selected' ; ?> value="0">Looking</option>
-                  <option <?php if ($intnum == 1 ) echo 'selected' ; ?> value="1">Hiring</option>
+                  <option value="0" <?php if ($intnum == 0 ) echo 'selected' ; ?> >Looking</option>
+                  <option value="1" <?php if ($intnum == 1 ) echo 'selected' ; ?> >Hiring</option>
                 </select>
               </div>
             </div>
