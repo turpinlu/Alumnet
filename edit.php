@@ -21,7 +21,7 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $password = $row['PASSWORD'];   
 
-    echo $description
+    echo $description;
 
 if (isset($_POST['update'])){
 
@@ -31,7 +31,7 @@ if (isset($_POST['update'])){
           $newdescription = $_POST['newdescripton'];
          // $newpassword = $_POST['newpPassword'];
 
-          echo $newdescription
+          echo $newdescription;
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$email', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
 
