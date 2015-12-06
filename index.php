@@ -182,7 +182,7 @@ $(document).ready(function(){
                                        </label>
                                     </div>
                                     <div class="form-group">
-                                       <button type="submit" class="btn btn-primary btn-block" name="sign_in" font-size="20px">Sign in</button>
+                                       <button type="submit" class="btn btn-primary btn-block" name="sign_in">Sign in</button>
                                     </div>
                                  </form>
                               </div>
