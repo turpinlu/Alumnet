@@ -22,7 +22,7 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $password = $row['PASSWORD'];
 
-    
+
     $query3 = "SELECT * FROM ACCDEG WHERE ACCOUNTNUM = '$accountnum'";
     $a = mysql_query($query3);
     $row3 = mysql_fetch_array($a);
@@ -149,7 +149,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Degree:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newdegree" type="text" value = "<? echo $degree ?>">
+              <input class="form-control" name="newdegree" type="text" value = "<? echo $degreename ?>">
             </div>
           </div>
 
