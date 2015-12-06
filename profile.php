@@ -35,7 +35,7 @@ $i = $_SESSION['email'];
     $accdeg = $row3['DEGNUM']; 
 
     $query4 = "SELECT * FROM DEGREE WHERE DEGNUM = '$accdeg'";
-    $a = mysql_query($query3);
+    $a = mysql_query($query4);
     $row4 = mysql_fetch_array($a);
 
     $degree = $row4['DEGREE']; 
