@@ -162,7 +162,7 @@ $(document).ready(function(){
   <div class="collapse navbar-collapse" style="padding-right:15px;">
     <ul class="nav navbar-nav navbar-right">
                   <li class="dropdown" style="padding-right:15px;">
-                     <a href="http://www.jquery2dotnet.com" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:15px;">Sign in <b class="caret"></b></a>
+                     <a href="http://www.jquery2dotnet.com" class="dropdown-toggle" data-toggle="dropdown" style="padding-right:15px;font-size:20px;">Sign in <b class="caret"></b></a>
                      <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
                         <li>
                            <div class="row">
@@ -182,7 +182,7 @@ $(document).ready(function(){
                                        </label>
                                     </div>
                                     <div class="form-group">
-                                       <button type="submit" class="btn btn-primary btn-block" name="sign_in" font-size="20px">Sign in</button>
+                                       <button type="submit" class="btn btn-primary btn-block" name="sign_in">Sign in</button>
                                     </div>
                                  </form>
                               </div>
