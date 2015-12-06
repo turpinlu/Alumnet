@@ -137,7 +137,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Graduation Year:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newgradyear" type="text" value = "<? echo $gradyear ?>">
+              <input class="form-control" maxlength="4" name="newgradyear" type="text" value = "<? echo $gradyear ?>">
             </div>
           </div>
 
