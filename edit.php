@@ -31,10 +31,11 @@ if (isset($_POST['update'])){
          // $newpassword = $_POST['newpPassword'];
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$email', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
-    
+      if($sql){
         die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
-    }
+      }
 
+    }
 
 ?>
 
