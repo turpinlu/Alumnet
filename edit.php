@@ -22,6 +22,26 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $password = $row['PASSWORD'];
 
+    
+    $query3 = "SELECT * FROM ACCDEG WHERE ACCOUNTNUM = '$accountnum'";
+    $a = mysql_query($query3);
+    $row3 = mysql_fetch_array($a);
+
+    $accdeg = $row3['DEGNUM']; 
+
+    $query4 = "SELECT * FROM DEGREE WHERE DEGNUM = '$accdeg'";
+    $a = mysql_query($query4);
+    $row4 = mysql_fetch_array($a);
+
+    $degree = $row4['DEGREE']; 
+    $gradyear = $row4['GRADDATE'];
+
+    $query5 = "SELECT * FROM DEGNAME WHERE DEGREE = '$degree'";
+    $b = mysql_query($query5);
+    $row5 = mysql_fetch_array($b);
+
+    $degreename = $row5['DEGNAME']; 
+
 
 if (isset($_POST['update'])){
 
