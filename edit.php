@@ -23,9 +23,15 @@ $i = $_SESSION['email'];
 
 if (isset($_POST['update'])){
 
-      // $sql = "UPDATE USERS SET USERNAME='$usernameHOLDER', EMAIL='$email', SECURITY = '$securityHolder', PASSWORD = '$password' WHERE USER_ID = '$userID'";
+       $sql = "UPDATE ACCOUNT SET CITY='$usernameHOLDER', EMAIL='$email', STATE = '$securityHolder', PASSWORD = '$password' WHERE EMAIL = '$i'";
 
     }
+
+    $email = $_POST['email'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $description = $_POST['descripton'];
+    $password = $_POST['password'];
 
 ?>
 
@@ -110,7 +116,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Degree:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newdegree" type="text" value = "<? echo $degree ?>">
+              <input class="form-control" name="degree" type="text" value = "<? echo $degree ?>">
             </div>
           </div>
 
@@ -118,14 +124,14 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Graduation Year:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newgradyear" type="text" value = "<? echo $gradyear ?>">
+              <input class="form-control" name="gradyear" type="text" value = "<? echo $gradyear ?>">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-lg-3 control-label">City:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newcity" type="text" value= "<? echo $city ?>" >
+              <input class="form-control" name="city" type="text" value= "<? echo $city ?>" >
             </div>
           </div>
 
@@ -133,7 +139,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">State:</label>
             <div class="col-lg-8">
-              <input class="form-control" name="newstate" type="text" value= "<? echo $state ?>">
+              <input class="form-control" name="state" type="text" value= "<? echo $state ?>">
             </div>
           </div>
 
