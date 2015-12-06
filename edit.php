@@ -169,8 +169,8 @@ if (isset($_POST['update'])){
             <div class="col-lg-8">
               <div class="ui-select">
                 <select id="newintnum" class="form-control">
-                  <option value='0' <?php if ($intnum == 0 ) echo "selected" ; ?> >Looking</option>
-                  <option value='1' <?php if ($intnum == 1 ) echo "selected" ; ?> >Hiring</option>
+                  <option value="0" <?php if ($intnum == 0 ) echo "selected" ; ?> >Looking</option>
+                  <option value="1" <?php if ($intnum == 1 ) echo "selected" ; ?> >Hiring</option>
                 </select>
               </div>
             </div>
