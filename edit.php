@@ -12,6 +12,7 @@ $i = $_SESSION['email'];
     $r = mysql_query($query);
     $row = mysql_fetch_array($r);
     $email = $row['EMAIL'];
+    $accountnum = $row['ACCOUNTNUM'];
     $fname = $row['FNAME']; 
     $lname = $row['LNAME'];
     $city = $row['CITY'];
@@ -29,7 +30,7 @@ $i = $_SESSION['email'];
 
 if (isset($_POST['update'])){
 
-       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$newemail', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$newpassword' WHERE EMAIL = '$i'";
+       $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$newemail', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$newpassword' WHERE ACCOUNTNUM = '$accountnum'";
 
       if (mysql_query($sql, $connection)) {
         echo "";          
