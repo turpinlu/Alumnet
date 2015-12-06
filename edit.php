@@ -23,15 +23,17 @@ $i = $_SESSION['email'];
 
 if (isset($_POST['update'])){
 
-       $sql = "UPDATE ACCOUNT SET CITY='$usernameHOLDER', EMAIL='$email', STATE = '$securityHolder', PASSWORD = '$password' WHERE EMAIL = '$i'";
+            $email = $_POST['email'];
+             $city = $_POST['city'];
+           $state = $_POST['state'];
+           $description = $_POST['descripton'];
+           $password = $_POST['password'];
+
+       $sql = "UPDATE ACCOUNT SET CITY='$city', EMAIL='$email', STATE = '$state', PASSWORD = '$password' WHERE EMAIL = '$i'";
 
     }
 
-    $email = $_POST['email'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $description = $_POST['descripton'];
-    $password = $_POST['password'];
+
 
 ?>
 
