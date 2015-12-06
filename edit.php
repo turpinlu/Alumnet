@@ -21,7 +21,6 @@ $i = $_SESSION['email'];
     $intnum = $row['INTNUM'];
     $password = $row['PASSWORD'];   
 
-    echo $description;
 
 if (isset($_POST['update'])){
 
@@ -31,13 +30,13 @@ if (isset($_POST['update'])){
           $newdescription = $_POST['newdescripton'];
          // $newpassword = $_POST['newpPassword'];
 
-          echo $newdescription;
+
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$email', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$password' WHERE ACCOUNTNUM = '$accountnum'";
 
       
       if (mysql_query($sql, $connection)) {
-      // die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");    
+       die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");    
       } 
       else {
         echo "";
