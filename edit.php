@@ -30,6 +30,7 @@ $i = $_SESSION['email'];
     $accdeg = $row3['DEGNUM']; 
 
     $query4 = "SELECT * FROM DEGREE WHERE DEGNUM = '$accdeg'";
+
     $a = mysql_query($query4);
     $row4 = mysql_fetch_array($a);
 
@@ -165,6 +166,7 @@ if (isset($_POST['update'])){
             <div class="col-lg-8">
               <div class="ui-select">
                 <select name="newdegree" class="form-control">
+                  <option value="0" <?php if ($degree == 0 ) echo "selected" ; ?> >Not Selected</option>
                   <option value="1" <?php if ($degree == 1 ) echo "selected" ; ?> >English</option>
                   <option value="2" <?php if ($degree == 2 ) echo "selected" ; ?> >Photography</option>
                   <option value="3" <?php if ($degree == 3 ) echo "selected" ; ?> >Finance</option>
