@@ -193,7 +193,7 @@ if (isset($_POST['update'])){
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
 
-              <input type="button" value="Update" name="update">
+              <input type="submit" value="Update" name="update">
               <span></span>
 
               <input type="button" value="Cancel" onclick="location='profile.php'" > 
