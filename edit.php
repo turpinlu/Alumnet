@@ -20,7 +20,9 @@ $i = $_SESSION['email'];
     $state = $row['STATE'];
     $description = $row['COVERSUM'];
     $intnum = $row['INTNUM'];
-    $password = $row['PASSWORD'];   
+    $password = $row['PASSWORD'];
+
+       
 
 
 if (isset($_POST['update'])){
