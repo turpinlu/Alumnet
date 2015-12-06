@@ -31,6 +31,13 @@ if (isset($_POST['update'])){
 
        $sql = "UPDATE ACCOUNT SET CITY='$city', EMAIL='$email', STATE = '$state', PASSWORD = '$password' WHERE EMAIL = '$i'";
 
+            if (mysql_query($sql, $connection)) {
+        echo "";          
+      } 
+      else {
+        echo "";
+      } 
+
     }
 
 
