@@ -28,19 +28,12 @@ if (isset($_POST['update'])){
           $newcity = $_POST['newcity'];
           $newstate = $_POST['newstate'];
           $newdescription = $_POST['newdescripton'];
-          $newpassword = $_POST['newpassword'];
+          $newpassword = $_POST['newpPassword'];
 
        $sql = "UPDATE ACCOUNT SET CITY ='$newcity', EMAIL ='$newemail', COVERSUM ='$newdescription' , STATE = '$newstate', PASSWORD = '$newpassword' WHERE ACCOUNTNUM = '$accountnum'";
 
-      if (mysql_query($sql, $connection)) {
-        echo "";          
-      } 
-      else {
-        echo "";
-      }
+     header("Location: profile.php");
 
-      header('Location: /profile.php'); 
-      exit();
     }
 
 
