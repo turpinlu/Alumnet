@@ -11,7 +11,7 @@ $i = $_SESSION['email'];
     $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$i'";
     $r = mysql_query($query);
     $row = mysql_fetch_array($r);
-
+    $username =$row['USERNAME'];
     $city = $row['CITY'];
     $accountnum = $row['ACCOUNTNUM'];
     $state = $row['STATE'];
