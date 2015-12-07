@@ -76,13 +76,13 @@
 			$city2 = $row['CITY'];
 			$state2 = $row['STATE'];     
 			$id = $row['ACCOUNTNUM'];          
-            echo '<td><A href="browse.php?id='.$id.'>'.$fname2.'</A></td>';
             echo '<td>'.$lname2.'</td>';
             echo '<td>'.$degree2.'</td>';
             echo '<td>'.$grad2.'</td>';
             echo '<td>'.$city2.'</td>';
             echo '<td>'.$state2.'</td>';
             echo '</tr>';
+        echo '<td><A href="browse.php?id='.$id.'>'.$fname2.'</A></td>';
                                 
 
 		}
