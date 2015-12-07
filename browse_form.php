@@ -73,7 +73,8 @@
 			$degree2 = $row['DEGNAME'];
 			$grad2 = $row['GRADDATE'];
 			$city2 = $row['CITY'];
-			$state2 = $row['STATE'];                  
+			$state2 = $row['STATE'];         
+			echo '<td><input type="radio" name="radio" id="radio" class="radio" checked/></td>';         
             echo '<td>'.$fname2.'</td>';
             echo '<td>'.$lname2.'</td>';
             echo '<td>'.$degree2.'</td>';
