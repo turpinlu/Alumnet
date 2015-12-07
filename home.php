@@ -2,9 +2,7 @@
 <?php 
 session_start();
 include "dataLogin.php";
-if (!$_SESSION['email']) {
-  die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
-}
+
 ?>
 <html lang="en">
 <link rel="shortcut icon" href="favicon.ico">
