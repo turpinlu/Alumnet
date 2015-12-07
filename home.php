@@ -65,7 +65,7 @@ if (!$_SESSION['email']) {
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <img src="grad.jpeg" style="max-height:150px;max-width:200px;">
+                <img src="grad.jpg" style="max-height:150px;max-width:200px;">
             </div>
         </div>
     </div>             
