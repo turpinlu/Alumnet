@@ -66,7 +66,7 @@ include "dataLogin.php";
                 <img src="grad.jpg" style="max-height:400px;max-width:600px;">
             </div>
             <div class="col-lg-12">
-                <img src="graduates.jpg" style="max-height:400px;max-width:600px;">
+                <img src="graduates.jpg" style="height:400px;width:600px;">
             </div>
         </div>
         <div class="row">
