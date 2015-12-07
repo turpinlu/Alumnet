@@ -56,7 +56,6 @@
 		echo '<table class="table table-striped table-hover ">';
         echo '<thead>';
         echo '<tr class="info">';
-       
         echo '<th>First Name</th>';
         echo '<th>Last Name</th>';
         echo '<th>Degree</th>';
@@ -76,15 +75,14 @@
 			$city2 = $row['CITY'];
 			$state2 = $row['STATE'];     
 			$id = $row['ACCOUNTNUM'];          
+        	//echo '<td><A href="browse.php?id='.$id.'>'.$fname2.'</A></td>';
             echo '<td>'.$lname2.'</td>';
             echo '<td>'.$degree2.'</td>';
             echo '<td>'.$grad2.'</td>';
             echo '<td>'.$city2.'</td>';
             echo '<td>'.$state2.'</td>';
             echo '</tr>';
-        echo '<td><A href="browse.php?id='.$id.'>'.$fname2.'</A></td>';
                                 
-
 		}
 		echo '</tbody>';
       	echo '</table>';
