@@ -29,7 +29,7 @@ $i = $_SESSION['email'];
 
     $accdeg = $row3['DEGNUM']; 
 
-    $query4 = "SELECT * FROM DEGREE WHERE DEGNUM = '$accdeg'";
+    $query4 = "SELECT * FROM DEGREE WHERE DEGNUM = '$accdeg'";  
 
     $a = mysql_query($query4);
     $row4 = mysql_fetch_array($a);
@@ -51,7 +51,6 @@ if (isset($_POST['update'])){
           $newstate = $_POST['newstate'];
           $newdescript = $_POST['newdescript'];
           $newusername = $_POST['newusername'];
-         // $newpassword = $_POST['newpPassword'];
           $newintnum = $_POST['newintnum'];
           $newdegree = $_POST['newdegree'];
           $newgradyear = $_POST['newgradyear'];
@@ -69,13 +68,7 @@ if (isset($_POST['update'])){
          if (mysql_query($sql2, $connection)) {
               die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");    
            } 
-         else {
-           echo "";
-          } 
 
-      } 
-      else {
-        echo "";
       } 
 
      
@@ -208,7 +201,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-lg-3 control-label">Description:</label>
             <div class="col-lg-8">
-              <textarea cols="40" rows="5" class="form-control" name="newdescript" type="text" ><? echo $description ?></textarea>
+              <textarea cols="40" rows="5" class="form-control" name="newdescript" type="text" > <? echo $description ?> </textarea>
             </div>
           </div>
 
@@ -246,7 +239,7 @@ if (isset($_POST['update'])){
             <label class="col-md-3 control-label"></label>
             <div class="col-md-8">
 
-              <input type="submit" value="Update" name="update" ">
+              <input type="submit" value="Update" name="update">
               <span></span>
 
               <input type="button" value="Cancel" onclick="location='profile.php'" > 
