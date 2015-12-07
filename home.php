@@ -66,10 +66,13 @@ include "dataLogin.php";
                 <img src="grad.jpg" style="max-height:400px;max-width:600px;">
             </div>
             <div class="col-lg-12">
-                <p>This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.
-                This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.
-              This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.</p>
+                <img src="graduates.jpg" style="max-height:400px;max-width:600px;">
             </div>
+        </div>
+        <div class="row">
+               <p>This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.
+                This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.
+              This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.</p> 
         </div>
     </div>             
 
