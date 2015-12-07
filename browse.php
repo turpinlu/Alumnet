@@ -59,7 +59,7 @@ if (!$_SESSION['email']) {
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-header">
-                    <h1 id="forms">Search Page!!</h1>
+                    <h1 id="forms">Alumnet Search Database</h1>
                 </div>
             </div>
         </div>
@@ -122,13 +122,25 @@ if (!$_SESSION['email']) {
 
 
   
-      </div>            
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+             </div>            
+           </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="well bs-component">
+              <div class="panel panel-default">
+                <div class="panel-body">
+
+                  THIS IS A TEST
+                </div>
+              </div>
+            </div>
+          </div>  
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
     
     
