@@ -222,7 +222,7 @@ if (isset($_POST['update'])){
           <div class="form-group">
             <label class="col-md-3 control-label">Old Password:</label>
             <div class="col-md-8">
-              <input class="form-control" name="newPassword" type="password" value="<?echo $password ?>">
+              <input class="form-control" name="newPassword" type="password">
             </div>
           </div>
 
