@@ -54,7 +54,7 @@
 	
 	if($r1 = mysql_query($query)){
 		echo '<table class="table table-striped table-hover ">';
-        echo '<thead>';
+        echo '<tbody>';
         echo '<tr>';
         echo '<th>First Name</th>';
         echo '<th>Last Name</th>';
@@ -63,8 +63,8 @@
         echo '<th>City</th>';
         echo '<th>State</th>';
         echo '</tr>';
-        echo '</thead>';
-        echo '<tbody>';
+        echo '</tbody>';
+        //echo '<tbody>';
         echo '<tr class="info">';
 		while($row=mysql_fetch_array($r1)){
 			$fname2 = $row['FNAME'];
@@ -83,7 +83,7 @@
                                 
 
 		}
-		echo '</tbody>';
+		//echo '</tbody>';
       	echo '</table>';
 	}
 	
