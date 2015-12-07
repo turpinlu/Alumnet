@@ -56,7 +56,7 @@
 		echo '<table class="table table-striped table-hover ">';
         echo '<thead>';
         echo '<tr class="info">';
-        echo '<tr>';
+       // echo '<tr>';
         echo '<th>First Name</th>';
         echo '<th>Last Name</th>';
         echo '<th>Degree</th>';
