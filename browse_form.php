@@ -53,11 +53,10 @@
 	$query= "SELECT * FROM ACCOUNT, DEGREE, DEGNAME, ACCDEG WHERE ACCDEG.ACCOUNTNUM=ACCOUNT.ACCOUNTNUM AND ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE $fn $ln $dg $gd $ct $st";
 	
 	if($r1 = mysql_query($query)){
-		echo '<table class="table table-striped">';
+		echo '<table class="table table-striped table-hover ">';
         echo '<thead>';
         echo '<tr class="info">';
-       // echo '<tr>';
-         echo '<th>        </th>';
+       
         echo '<th>First Name</th>';
         echo '<th>Last Name</th>';
         echo '<th>Degree</th>';
@@ -67,6 +66,7 @@
         echo '</tr>';
         echo '</thead>';
         echo '<tbody>';
+        echo '<tr>';
        
 		while($row=mysql_fetch_array($r1)){
 			$fname2 = $row['FNAME'];
@@ -74,9 +74,8 @@
 			$degree2 = $row['DEGNAME'];
 			$grad2 = $row['GRADDATE'];
 			$city2 = $row['CITY'];
-			$state2 = $row['STATE'];         
-			echo '<td><input type="radio" name="radio" id="radio" class="radio"/></td>';         
-            echo '<td>'.$fname2.'</td>';
+			$state2 = $row['STATE'];                
+            echo '<td><A href="browse.php">'.$fname2.'</A></td>';
             echo '<td>'.$lname2.'</td>';
             echo '<td>'.$degree2.'</td>';
             echo '<td>'.$grad2.'</td>';

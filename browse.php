@@ -115,7 +115,7 @@ if (!$_SESSION['email']) {
                 </form>
 
                        
-    <?php include "browse_form.php";?>
+                <?php include "browse_form.php";?>
 
                 </div>             
 
@@ -143,7 +143,7 @@ if (!$_SESSION['email']) {
   </div>
 </div>
     
-    
+    <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '0b99ac80-5fc3-44b9-9271-c80c2153292f', f: true }); done = true; } }; })();</script>
 </html>
 
 
