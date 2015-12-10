@@ -7070,9 +7070,9 @@ label,
 .popup {
   margin: 70px auto;
   padding: 20px;
-  background: #fff;
+  background: #4e5d6c;
   border-radius: 5px;
-  width: 60%;
+  width: 90%;
   position: relative;
   transition: all 5s ease-in-out;
 }

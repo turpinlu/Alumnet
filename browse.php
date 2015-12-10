@@ -127,7 +127,7 @@ include "dataLogin.php";
           <div class="col-lg-6">
             <div class="well bs-component">
               <div class="panel panel-default">
-                <div class="panel-body">
+               <!-- <div class="panel-body"> -->
 
                   <div id="popup1" class="overlay3">
                     <div class="popup">
@@ -139,7 +139,7 @@ include "dataLogin.php";
                     </div>
                   </div>
 
-                </div>
+               <!-- </div> -->
               </div>
             </div>
           </div>
