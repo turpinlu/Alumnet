@@ -125,7 +125,7 @@ include "dataLogin.php";
           </div>
 
           <div class="col-lg-6">
-            <div class="well bs-component">
+            <!--<div class="well bs-component">-->
               <!--<div class="panel panel-default">-->
                <!-- <div class="panel-body"> -->
 
@@ -141,7 +141,7 @@ include "dataLogin.php";
 
                <!-- </div> -->
               <!--</div>-->
-            </div>
+            <!--</div>-->
           </div>
         </div>
       </div>
