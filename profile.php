@@ -92,11 +92,6 @@ $i = $_SESSION['email'];
                 <li><a href="browse.php">Browse</a></li>
                 <li><a href="logout.php">Log Out</a></li>
             </ul>
-            <form role="search" action="<?php echo $_SERVER['PHP_SELF'];?>" class="navbar-form navbar-right">
-                <div class="form-group">
-                    <input type="text" placeholder="Search" class="form-control">
-                </div>
-            </form>
         </div>
     </nav>
 
