@@ -87,7 +87,7 @@ $i = $_SESSION['email'];
         <!-- Collection of nav links, forms, and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li class="active"><a href="profile.php">Profile</a></li>
                 <li><a href="browse.php">Browse</a></li>
                 <li><a href="logout.php">Log Out</a></li>
