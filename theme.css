@@ -7041,14 +7041,16 @@ label,
   font-size: 1em;
   padding: 3px;
   color: #fff;
-  border: 2px solid orange;
+  border: 2px solid;
+  border-color: #df691a; 
   border-radius: 15px/40px;
   text-decoration: none;
   cursor: pointer;
+  background-color: #4E5D6C;
   transition: all 0.3s ease-out;
 }
 .button3:hover {
-  background: orange;
+  background: #df691a;
 }
 
 .overlay3 {
