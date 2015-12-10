@@ -45,15 +45,17 @@ $register=$_POST['reg'];
                 
           $query7 = "SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL = '$email'";
           $r7 = mysql_query($query7);
+          echo $email;
+          echo $r7;
           $query8 = "INSERT INTO ACCDEG (ACCOUNTNUM) VALUES ('$r7')";
           $r8 = mysql_query($query8);
-          
+
           echo 'success';
           $_SESSION['email'] = $email;
           $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
           $time =new DateTime();
           $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-          die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+         // die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
         }
     	  mysql_query("UNLOCK TABLES");
     }
