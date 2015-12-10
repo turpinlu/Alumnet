@@ -78,8 +78,8 @@
 			$accnum = $row['ACCOUNTNUM'];
 			?>
 			<div class="box">
-				<td> <a class="button3" href="#popup1">View</a></td>
-
+				<form action="#popup1" method="get">
+				<td> <input type="submit" class="button3">View</a></td>
 			</div>
 			<?php
 			//?var=<?php echo $accnum
