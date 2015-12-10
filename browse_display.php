@@ -2,7 +2,52 @@
 <div id="popup1" class="overlay3">
 	<?php
 	    $var = $_GET['var'];
-	    echo $var;
+		session_start();
+		include "dataLogin.php";
+
+		$i = $_SESSION['email'];
+
+		    $query = "SELECT * FROM ACCOUNT WHERE ACCOUNTNUM = '$var'";
+		    $r = mysql_query($query);
+		    $row = mysql_fetch_array($r);
+		    $username =$row['USERNAME'];
+		    $city = $row['CITY'];
+		    $accountnum = $row['ACCOUNTNUM'];
+		    $state = $row['STATE'];
+		    $zip = $row['ZIP'];
+		    $email = $row['EMAIL'];
+		    $fname = $row['FNAME']; 
+		    $lname = $row['LNAME'];
+		    $intnum = $row['INTNUM'];
+		    $description = $row['COVERSUM'];   
+
+		    $query2 = "SELECT * FROM INTEREST WHERE INTNUM = '$intnum'";
+		    $s = mysql_query($query2);
+		    $row2 = mysql_fetch_array($s);
+
+		    $interest = $row2['INTVALUE']; 
+
+		    $query3 = "SELECT * FROM ACCDEG WHERE ACCOUNTNUM = '$accountnum'";
+		    $a = mysql_query($query3);
+		    $row3 = mysql_fetch_array($a);
+
+		    $accdeg = $row3['DEGNUM']; 
+
+		    $query4 = "SELECT * FROM DEGREE WHERE DEGNUM = '$accdeg'";
+		    $a = mysql_query($query4);
+		    $row4 = mysql_fetch_array($a);
+
+		    $degree = $row4['DEGREE']; 
+		    $gradyear = $row4['GRADDATE'];
+
+		    $query5 = "SELECT * FROM DEGNAME WHERE DEGREE = '$degree'";
+		    $b = mysql_query($query5);
+		    $row5 = mysql_fetch_array($b);
+
+		    $degreename = $row5['DEGNAME']; 
+
+
+
 	?>
 	<div class="popup">
 	  <h2>Here i am</h2>
@@ -16,7 +61,7 @@
 	            <tbody>
 	             <tr>
 	                <td>Username:</td>
-	                <td> <?php echo $var ?> </td>
+	                <td> <?php echo $username?> </td>
 	              </tr>
 	            <tr>
 	              <tr>
