@@ -133,7 +133,8 @@ include "dataLogin.php";
                   <div id="popup1" class="overlay3">
                     <?php
                         $var = $GET['var'];
-                        echo "<a target='_blank' href='popup1?var=".$var."' onclick=\"window.open(this.href, 'popupwindow', width=400,height=300,scrollbars,resizable');return false;\"><h10>(check status)</h10></a>";
+                        $query= "SELECT * FROM ACCOUNT, DEGREE, DEGNAME, ACCDEG WHERE ACCDEG.ACCOUNTNUM=ACCOUNT.ACCOUNTNUM AND ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE $fn $ln $dg $gd $ct $st";
+
                     ?>
                     <div class="popup">
                       <h2>Here i am</h2>
@@ -147,36 +148,36 @@ include "dataLogin.php";
                                 <tbody>
                                  <tr>
                                     <td>Username:</td>
-                                    <td> <? echo $var ?> </td>
+                                    <td> <?php echo $var ?> </td>
                                   </tr>
                                 <tr>
                                   <tr>
                                     <td>Degree:</td>
-                                    <td> <? echo $degreename ?> </td>
+                                    <td> <?php echo $degreename ?> </td>
                                   </tr>
                                 <tr>
                                     <td>Grad Year:</td>
-                                    <td><? echo $gradyear ?></td>
+                                    <td><?php echo $gradyear ?></td>
                                   </tr>
                                    <tr>
                                     <td>City:</td>
-                                    <td><? echo $city ?></td>
+                                    <td><?php echo $city ?></td>
                                   </tr>
                                   <tr>
                                     <td>State:</td>
-                                    <td><? echo $state ?></td>
+                                    <td><?php echo $state ?></td>
                                   </tr>
                                   <tr>
                                     <td>Interest:</td>
-                                    <td><? echo $interest ?></td>
+                                    <td><?php echo $interest ?></td>
                                   </tr>
                                    <tr>
                                     <td>Description:</td>
-                                    <td><? echo $description ?></td>
+                                    <td><?php echo $description ?></td>
                                   </tr>
                                   <tr>
                                     <td>Email:</td>
-                                    <td><?  echo $email ?></td>
+                                    <td><?php  echo $email ?></td>
                                   </tr>
 
                                 </tbody>
