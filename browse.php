@@ -128,7 +128,8 @@ include "dataLogin.php";
             <div class="well bs-component">
               <div class="panel panel-default">
                 <div class="panel-body">
-                  <div id="popup1" class="overlay">
+
+                  <div id="popup1" class="overlay3">
                     <div class="popup">
                       <h2>Here i am</h2>
                       <a class="close" href="#">×</a>
@@ -137,6 +138,7 @@ include "dataLogin.php";
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
