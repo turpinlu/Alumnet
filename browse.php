@@ -101,7 +101,7 @@ include "dataLogin.php";
                               <div class="form-group">
                                   <label for="state" class="col-lg-2 control-label">State</label>
                                   <div class="col-lg-10">
-                                      <input type="text" class="form-control" id="state" name="state" placeholder="State" value="<?php if(isset($city)){ echo htmlspecialchars($city);} ?>">
+                                      <input type="text" class="form-control" id="state" name="state" placeholder="State" value="<?php if(isset($state)){ echo htmlspecialchars($state);} ?>">
                                   </div>
                               </div>
                                <div class="form-group">
