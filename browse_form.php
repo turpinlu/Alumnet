@@ -79,7 +79,7 @@
 			?>
 			<div class="box">
 				<form action="#popup1" method="get">
-				<td> <input type="submit" class="button3">View</a></td>
+				<td> <input type="submit" value="View" class="button3"></td>
 			</div>
 			<?php
 			//?var=<?php echo $accnum
