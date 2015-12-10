@@ -66,7 +66,7 @@ include "dataLogin.php";
             </div>
             <div class="col-md-4 col-md-offset-1 text-center mt-100 mb-100">
                 <div class="phone">
-                    <img class="img-responsive img-rounded" src="watson.jpg">
+                    <img class="img-responsive img-rounded" src="redder.JPG">
                 </div>
             </div>
           </div>
