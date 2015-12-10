@@ -75,9 +75,10 @@
 			$grad2 = $row['GRADDATE'];
 			$city2 = $row['CITY'];
 			$state2 = $row['STATE'];
+			$accnum = $row['ACCOUNTNUM'];
 			?>
 			<div class="box">
-				<td> <a class="button3" href="#popup1">View</a></td>
+				<td> <a class="button3" href="#popup1?var=<?php echo $accnum ?>">View</a></td>
 			</div>
 			<?php
         	echo '<td>'.$fname2.'</td>';

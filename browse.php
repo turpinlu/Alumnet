@@ -130,6 +130,9 @@ include "dataLogin.php";
                <!-- <div class="panel-body"> -->
 
                   <div id="popup1" class="overlay3">
+                    <?php
+                        $var = $GET['accnum'];
+                    ?>
                     <div class="popup">
                       <h2>Here i am</h2>
                       <a class="close" href="#">&#10006;</a>
@@ -142,7 +145,7 @@ include "dataLogin.php";
                                 <tbody>
                                  <tr>
                                     <td>Username:</td>
-                                    <td> <? echo $username ?> </td>
+                                    <td> <? echo $accnum ?> </td>
                                   </tr>
                                 <tr>
                                   <tr>
