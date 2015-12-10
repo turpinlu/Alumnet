@@ -133,7 +133,7 @@ include "dataLogin.php";
                   <div id="popup1" class="overlay3">
                     <?php
                         $var = $GET['var'];
-                        echo "hello";
+                        echo $fname2;
                     ?>
                     <div class="popup">
                       <h2>Here i am</h2>
