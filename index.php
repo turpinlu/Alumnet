@@ -7,7 +7,6 @@
 include 'dataLogin.php';
 //include 'myDataLogin.php';
 include 'secure.php';
-session_start();
 
 $register=$_POST['reg'];
 
@@ -60,6 +59,8 @@ $register=$_POST['reg'];
           $r10 = mysql_query($query10);
 
           echo 'success';
+          session_destroy();
+          session_start();
           $_SESSION['email'] = $email;
           $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
           $time =new DateTime();

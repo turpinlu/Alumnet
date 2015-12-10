@@ -2,7 +2,6 @@
 include 'dataLogin.php';
 //include 'myDataLogin.php'
 include 'secure.php';
-session_start();
 
 
 
@@ -52,6 +51,8 @@ echo "<br>";
         //login
         echo "<br>";  
         echo 'logged in!';
+        session_destroy();
+        session_start();
 			  $_SESSION['email'] = $email;
 
         $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";             //should keep security log-will need this information
