@@ -48,11 +48,16 @@ $register=$_POST['reg'];
           $row7 = mysql_fetch_array($r7);
           $accountnum = $row7['ACCOUNTNUM'];
 
-          echo $email;
-          echo $r7;
-          echo $accountnum;
           $query8 = "INSERT INTO ACCDEG (ACCOUNTNUM) VALUES ('$accountnum')";
           $r8 = mysql_query($query8);
+
+          $query9 = "SELECT DEGNUM FROM ACCDEG WHERE ACCOUNTNUM = '$accountnum'";
+          $r9 = mysql_query($query9);
+          $row9 = mysql_fetch_array($r9);
+          $degnum = $row9['DEGNUM'];
+
+          $query10 = "INSERT INTO DEGREE (DEGNUM, DEGREE, DEGLEVEL, GRADDATE) VALUES ('$degnum','0','0','0000')";
+          $r10 = mysql_query($query10);
 
           echo 'success';
           $_SESSION['email'] = $email;
