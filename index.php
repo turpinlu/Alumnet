@@ -46,7 +46,8 @@ $register=$_POST['reg'];
           $query7 = "SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL = '$email'";
           $r7 = mysql_query($query7);
           $row7 = mysql_fetch_array($r7);
-          $accountnum = $row['ACCOUNTNUM'];
+          $accountnum = $row7['ACCOUNTNUM'];
+
           echo $email;
           echo $r7;
           echo $accountnum;
