@@ -58,20 +58,9 @@ include "dataLogin.php";
             <div class="col-md-5 col-md-offset-1">
                 <div class="content">
                   <div class="pull-middle">
-                    <h1 class="page-header">Create an awesome App template with Bootstrap.</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet.</p>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <form action="#" role="form">
-                                <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Email Address" required>
-                                    <span class="input-group-btn">
-                                      <button class="btn btn-success btn-circle" type="submit">Sign up for free</button>
-                                    </span>                        
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    <h1 class="page-header">Welcome to Alumnet</h1>
+                    <p class="lead">Mobile applications are on the way!</p>
+                    
                   </div>              
                 </div>
             </div>
