@@ -59,7 +59,7 @@ $register=$_POST['reg'];
           $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
           $time =new DateTime();
           $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-         // die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+          die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
         }
     	  mysql_query("UNLOCK TABLES");
     }
