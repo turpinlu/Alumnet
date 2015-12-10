@@ -50,7 +50,7 @@
 
 	?>
 	<div class="popup">
-	  <h2>Here i am</h2>
+	  <h2><?php echo $fname.' '.$lname?></h2>
 	  <a class="close" href="#">&#10006;</a>
 	  <div class="content">
 	    <div class="panel-body">
