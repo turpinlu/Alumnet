@@ -37,12 +37,17 @@ $register=$_POST['reg'];
       //insert into database--create account
 
         if(mysql_query("LOCK TABLES account WRITE")){
-            echo "hi"; 
         }
      	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
           echo $query;
         if (mysql_query($query)){
         //automatically login--create new session
+                
+          $query7 = "SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL = '$email'";
+          $r7 = mysql_query($query7);
+          $query8 = "INSERT INTO ACCDEG (ACCOUNTNUM) VALUES ('$r7')";
+          $r8 = mysql_query($query8);
+          
           echo 'success';
           $_SESSION['email'] = $email;
           $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
