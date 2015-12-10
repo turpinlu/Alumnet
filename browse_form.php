@@ -79,8 +79,7 @@
 			?>
 			<div class="box">
 				<form action="#popup1" method="get">
-					<input type="hidden" name='var' value='<? echo $accnum ?>' />
-				<td> <input type="submit" value="View" class="button3"></td>
+				<td> <button class="button3" name="var" type="submit" value="<? echo $accnum ?>">View</button></td>
 			</div>
 			<?php
 			//?var=<?php echo $accnum
