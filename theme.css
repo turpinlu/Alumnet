@@ -7019,7 +7019,7 @@ label,
   display: none;
 }
 
-.mailbox:hover .popup {
+.mailbox:table-hover .popup {
   display: block;
 }
 
