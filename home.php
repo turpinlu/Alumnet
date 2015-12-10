@@ -52,29 +52,37 @@ include "dataLogin.php";
             </ul>
         </div>
     </nav>
-<div class="container">
-    <div class="bs-docs-section">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="page-header">
-                    <h1 id="forms">Welcome to Alumnet</h1>
+<header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                <div class="content">
+                  <div class="pull-middle">
+                    <h1 class="page-header">Create an awesome App template with Bootstrap.</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet.</p>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form action="#" role="form">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                    <span class="input-group-btn">
+                                      <button class="btn btn-success btn-circle" type="submit">Sign up for free</button>
+                                    </span>                        
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                  </div>              
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <img src="grad.jpg" style="max-height:400px;max-width:600px;">
+            <div class="col-md-4 col-md-offset-1 text-center mt-100 mb-100">
+                <div class="phone">
+                    <img class="img-responsive img-rounded" src="http://placemi.com/djlnr/263x480">
+                </div>
             </div>
-            <div class="col-lg-12">
-                <img src="graduates.jpg" style="height:400px;width:600px;">
-            </div>
+          </div>
         </div>
-        <div class="row">
-               <p>This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.
-                This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.
-              This is some text.This is some text.This is some text.This is some text.This is some text.This is some text.</p> 
-        </div>
-    </div>             
+    </header>  
 
 </div>            
     
