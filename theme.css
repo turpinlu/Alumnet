@@ -7059,8 +7059,9 @@ label,
   right: 0;
   transition: opacity 500ms;
   visibility: visible;
-  opacity: 0;
+  opacity: 1;
 }
+
 .overlay3:target {
   visibility: visible;
   opacity: 1;
