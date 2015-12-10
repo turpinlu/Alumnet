@@ -131,7 +131,7 @@ include "dataLogin.php";
 
                   <div id="popup1" class="overlay3">
                     <?php
-                        $var = $GET['accnum'];
+                        $var = $GET['var'];
                     ?>
                     <div class="popup">
                       <h2>Here i am</h2>
