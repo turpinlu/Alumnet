@@ -154,8 +154,12 @@ include "dataLogin.php";
                                     <td><? echo $gradyear ?></td>
                                   </tr>
                                    <tr>
-                                    <td>City,State:</td>
-                                    <td><? echo $city ?>, <? echo $state; ?></td>
+                                    <td>City:</td>
+                                    <td><? echo $city ?></td>
+                                  </tr>
+                                  <tr>
+                                    <td>State:</td>
+                                    <td><? echo $state ?></td>
                                   </tr>
                                   <tr>
                                     <td>Interest:</td>

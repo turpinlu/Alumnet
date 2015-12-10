@@ -132,9 +132,13 @@ $i = $_SESSION['email'];
                         <td>Grad Year:</td>
                         <td><? echo $gradyear ?></td>
                       </tr>
-                       <tr>
-                        <td>City,State:</td>
-                        <td><? echo $city ?>, <? echo $state; ?></td>
+                        <tr>
+                        <td>City:</td>
+                        <td><? echo $city ?></td>
+                      </tr>
+                      <tr>
+                        <td>State:</td>
+                        <td><? echo $state ?></td>
                       </tr>
                       <tr>
                         <td>Interest:</td>
