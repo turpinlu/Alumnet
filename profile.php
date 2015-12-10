@@ -5,6 +5,7 @@
 <?php
 session_start();
 include "dataLogin.php";
+include "pageVerification.php";
 
 $i = $_SESSION['email'];
 
