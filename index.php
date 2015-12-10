@@ -45,9 +45,11 @@ $register=$_POST['reg'];
                 
           $query7 = "SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL = '$email'";
           $r7 = mysql_query($query7);
+          $row7 = mysql_fetch_array($r7);
+          $accountnum = $row['ACCOUNTNUM'];
           echo $email;
           echo $r7;
-          $query8 = "INSERT INTO ACCDEG (ACCOUNTNUM) VALUES ('$r7')";
+          $query8 = "INSERT INTO ACCDEG (ACCOUNTNUM) VALUES ('$accountnum')";
           $r8 = mysql_query($query8);
 
           echo 'success';
