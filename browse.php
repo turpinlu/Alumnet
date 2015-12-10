@@ -133,7 +133,7 @@ include "dataLogin.php";
                   <div id="popup1" class="overlay3">
                     <?php
                         $var = $GET['var'];
-                        echo "<a target='_blank' href='popup.php?id=".$var."' onclick=\"window.open(this.href, 'popupwindow', width=400,height=300,scrollbars,resizable');return false;\"><h10>(check status)</h10></a>";
+                        echo "<a target='_blank' href='popup1?var=".$var."' onclick=\"window.open(this.href, 'popupwindow', width=400,height=300,scrollbars,resizable');return false;\"><h10>(check status)</h10></a>";
                     ?>
                     <div class="popup">
                       <h2>Here i am</h2>
