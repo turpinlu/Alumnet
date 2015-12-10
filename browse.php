@@ -145,7 +145,7 @@ include "dataLogin.php";
                                 <tbody>
                                  <tr>
                                     <td>Username:</td>
-                                    <td> <? echo $accnum ?> </td>
+                                    <td> <? echo $var ?> </td>
                                   </tr>
                                 <tr>
                                   <tr>
