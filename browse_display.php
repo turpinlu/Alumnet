@@ -1,8 +1,8 @@
 
 <div id="popup1" class="overlay3">
 	<?php
-	    $var = $GET['var'];
-	    echo $fname2;
+	    $var = $_GET['var'];
+	    echo $var;
 	?>
 	<div class="popup">
 	  <h2>Here i am</h2>

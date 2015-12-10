@@ -111,30 +111,13 @@ include "dataLogin.php";
                 </div>
                 </fieldset>
                 </form>
-
-                       
                 <?php include "browse_form.php";?>
-
-                </div>             
-
-
-
-  
+              </div>   
              </div>            
            </div>
           </div>
-
           <div class="col-lg-6">
-            <!--<div class="well bs-component">-->
-              <!--<div class="panel panel-default">-->
-               <!-- <div class="panel-body"> -->
-
               <?php include "browse_display.php";?>
-                  
-
-               <!-- </div> -->
-              <!--</div>-->
-            <!--</div>-->
           </div>
         </div>
       </div>
