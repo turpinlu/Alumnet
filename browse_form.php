@@ -77,7 +77,7 @@
 			$state2 = $row['STATE'];
 			?>
 			<div class="box">
-				<td> <a class="button3" href="#popup1">Let me Pop up</a></td>
+				<td> <a class="button3" href="#popup1">View</a></td>
 			</div>
 			<?php
         	echo '<td>'.$fname2.'</td>';
