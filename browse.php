@@ -57,7 +57,7 @@ include "dataLogin.php";
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-header">
-                    <h1 id="forms">Alumnet Search Database</h1>
+                    <h1 id="forms">Search Alumnet Database</h1>
                 </div>
             </div>
         </div>
@@ -132,9 +132,8 @@ include "dataLogin.php";
 
                   <div id="popup1" class="overlay3">
                     <?php
-                        $var = $GET['var'];
-                        $query= "SELECT * FROM ACCOUNT, DEGREE, DEGNAME, ACCDEG WHERE ACCDEG.ACCOUNTNUM=ACCOUNT.ACCOUNTNUM AND ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE $fn $ln $dg $gd $ct $st";
-
+                        $var = $REQUEST['var'];
+                        echo $var;
                     ?>
                     <div class="popup">
                       <h2>Here i am</h2>
