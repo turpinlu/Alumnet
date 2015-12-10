@@ -37,7 +37,7 @@ $register=$_POST['reg'];
 
         if(mysql_query("LOCK TABLES account WRITE")){
         }
-     	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email')";
+     	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL, CITY, STATE) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email','NA','NA')";
           echo $query;
         if (mysql_query($query)){
         //automatically login--create new session
