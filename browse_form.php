@@ -56,6 +56,7 @@
 		echo '<table class="table table-striped table-hover ">';
         echo '<thead>';
         echo '<tr class="info">';
+        echo '<th>Select</th>';
         echo '<th>First Name</th>';
         echo '<th>Last Name</th>';
         echo '<th>Degree</th>';
@@ -74,7 +75,11 @@
 			$grad2 = $row['GRADDATE'];
 			$city2 = $row['CITY'];
 			$state2 = $row['STATE'];
-			echo '<div class="mailbox">';
+			?>
+			<div class="box">
+				<td> <a class="button3" href="#popup1">Let me Pop up</a></td>
+			</div>
+			<?php
         	echo '<td>'.$fname2.'</td>';
             echo '<td>'.$lname2.'</td>';
             echo '<td>'.$degree2.'</td>';
@@ -87,6 +92,17 @@
 		}
 		echo '</tbody>';
       	echo '</table>';
+      	?>
+      	<div id="popup1" class="overlay">
+			<div class="popup">
+				<h2>Here i am</h2>
+				<a class="close" href="#">×</a>
+				<div class="content">
+					Thanks for pop me out of that button, but now i'm done so you can close this window.
+				</div>
+			</div>
+		</div>
+      	<?php
 	}
 	
 ?>
