@@ -132,8 +132,8 @@ include "dataLogin.php";
 
                   <div id="popup1" class="overlay3">
                     <?php
-                        $var = $REQUEST['var'];
-                        echo $var;
+                        $var = $GET['var'];
+                        echo "hello";
                     ?>
                     <div class="popup">
                       <h2>Here i am</h2>
