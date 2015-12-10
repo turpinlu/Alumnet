@@ -23,7 +23,7 @@ $register=$_POST['reg'];
 
 
       //check to see if alredy have account using that email
-      $email_check_query=mysql_query("SELECT EMAIL FROM account WHERE EMAIL='$email'");
+      $email_check_query=mysql_query("SELECT EMAIL FROM ACCOUNT WHERE EMAIL='$email'");
       $count_email = mysql_num_rows($email_check_query);    //if not 0. email already in use
 
       //Validate Password
