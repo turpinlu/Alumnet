@@ -73,15 +73,15 @@
 			$degree2 = $row['DEGNAME'];
 			$grad2 = $row['GRADDATE'];
 			$city2 = $row['CITY'];
-			$state2 = $row['STATE'];     
-			//$id = $row['ACCOUNTNUM'];  
-			//echo '<tr href="browse.php?id='.$id.'>';
+			$state2 = $row['STATE'];
+			echo '<div class="mailbox">';
         	echo '<td>'.$fname2.'</td>';
             echo '<td>'.$lname2.'</td>';
             echo '<td>'.$degree2.'</td>';
             echo '<td>'.$grad2.'</td>';
             echo '<td>'.$city2.'</td>';
             echo '<td>'.$state2.'</td>';
+            echo '</div>';
             echo '</tr>';
                                 
 		}
