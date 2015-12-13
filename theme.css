@@ -586,6 +586,7 @@ th {
   content: "\e083";
 }
 .glyphicon-ok-sign:before {
+  color:black;
   content: "\e084";
 }
 .glyphicon-question-sign:before {
