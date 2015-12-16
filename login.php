@@ -10,24 +10,14 @@ $password = $_POST['user-password'];
 
 //$query = "SELECT * FROM ACCOUNT WHERE EMAIL='$email'";
           
-echo $email;
-echo "<br>";
-echo $password;
-echo "<br>";
 
 $result = mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'");
-echo "<br>";
-echo $result;
-echo "<br>";
 
 if (!$result){
-  echo 'Wrong email or password';
-  echo "WRONG !";
+ 
   die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 }
-echo "<br>";
-echo "Setting Values from $result";
-echo "<br>";
+
 $numrows = mysql_num_rows($result);
 if ($numrows!=0){
 
@@ -41,16 +31,10 @@ if ($numrows!=0){
 
 
   //check to see if they match
-echo $email;
-echo "<br>";
-echo $mail;
-echo "<br>";
-echo $pass;
-echo "<br>";
+
 		if ($email==$mail && password_verify($password, $pass)){
         //login
-        echo "<br>";  
-        echo 'logged in!';
+       
         session_destroy();
         session_start();
 			  $_SESSION['email'] = $email;
@@ -58,8 +42,7 @@ echo "<br>";
         $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";             //should keep security log-will need this information
 				$time =new DateTime();
 				$_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-        echo "<br>";
-        echo 'success';
+        
         die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 
 		}
@@ -68,7 +51,11 @@ echo "<br>";
         echo "<script type='text/javascript'>alert('$message');</script>";
         die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
       }
-      echo $_SESSION['email'];
 //}
 
 ?>
+<html lang="en">
+<body>
+  
+</body>
+</html>
