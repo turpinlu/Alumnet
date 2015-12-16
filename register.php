@@ -38,7 +38,6 @@ $register=$_POST['reg'];
         if(mysql_query("LOCK TABLES account WRITE")){
         }
      	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL, CITY, STATE) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email','NA','NA')";
-          echo $query;
         if (mysql_query($query)){
         //automatically login--create new session
                 
@@ -58,7 +57,6 @@ $register=$_POST['reg'];
           $query10 = "INSERT INTO DEGREE (DEGNUM, DEGREE, DEGLEVEL, GRADDATE) VALUES ('$degnum','0','0','0000')";
           $r10 = mysql_query($query10);
 
-          echo 'success';
           session_destroy();
           session_start();
           $_SESSION['email'] = $email;
