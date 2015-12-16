@@ -64,8 +64,9 @@ echo "<br>";
 
 		}
       else{
-        echo 'Wrong email or password';
-        die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+        $message = "Username and/or Password incorrect.\\nTry again.";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
       }
       echo $_SESSION['email'];
 //}
