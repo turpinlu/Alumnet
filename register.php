@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<body>
 <link rel="shortcut icon" href="favicon.ico">
 
 <?php
@@ -161,7 +162,7 @@ $(document).ready(function(){
     }
 </style>
 </head>
-<body>
+
 <nav class="navbar navbar-custom navbar-static-top">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
