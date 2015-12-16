@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
+
 <link rel="shortcut icon" href="favicon.ico">
 
 <?php
@@ -27,8 +27,8 @@ $register=$_POST['reg'];
       $count_email = mysql_num_rows($email_check_query);    //if not 0. email already in use
 
       //Validate Password
-      //$error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
-      $error = NULL;
+      $error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
+      //$error = NULL;
 
       //hash password
       $password = hashPassword($password);    //hashes password for storage into database
@@ -162,7 +162,7 @@ $(document).ready(function(){
     }
 </style>
 </head>
-
+<body>
 <nav class="navbar navbar-custom navbar-static-top">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
