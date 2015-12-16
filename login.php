@@ -51,7 +51,7 @@ echo "<br>";
         //login
         echo "<br>";  
         echo 'logged in!';
-        //session_destroy();
+        session_destroy();
         session_start();
 			  $_SESSION['email'] = $email;
 

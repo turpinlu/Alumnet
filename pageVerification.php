@@ -6,7 +6,8 @@
 //include 'secure.php';
 session_start();
 if (!$_SESSION['email']) {
-	die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
+	echo "no sesh in email";
+	//die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
 }
 	
 ?>
