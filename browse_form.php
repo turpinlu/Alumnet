@@ -59,7 +59,7 @@
 
 	$query= "SELECT * FROM ACCOUNT, DEGREE, DEGNAME, ACCDEG WHERE ACCDEG.ACCOUNTNUM=ACCOUNT.ACCOUNTNUM AND ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE $fn $ln $dg $gd $ct $st";
 	
-	if($r1 = mysql_query($query) && x==0){
+	if($r1 = mysql_query($query) && $x==0){
 		echo '<table class="table table-striped table-hover ">';
         echo '<thead>';
         echo '<tr class="info">';
