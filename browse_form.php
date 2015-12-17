@@ -3,7 +3,7 @@
 	//strings for query function
 	$x=1;
 
-	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+	if ($_SERVER['REQUEST_METHOD'] == 'POST' || $_SERVER['REQUEST_METHOD'] == 'GET'){
 		$x=0;
 	}
 	if(!empty($_POST['fname'])){
