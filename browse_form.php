@@ -2,7 +2,10 @@
 
 	//strings for query function
 	$x=1;
-
+	
+	if(!empty($_POST['search'])){
+		$x=0;
+	}
 	if(!empty($_POST['fname'])){
 		$fname=$_POST['fname'];
 		$fn="AND FNAME='$fname'";
