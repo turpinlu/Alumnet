@@ -2,8 +2,8 @@
 
 	//strings for query function
 	$x=1;
-	
-	if(!empty($_POST['search'])){
+
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$x=0;
 	}
 	if(!empty($_POST['fname'])){
