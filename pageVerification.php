@@ -1,8 +1,7 @@
 
 <?php
  // MySQL Database Connect
-//include 'dataLogin.php';
-//include 'myDataLogin.php';
+include 'dataLogin.php';
 //include 'secure.php';
 session_start();
 if (!$_SESSION['email']) {

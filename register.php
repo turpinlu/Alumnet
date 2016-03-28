@@ -6,7 +6,6 @@
 <?php
  // MySQL Database Connect
 include 'dataLogin.php';
-//include 'myDataLogin.php';
 include 'secure.php';
 
 $register=$_POST['reg'];

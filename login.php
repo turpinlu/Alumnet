@@ -1,6 +1,5 @@
 <?php
 include 'dataLogin.php';
-//include 'myDataLogin.php'
 include 'secure.php';
 
 
@@ -38,11 +37,12 @@ if ($numrows!=0){
         session_destroy();
         session_start();
 			  $_SESSION['email'] = $email;
-
         $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";             //should keep security log-will need this information
 				$time =new DateTime();
 				$_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-        
+
+       
+
         die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 
 		}
