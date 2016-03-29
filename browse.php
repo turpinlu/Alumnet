@@ -116,10 +116,10 @@ include "dataLogin.php";
               </div>   
              </div>            
            </div>
-          </div>
+          </div> 
           <div class="col-lg-6">
               <?php include "browse_display.php";?>
-          </div>
+          </div>   
         </div>
       </div>
     </div>

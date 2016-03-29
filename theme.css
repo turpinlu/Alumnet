@@ -7071,7 +7071,8 @@ label,
 }
 
 .popup {
-  margin: 70px auto;
+  margin: 0px auto;
+  margin-left: 70px auto;
   padding: 20px;
   background: #4e5d6c;
   width: 90%;

@@ -97,7 +97,7 @@
 	            </tbody>
 	          </table>
 	        </div>
-	       		<textarea rows="4" cols="50">
+	       		<textarea rows="4" cols="30">
 				Hello, My name is ....
 				</textarea>
 				<div class="box">
@@ -109,8 +109,6 @@
 	  </div>
 	</div>
 </div>
-<div id="popup2" class="overlay3">
-	<?php echo "Hello"; ?>
-</div>	
+
 
 
