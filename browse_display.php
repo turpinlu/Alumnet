@@ -55,7 +55,12 @@
 	  <div class="content">
 	    <div class="panel-body">
 	      <div class="row">
-	        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> </div>
+	        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> 
+	        	<div class="box">
+					<form action="" method="get">
+					<td> <button class="button3" name="mess" type="submit">Message</button></td>
+				</div>
+	        </div>
 	        <div class=" col-md-9 col-lg-9 ">
 	          <table class="table table-user-information">
 	            <tbody>
