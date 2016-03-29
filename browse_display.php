@@ -97,13 +97,12 @@
 	            </tbody>
 	          </table>
 	        </div>
-	       		<textarea rows="4" cols="30">
-				Hello, My name is ....
-				</textarea>
-				<div class="box">
-					<form action="" method="get">
-                    <button type="submit" name="mess" class="btn btn-primary">Send Message</button>
-				</div>
+	         <div class="col-md-8 col-lg-8 " align="left">
+	       		<textarea rows="4" cols="43" text-align="left">Hello, My name is ....</textarea>
+			</div>
+			 <div class="col-md-4 col-lg-4 " align="center">
+				<button type="submit" name="mess" class="btn btn-primary">Send Message</button>
+			</div>
 	      </div>
 	    </div>
 	  </div>
