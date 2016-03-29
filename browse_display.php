@@ -56,10 +56,6 @@
 	    <div class="panel-body">
 	      <div class="row">
 	        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> 
-	        	<div class="box">
-					<form action="#popup2" method="get">
-					<td> <button class="button3" name="mess" type="submit">Message</button></td>
-				</div>
 	        </div>
 	        <div class=" col-md-9 col-lg-9 ">
 	          <table class="table table-user-information">
@@ -102,8 +98,12 @@
 	          </table>
 	        </div>
 	       		<textarea rows="4" cols="50">
-				At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+				Hello, My name is ....
 				</textarea>
+				<div class="box">
+					<form action="" method="get">
+                    <button type="submit" name="mess" class="btn btn-primary">Send Message</button>
+				</div>
 	      </div>
 	    </div>
 	  </div>
