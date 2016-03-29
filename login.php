@@ -13,7 +13,6 @@ $password = $_POST['user-password'];
 $result = mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'");
 
 if (!$result){
- 
   die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 }
 

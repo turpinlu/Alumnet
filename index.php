@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php 
 session_start();
+echo $_SESSION['email'];
 include "dataLogin.php";
 include "pageVerification.php";
 
