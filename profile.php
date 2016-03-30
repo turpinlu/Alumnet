@@ -150,7 +150,16 @@ $i = $_SESSION['email'];
                 </div>
               </div>
             </div>
-
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <h3 class="panel-title"><? echo "New Message";?></h3></div>
+                <div class=" col-md-9 col-lg-9 ">
+                  <table class="table table-user-information">
+                   
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
