@@ -68,6 +68,15 @@ $i = $_SESSION['email'];
         margin-top: 15px;
     }
 </style>
+
+
+<style>
+      #map {
+        width: 500px;
+        height: 400px;
+      }
+</style>
+
 </head>
 <body>
 
@@ -103,7 +112,7 @@ $i = $_SESSION['email'];
           <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title"><? echo $fname; echo " "; echo $lname; ?></h3>
-              <A href="edit.php" >Edit Profile</A>
+              <A href="edit.php" >Edit Proadsfile</A>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -165,5 +174,21 @@ $i = $_SESSION['email'];
       </div>
     </div>
 </div>
+
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 44.540, lng: -78.546},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+
+
+
 </body>
 </html>
