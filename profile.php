@@ -112,7 +112,7 @@ $i = $_SESSION['email'];
           <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title"><? echo $fname; echo " "; echo $lname; ?></h3>
-              <A href="edit.php" >Edit Proadsfile</A>
+              <A href="edit.php" >Edit Profile</A>
             </div>
             <div class="panel-body">
               <div class="row">
@@ -174,7 +174,8 @@ $i = $_SESSION['email'];
       </div>
     </div>
 </div>
-
+ <div class="panel-body">
+  <center>
 <div id="map"></div>
     <script>
       function initMap() {
@@ -187,8 +188,8 @@ $i = $_SESSION['email'];
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
-
-
+</div>
+</center>
 
 </body>
 </html>
