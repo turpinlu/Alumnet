@@ -48,6 +48,7 @@ include "pageVerification.php";
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php">Home</a></li>
                 <li><a href="profile.php">Profile</a></li>
+                <li><a href="inbox.php">Inbox</a></li>
                 <li><a href="browse.php">Browse</a></li>
                 <li><a href="logout.php">Log Out</a></li>
             </ul>

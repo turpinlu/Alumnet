@@ -98,6 +98,7 @@ $i = $_SESSION['email'];
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Home</a></li>
                 <li class="active"><a href="profile.php">Profile</a></li>
+                <li><a href="inbox.php">Inbox</a></li>
                 <li><a href="browse.php">Browse</a></li>
                 <li><a href="logout.php">Log Out</a></li>
             </ul>
