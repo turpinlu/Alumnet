@@ -98,11 +98,13 @@
 	          </table>
 	        </div>
 	         <div class="col-md-8 col-lg-8 " align="left">
-	       		<textarea rows="4" cols="43" text-align="left">Hello, My name is ....</textarea>
+	       		<textarea name="MESSE" rows="4" cols="43" text-align="left">Hello, My name is ....</textarea>
 			</div>
-			 <div class="col-md-4 col-lg-4 " align="center">
-				<button type="submit" name="mess" class="btn btn-primary">Send Message</button>
-			</div>
+			<form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
+				<div class="col-md-4 col-lg-4 " align="center">
+					<button type="submit" name="mess" class="btn btn-primary">Send Message</button>
+				</div>
+			</form>
 	      </div>
 	    </div>
 	  </div>
