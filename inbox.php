@@ -4,6 +4,29 @@ session_start();
 include "pageVerification.php";
 include "dataLogin.php";
 
+
+    $i = $_SESSION['email'];
+    //Start Messaging Queries
+
+    $query3 = "SELECT * FROM `MESSAGES` WHERE `TO_USER` = '$i' AND `DELETED` = '0' ORDER BY `DATE_SENT` DESC";
+    $sql = mysql_query($query3);
+    while($row3 = mysql_fetch_array($sql)){
+        $fromuser = "{$row3[2]}";
+        $message = "{$row3[3]}";
+        $date = "{$row3[6]}";
+    }
+
+    $query4 = "SELECT FNAME FROM ACCOUNT WHERE EMAIL = '$fromuser'";
+    $r4 = mysql_query($query4);
+    while($row4 = mysql_fetch_array($r4)){
+        $fromfirst = "{$row4[0]}";
+    }
+    $query5 = "SELECT LNAME FROM ACCOUNT WHERE EMAIL = '$fromuser'";
+    $r5 = mysql_query($query5);
+    while($row5 = mysql_fetch_array($r5)){
+        $fromlast = "{$row5[0]}";
+    }
+
 ?>
 <html lang="en">
 <link rel="shortcut icon" href="favicon.ico">
@@ -55,6 +78,18 @@ include "dataLogin.php";
                 <div class="page-header">
                     <h1 id="forms">Inbox</h1>
                 </div>
+                <!-- Start of Inbox -->
+
+                <table width='1200'>
+                <tr><th>FROM</th><th>MESSAGE</th><th>DATE</th></tr>
+
+                <?php
+
+                    echo "<tr><td>$fromfirst $fromlast</td><td>$message</td><td>$date</td></tr>";
+
+                ?>
+
+                </table>
             </div>
         </div>
         
