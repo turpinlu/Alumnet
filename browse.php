@@ -4,6 +4,22 @@ session_start();
 include "pageVerification.php";
 include "dataLogin.php";
 
+if (isset($_POST['send'])){
+
+$toser = $_SESSION['toser'];
+$foser = $_SESSION['email'];
+$msg = $_POST['message'];
+
+$sql = "INSERT INTO MESSAGES (TO_USER, FROM_USER, MESSAGE) VALUES ('$toser', '$foser', '$msg')";
+if(mysql_query($sql, $connection)){
+        echo '<script language="javascript">';
+        echo 'alert("Message Sent Successfully!")';
+        echo '</script>';
+      } else {
+        echo "<p align='center'> Error sending Message </p>" . mysql_error($connection);
+      }
+}
+
 ?>
 <html lang="en">
 <link rel="shortcut icon" href="favicon.ico">

@@ -3,6 +3,8 @@
 	<?php
 	    $var = $_GET['var'];
 		session_start();
+		$_SESSION['toser'] = $var;
+		
 		include "dataLogin.php";
 
 		$i = $_SESSION['email'];
@@ -97,12 +99,13 @@
 	            </tbody>
 	          </table>
 	        </div>
+
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 	         <div class="col-md-8 col-lg-8 " align="left">
-	       		<textarea name="MESSE" rows="4" cols="43" text-align="left">Hello, My name is ....</textarea>
+	       		<textarea name="message" rows="4" cols="43" text-align="left"></textarea>
 			</div>
-			<form action="" method="post" class="form-horizontal" enctype="multipart/form-data">
 				<div class="col-md-4 col-lg-4 " align="center">
-					<button type="submit" name="mess" class="btn btn-primary">Send Message</button>
+					<button type="submit" name="send" class="btn btn-primary">Send Message</button>
 				</div>
 			</form>
 	      </div>
