@@ -6,9 +6,16 @@ include "dataLogin.php";
 
 
     $i = $_SESSION['email'];
+
+    $query = "SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL = '$i'";
+    $sql2 = mysql_query($query);
+    while($row2 = mysql_fetch_array($sql2)){
+        $accnum = "{$row2[0]}";
+    }
+
     //Start Messaging Queries
 
-    $query3 = "SELECT * FROM `MESSAGES` WHERE `TO_USER` = '$i' AND `DELETED` = '0' ORDER BY `DATE_SENT` DESC";
+    $query3 = "SELECT * FROM `MESSAGES` WHERE `TO_USER` = '$accnum' AND `DELETED` = '0' ORDER BY `DATE_SENT` DESC";
     $sql = mysql_query($query3);
     while($row3 = mysql_fetch_array($sql)){
         $fromuser = "{$row3[2]}";
