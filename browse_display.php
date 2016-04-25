@@ -56,9 +56,21 @@
 	  <a class="close" href="#">&#10006;</a>
 	  <div class="content">
 	    <div class="panel-body">
-	      <div class="row">
-	        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> 
-	        </div>
+	      <div class="row"> 
+	      	<?php
+                  $i = $_SESSION['email'];
+                  $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$i'";
+                  $r = mysql_query($query);
+                  $row = mysql_fetch_array($r);
+                  $accountnum = $row['ACCOUNTNUM'];
+                  $select_query = "SELECT images_path FROM  images_tbl WHERE ACCOUNTNUM='$accountnum'";
+                  $sql = mysql_query($select_query) or die(mysql_error());   
+                  while($row = mysql_fetch_array($sql)){
+                    $image="uploads/".$row['images_path'];
+                    echo '<div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> </div>';
+                  }
+            ?>		
+	      </div>
 	        <div class=" col-md-9 col-lg-9 ">
 	          <table class="table table-user-information">
 	            <tbody>
