@@ -31,16 +31,38 @@ $register=$_POST['reg'];
 
       //hash password
       $password = hashPassword($password);    //hashes password for storage into database
+      if(!$error && !$pwmatch && $count_email==0){
+          echo"Cleared for insertion";
+          //insert into database--create account
 
-    if(!$error && !$pwmatch && $count_email==0){
-      //insert into database--create account
+            if(mysql_query("LOCK TABLES account WRITE")){
+            }
+            //generates random confirmation code
+            //Activated is 0 until confirmed, then 1
+            $confirm_code=rand();
 
-        if(mysql_query("LOCK TABLES account WRITE")){
-        }
-     	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL, CITY, STATE) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email','NA','NA')";
-        if (mysql_query($query)){
-        //automatically login--create new session
-                
+         	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL, CITY, STATE, ACTIVATED, CONFIRM) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email','NA','NA','0','$confirm_code')";
+            echo '  query is   ';
+            echo $query;
+            if (mysql_query($query)){
+              echo"query complete";
+              //send email
+              $message=
+              "
+              Confirm your email
+              Click the link below to verify your account
+              http://www.alumnet.xyz/verify_email.php?username=$email&code=$confirm_code
+              ";
+              $subject="Alumnet Account Confirmation";
+              $headers="From:  DO_NOT_REPLY@alumnet.xyz";
+              $mail=mail($email, $subject, $message,$headers);
+              if ($mail){
+                echo "Registration complete please confirm email address";
+              }
+              else{
+                echo"Email verificaiton message failed to send";
+              }
+
           $query7 = "SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL = '$email'";
           $r7 = mysql_query($query7);
           $row7 = mysql_fetch_array($r7);
@@ -329,7 +351,7 @@ $(document).ready(function(){
 </div><!-- /.modal -->
 </div>
 </div>
-<div class="col-md-5 col-xl-height col-sm-offset-0"> 
+<div class="col-md-5 col-xl-height col-sm-offset-0">
     <div class="jumbotron">
         <h1>Networking Made Easy</h1>
         <p>For those who leave Salisbury, but for whom Salisbury never leaves, this is where you belong: Salisbury University's Alumni Network (Alumnet, for short). Strengthen your Salisbury connection and help support activities of other alumni by becoming a member.</p>
