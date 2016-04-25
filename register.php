@@ -50,7 +50,9 @@ $register=$_POST['reg'];
               $getAcct="SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL='$email'";
               if(mysql_query($getAcct)){
                 $theDate=date("Y-m-d");
-                $query2="INSERT INTO images_tbl (ACCOUNTNUM, images_path, submission_date) VALUES ('$getAcct', 'DefaultPic.jpeg', '$theDate')";
+                $row = mysql_fetch_array($r);
+                $currentAcct=$row['ACCOUNTNUM'];
+                $query2="INSERT INTO images_tbl (ACCOUNTNUM, images_path, submission_date) VALUES ('$currentAcct', 'DefaultPic.jpeg', '$theDate')";
                 if(mysql_query($query2)){
                   echo "done";
                 }
