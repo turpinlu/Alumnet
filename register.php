@@ -220,6 +220,9 @@ $(document).ready(function(){
                                     <div class="form-group">
                                        <button type="submit" class="btn btn-primary btn-block" name="sign_in">Sign in</button>
                                     </div>
+                                    <div class="form-group">
+                                       <button type="submit" class="btn btn-primary btn-block" name="forgot_password">Forgot Password</button>
+                                    </div>
                                  </form>
                               </div>
                            </div>
