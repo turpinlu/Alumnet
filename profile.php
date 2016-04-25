@@ -179,10 +179,15 @@ $i = $_SESSION['email'];
 <div id="map"></div>
     <script>
       function initMap() {
+        var myLatLng = {lat: 38.346515, lng: -75.6056542};
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
-          center: {lat: 38.346515, lng: -75.6056542},
-          zoom: 8
+          center: myLatLng,
+          zoom: 4
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
         });
       }
     </script>
