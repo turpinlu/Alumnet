@@ -41,6 +41,7 @@ $reset=$_POST['res'];
         else{
           echo"Email failed to send";
         }
+          die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
 
       }
       else{
@@ -164,7 +165,7 @@ $(document).ready(function(){
 
 <div class="row">
     <div class="col-md-12 col-xl-height col-sm-offset-0 col-md-offset-0">
-        <form role="form" action="reset_password.php" method="post">
+        <form role="form" action="<?php echo $_SERVER['PHP_SELF'];?>"method="post">
             <h2>So you've forgotton your password?</h2>
 
             <hr class="colorgraph">

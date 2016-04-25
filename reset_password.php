@@ -9,8 +9,42 @@
  include 'dataLogin.php';
  include 'secure.php';
  $username = $_GET['username'];
+ $confirm_code=$_GET['code'];
+     $reset=$_POST['res'];
+  if ($reset){
 
- if ($reset){
+    $query= "SELECT * FROM ACCOUNT WHERE EMAIL = '$username'";
+    $r = mysql_query($query);
+    $row = mysql_fetch_array($r);
+    $confirm_code=$row['CONFIRM'];
+    if ($confirm_code==$code){
+      $password=$_POST['password'];
+      $confrim_password=$_POST['password_confirmation'];
+      $pwmatch = strcmp($password_confirmation, $password);
+      //Validate Password
+      //$error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
+      //$error = NULL;
+
+      //hash password
+      $password = hashPassword($password);    //hashes password for storage into database
+      if(!$error && !$pwmatch){
+        if(mysql_query("LOCK TABLES account WRITE")){
+          $query="UPDATE ACCOUNT SET PASSWORD='$password'";
+          echo '  query is   ';
+          echo $query;
+          if (mysql_query($query)){
+            echo"query complete";
+            session_destroy();
+            session_start();
+            $_SESSION['email'] = $email;
+            $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";     //should keep security log-will need this information
+            $time =new DateTime();
+            $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
+            die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
+          }
+        }
+      }
+}
 
 }
 
@@ -148,5 +182,16 @@ $(document).ready(function(){
                 <div class="col-xs-12 col-md-6"><input type="submit" value="Reset" name="res" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
             </div>
             </form>
+            <?php
+                if ($pwmatch){
+            ?>
+                <div class="row">
+                    <div class="col-xs-8 col-sm-9 col-md-9">
+                        <p> *** The passwords must match</p>
+                    </div>
+                </div>
+            <?php
+                }
+            ?>
 
 </html>
