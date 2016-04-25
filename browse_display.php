@@ -58,11 +58,6 @@
 	    <div class="panel-body">
 	      <div class="row"> 
 	      	<?php
-                  $i = $_SESSION['email'];
-                  $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$i'";
-                  $r = mysql_query($query);
-                  $row = mysql_fetch_array($r);
-                  $accountnum = $row['ACCOUNTNUM'];
                   $select_query = "SELECT images_path FROM  images_tbl WHERE ACCOUNTNUM='$accountnum'";
                   $sql = mysql_query($select_query) or die(mysql_error());   
                   while($row = mysql_fetch_array($sql)){
