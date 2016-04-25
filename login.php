@@ -7,8 +7,9 @@ include 'secure.php';
 $email = cleanStringInput($_POST['user-email']);
 $password = $_POST['user-password'];
 
+
 //$query = "SELECT * FROM ACCOUNT WHERE EMAIL='$email'";
-          
+
 
 $result = mysql_query("SELECT * FROM ACCOUNT WHERE EMAIL='$email'");
 
@@ -24,6 +25,7 @@ if ($numrows!=0){
 	while($row=mysql_fetch_array($result)){
 		$mail = $row['EMAIL'];
 		$pass = $row['PASSWORD'];
+    $active=$row['ACTIVATED'];
 	}
 }
 
@@ -32,15 +34,18 @@ if ($numrows!=0){
 
 		if ($email==$mail && password_verify($password, $pass)){
         //login
-       
+        if($active==0){
+          $message = "You're account has not been activated.\\nPlease check your email for verification link.";
+          echo "<script type='text/javascript'>alert('$message');</script>";
+          die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
+        }
+
         session_destroy();
         session_start();
 			  $_SESSION['email'] = $email;
         $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";             //should keep security log-will need this information
 				$time =new DateTime();
 				$_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-
-       
 
         die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 
@@ -55,6 +60,6 @@ if ($numrows!=0){
 ?>
 <html lang="en">
 <body>
-  
+
 </body>
 </html>
