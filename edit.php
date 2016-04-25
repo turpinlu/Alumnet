@@ -171,9 +171,11 @@ if (isset($_POST['update'])){
     if(move_uploaded_file("$temp_name", "$target_path")) {
 
         //$query_upload="INSERT INTO `images_tbl` ( 'images_path', 'submission_date') VALUES ('$target_path', '".date("Y-m-d")."')";
-
-        $query_upload="UPDATE `images_tbl` SET ACCOUNTNUM='$accountnum', images_path='$target_path',submission_date='$theDate' WHERE ACCOUNTNUM = '$accountnum'";
-
+        if(!$image) {
+          $query_upload="INSERT INTO images_tbl (ACCOUNTNUM, images_path, submission_date) VALUES ('$accountnum', '$target_path', '$theDate')";
+        } else {
+          $query_upload="UPDATE `images_tbl` SET ACCOUNTNUM='$accountnum', images_path='$target_path', submission_date='$theDate' WHERE ACCOUNTNUM = '$accountnum'";
+        }
         mysql_query($query_upload) or die("error in $query_upload == ----> ".mysql_error()); 
 
         die("<script>location.href = 'http://alumnet.xyz/edit.php'</script>");
