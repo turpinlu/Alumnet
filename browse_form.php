@@ -56,6 +56,7 @@
 
 	if(!empty($_POST['state'])){
 		$state=$_POST['state'];
+<<<<<<< HEAD
 
 		
 		$x=0;
@@ -63,6 +64,8 @@
 
 		$st="AND STATE='$state'";
 
+=======
+>>>>>>> origin/master
 	}
 	else{
 		$st="";

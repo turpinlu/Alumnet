@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
 session_start();
-//include "pageVerification.php";
+include "pageVerification.php";
 include "dataLogin.php";
 
 if (isset($_POST['send'])){
