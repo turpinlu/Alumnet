@@ -127,7 +127,7 @@ $i = $_SESSION['email'];
                   $sql = mysql_query($select_query) or die(mysql_error());   
                   while($row = mysql_fetch_array($sql)){
                     $image="uploads/".$row['images_path'];
-                    echo "<div class='col-md-10 col-lg-10 ' align='left'><img alt='User Pic' src='$image' class='img-circle img-responsive'> <h6></h6></div>";
+                    echo "<div class='col-md-10 col-lg-10 ' align='left'><img alt='User Pic' height='250' width='250' src='$image' class='img-circle img-responsive'> <h6></h6></div>";
         }
                 ?>
                 

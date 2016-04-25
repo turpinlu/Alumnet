@@ -137,7 +137,7 @@ if (isset($_POST['update'])){
         $sql = mysql_query($select_query) or die(mysql_error());   
         while($row = mysql_fetch_array($sql)){
           $image="uploads/".$row['images_path'];
-          echo "<div class='col-md-10 col-lg-10 ' align='center'><img alt='User Pic' src='$image' class='img-circle img-responsive'> <h6>Upload a different photo...</h6></div>";
+          echo "<div class='col-md-10 col-lg-10 ' align='center'><img alt='User Pic' src='$image' height='250' width='250'class='img-circle img-responsive'> <h6>Upload a different photo...</h6></div>";
         }
         ?>
 
