@@ -19,7 +19,7 @@
     $confirm_code=$row['CONFIRM'];
     if ($confirm_code==$code){
       $password=$_POST['password'];
-      $confrim_password=$_POST['password_confirmation'];
+      $confirm_password=$_POST['password_confirmation'];
       $pwmatch = strcmp($confirm_password, $password);
       //Validate Password
       //$error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
