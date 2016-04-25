@@ -34,20 +34,23 @@ if ($numrows!=0){
 
 		if ($email==$mail && password_verify($password, $pass)){
         //login
-        if($active==0){
-          $message = "You're account has not been activated.\\nPlease check your email for verification link.";
-          echo "<script type='text/javascript'>alert('$message');</script>";
+        if($active==1){
+          session_destroy();
+          session_start();
+          $_SESSION['email'] = $email;
+          $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";             //should keep security log-will need this information
+          $time =new DateTime();
+          $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
+
           die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
+
+        }
+        else{
+            $verifymessage = "You're account has not been activated.\\nPlease check your email for verification link.";
+            echo "<script type='text/javascript'>alert('$verifymessage');</script>";
+            die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
         }
 
-        session_destroy();
-        session_start();
-			  $_SESSION['email'] = $email;
-        $_SESSION['page'] = "{$_SERVER['PHP_SELF']}";             //should keep security log-will need this information
-				$time =new DateTime();
-				$_SESSION['start_time']=$time->format('Y-m-d H:i:s');
-
-        die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
 
 		}
       else{
