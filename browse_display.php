@@ -2,13 +2,16 @@
 <div id="popup1" class="overlay3">
 	<?php
 	    $var = $_GET['var'];
+<<<<<<< Updated upstream
 		session_start();
 		$_SESSION['toser'] = $var;
 		
+=======
+		//session_start();
+>>>>>>> Stashed changes
 		include "dataLogin.php";
-
 		$i = $_SESSION['email'];
-
+		
 		    $query = "SELECT * FROM ACCOUNT WHERE ACCOUNTNUM = '$var'";
 		    $r = mysql_query($query);
 		    $row = mysql_fetch_array($r);
@@ -21,7 +24,7 @@
 		    $fname = $row['FNAME']; 
 		    $lname = $row['LNAME'];
 		    $intnum = $row['INTNUM'];
-		    $description = $row['COVERSUM'];   
+		    $description = $row['COVERSUM'];
 
 		    $query2 = "SELECT * FROM INTEREST WHERE INTNUM = '$intnum'";
 		    $s = mysql_query($query2);
