@@ -37,7 +37,7 @@ if ($numrows!=0){
         if($active==0){
           $message = "You're account has not been activated.\\nPlease check your email for verification link.";
           echo "<script type='text/javascript'>alert('$message');</script>";
-          die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
+          die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
         }
 
         session_destroy();
@@ -53,7 +53,7 @@ if ($numrows!=0){
       else{
         $message = "Username and/or Password incorrect.\\nTry again.";
         echo "<script type='text/javascript'>alert('$message');</script>";
-        die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
+        die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
       }
 //}
 
