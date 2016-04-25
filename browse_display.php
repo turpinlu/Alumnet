@@ -67,8 +67,8 @@
                   $sql = mysql_query($select_query) or die(mysql_error());   
                   while($row = mysql_fetch_array($sql)){
                     $image="uploads/".$row['images_path'];
-                    echo '<div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://pbs.twimg.com/profile_images/3470882798/b30f3b4f149669a38b52fe513ed1e3e5.jpeg" class="img-circle img-responsive"> </div>';
-                  }
+                    echo "<div class='col-md-10 col-lg-10 ' align='center'><img alt='User Pic' src='$image' class='img-circle img-responsive'> <h6>Upload a different photo...</h6></div>";
+        	}
             ?>		
 	      </div>
 	        <div class=" col-md-9 col-lg-9 ">
