@@ -2,7 +2,7 @@
 <?php 
 session_start();
 include "dataLogin.php";
-//include "pageVerification.php";
+include "pageVerification.php";
 
 ?>
 <html lang="en">
