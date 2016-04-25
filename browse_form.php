@@ -56,13 +56,6 @@
 
 	if(!empty($_POST['state'])){
 		$state=$_POST['state'];
-<<<<<<< Updated upstream
-		$gd="AND STATE='$state'";
-		$x=0;
-		$y=1;
-=======
-		$st="AND STATE='$state'";
->>>>>>> Stashed changes
 	}
 	else{
 		$st="";

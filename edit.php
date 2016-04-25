@@ -135,7 +135,7 @@ if (isset($_POST['update'])){
         $select_query = "SELECT images_path FROM  images_tbl WHERE ACCOUNTNUM='$accountnum'";
         $sql = mysql_query($select_query) or die(mysql_error());   
         while($row = mysql_fetch_array($sql)){
-          $image=$row['images_path'];
+          $image="uploads/".$row['images_path'];
           //echo "$image";
           //echo "<img src= '$image' height='420' width='420' >";
           echo "<div class='col-md-10 col-lg-10 ' align='center'><img alt='User Pic' src='$image' class='img-circle img-responsive'> <h6>Upload a different photo...</h6></div>";
@@ -168,7 +168,8 @@ if (isset($_POST['update'])){
       $imagename=date("d-m-Y")."-".time().$ext;
       //$target_path = getcwd()."/".$imagename;
       $target_path = $imagename;
-    if(move_uploaded_file("$temp_name", "$target_path")) {
+      
+    if(move_uploaded_file("$temp_name", "uploads/"."$target_path")) {
 
         //$query_upload="INSERT INTO `images_tbl` ( 'images_path', 'submission_date') VALUES ('$target_path', '".date("Y-m-d")."')";
         if(!$image) {

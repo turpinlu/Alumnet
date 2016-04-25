@@ -2,13 +2,12 @@
 <div id="popup1" class="overlay3">
 	<?php
 	    $var = $_GET['var'];
-<<<<<<< Updated upstream
+
 		session_start();
 		$_SESSION['toser'] = $var;
 		
-=======
+
 		//session_start();
->>>>>>> Stashed changes
 		include "dataLogin.php";
 		$i = $_SESSION['email'];
 		
