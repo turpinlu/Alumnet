@@ -42,10 +42,20 @@ $register=$_POST['reg'];
             $confirm_code=rand();
 
          	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL, CITY, STATE, ACTIVATED, CONFIRM) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email','NA','NA','0','$confirm_code')";
+            
             echo '  query is   ';
             echo $query;
             if (mysql_query($query)){
               echo"query complete";
+              $getAcct="SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL='$email'";
+              if(mysql_query($getAcct)){
+                $theDate=date("Y-m-d");
+                $query2="INSERT INTO images_tbl (ACCOUNTNUM, images_path, submission_date) VALUES ('$getAcct', 'DefaultPic.jpeg', '$theDate')";
+                if(mysql_query($query2)){
+                  echo "done";
+                }
+              }
+
               //send email
               $message=
               "
