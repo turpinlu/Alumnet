@@ -6,19 +6,23 @@ include "dataLogin.php";
 
 if (isset($_POST['send'])){
 
-$toser = $_SESSION['toser'];
-$foser = $_SESSION['email'];
-$msg = $_POST['message'];
+  $toser = $_SESSION['toser'];
+  $foser = $_SESSION['email'];
+  $msg = $_POST['message'];
+  $y = 0;
 
-$sql = "INSERT INTO MESSAGES (TO_USER, FROM_USER, MESSAGE) VALUES ('$toser', '$foser', '$msg')";
-if(mysql_query($sql, $connection)){
-        echo '<script language="javascript">';
-        echo 'alert("Message Sent Successfully!")';
-        echo '</script>';
-      } else {
-        echo "<p align='center'> Error sending Message </p>" . mysql_error($connection);
-      }
+  $sql = "INSERT INTO MESSAGES (TO_USER, FROM_USER, MESSAGE) VALUES ('$toser', '$foser', '$msg')";
+  if(mysql_query($sql, $connection)){
+          echo '<script language="javascript">';
+          echo 'alert("Message Sent Successfully!")';
+          echo '</script>';
+  } else {
+    echo "<p align='center'> Error sending Message </p>" . mysql_error($connection);
+  }
+  //die("<script>location.href = 'alumnet.xyz/browse.php?var='".$toser."'&message=#popup1'</script>");
+//die('Location: alumnet.xyz/browse.php?var='.$toser.'&message=#popup1');
 }
+
 
 ?>
 <html lang="en">

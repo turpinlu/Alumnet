@@ -181,7 +181,7 @@ $i = $_SESSION['email'];
       function initMap() {
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {
-          center: {lat: 44.540, lng: -78.546},
+          center: {lat: 38.346515, lng: -75.6056542},
           zoom: 8
         });
       }

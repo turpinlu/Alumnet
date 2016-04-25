@@ -10,6 +10,7 @@
 		$fname=$_POST['fname'];
 		$fn="AND FNAME='$fname'";
 		$x=0;
+		$y=1;
 	}else{
 		$fn="";
 	}
@@ -18,6 +19,7 @@
 		$lname=$_POST['lname'];
 		$ln="AND LNAME='$lname'";
 		$x=0;
+		$y=1;
 	}else{
 		$ln="";
 	}
@@ -26,6 +28,7 @@
 		$degree=$_POST['degree'];
 		$dg="AND DEGNAME.DEGNAME='$degree'";
 		$x=0;
+		$y=1;
 	}
 	else{
 		$dg="";
@@ -35,6 +38,7 @@
 		$grad=$_POST['grad'];
 		$gd="AND GRADDATE='$grad'";
 		$x=0;
+		$y=1;
 	}
 	else{
 		$gd="";
@@ -44,6 +48,7 @@
 		$city=$_POST['city'];
 		$ct="AND CITY='$city'";
 		$x=0;
+		$y=1;
 	}
 	else{
 		$ct="";
@@ -53,6 +58,7 @@
 		$state=$_POST['state'];
 		$gd="AND STATE='$state'";
 		$x=0;
+		$y=1;
 	}
 	else{
 		$st="";
@@ -61,7 +67,7 @@
 
 
 	$query= "SELECT * FROM ACCOUNT, DEGREE, DEGNAME, ACCDEG WHERE ACCDEG.ACCOUNTNUM=ACCOUNT.ACCOUNTNUM AND ACCDEG.DEGNUM=DEGREE.DEGNUM AND DEGREE.DEGREE=DEGNAME.DEGREE $fn $ln $dg $gd $ct $st";
-	if ($x==0){
+	if ($x==0 && $y!=0){
 		if($r1 = mysql_query($query)){
 			echo '<table class="table table-striped table-hover ">';
 	        echo '<thead>';
