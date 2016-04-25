@@ -5,13 +5,7 @@
 
 		session_start();
 		$_SESSION['toser'] = $var;
-<<<<<<< HEAD
-	
-=======
-		
 
-		//session_start();
->>>>>>> origin/master
 		include "dataLogin.php";
 		$i = $_SESSION['email'];
 		
