@@ -22,15 +22,16 @@
     	$ext= GetImageExtension($imgtype);
     	$imagename=date("d-m-Y")."-".time().$ext;
     	//$target_path = getcwd()."/".$imagename;
-      $target_path = "/folder/".$imagename;
+      $target_path = $imagename;
 		if(move_uploaded_file("$temp_name", "$target_path")) {
-			
+			 echo $accountnum;
     		//$query_upload="INSERT INTO `images_tbl` ( 'images_path', 'submission_date') VALUES ('$target_path', '".date("Y-m-d")."')";
 
-    		$query_upload="INSERT into `images_tbl` (images_path, submission_date) VALUES ('$target_path','$theDate')";
+    		$query_upload="INSERT into `images_tbl` (ACCOUNTNUM, images_path, submission_date) VALUES ('$accountnum','$target_path','$theDate')";
 
     		mysql_query($query_upload) or die("error in $query_upload == ----> ".mysql_error()); 
 
+        die("<script>location.href = 'http://alumnet.xyz/edit.php'</script>");
      	}else{
 
  			exit("Error While uploading image on the server");
@@ -54,16 +55,17 @@
 </form>
 
 <?php
+/*
 //session_start();
 //include("dataLogin.php");
-$select_query = "SELECT images_path FROM  images_tbl WHERE images_id=24";
+$select_query = "SELECT images_path FROM  images_tbl WHERE ACCOUNTNUM='$accountnum'";
 $sql = mysql_query($select_query) or die(mysql_error());   
 while($row = mysql_fetch_array($sql)){
   $image=$row['images_path'];
   //echo "$image";
   echo "<img src= '$image' height='420' width='420' >";
   
-}
+} */
 ?>
 
 
