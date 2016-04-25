@@ -93,7 +93,6 @@ $register=$_POST['reg'];
 
 
 ?>
-
 <head>
 <title>Alumnet&#153 - Networking Made Easy</title>
 <link rel="stylesheet" href="theme.css">
