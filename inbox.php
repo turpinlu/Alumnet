@@ -129,7 +129,7 @@ include "dataLogin.php";
                 </ul>
             </div>
             <button type="button" class="btn btn-default" data-toggle="tooltip" title="Refresh">
-                   <span class="glyphicon glyphicon-refresh"></span>   </button>
+                   <span class="glyphicon glyphicon-refresh">Refresh</span></button>
             <!-- Single button -->
             <div class="btn-group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -142,7 +142,7 @@ include "dataLogin.php";
                 </ul>
             </div>
             <div class="pull-right">
-                <span class="text-muted"><b>1 – 50</b> of <b>277</b></span>
+                <span class="text-muted"><b>1 &#9866 50</b> of <b>277</b></span>
                 <div class="btn-group btn-group-sm">
                     <button type="button" class="btn btn-default">
                         <span class="glyphicon glyphicon-chevron-left"></span>
