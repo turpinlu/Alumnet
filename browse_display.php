@@ -51,7 +51,7 @@
 
 
 	?>
-	<div class="popup">
+	<div class="popup" align="center">
 	  <h2><?php echo $fname.' '.$lname?></h2>
 	  <a class="close" href="#">&#10006;</a>
 	  <div class="content">
@@ -62,7 +62,7 @@
                   $sql = mysql_query($select_query) or die(mysql_error());   
                   while($row = mysql_fetch_array($sql)){
                     $image="uploads/".$row['images_path'];
-                    echo "<div class='col-md-10 col-lg-10 ' align='center'><img alt='User Pic' src='$image' height='250' width='250' class='img-circle img-responsive'> <h6></h6></div>";
+                    echo "<div 'align='center'><img alt='User Pic' src='$image' style=max-height:200px;max-width:200px; class='img-circle img-responsive'> <h6></h6></div>";
         	}
             ?>		
 	      </div>
@@ -109,14 +109,16 @@
 
 			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 	         <div class="col-md-8 col-lg-8 " align="left">
-	       		<textarea name="message" rows="4" cols="37" text-align="left"></textarea>
+	       		<textarea name="message" rows="4" cols="60" text-align="left"></textarea>
 			</div>
-				<div class="col-md-4 col-lg-4 " align="center">
-					<button type="submit" name="send" class="btn btn-primary">Send Message</button>
-				</div>
+				
 			</form>
 	      </div>
+	      <div class="col-md-4 " align="center">
+					<button type="submit" name="send" class="btn btn-primary">Send Message</button>
+			</div>
 	    </div>
+	    
 	  </div>
 	</div>
 </div>
