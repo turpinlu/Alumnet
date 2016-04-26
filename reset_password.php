@@ -28,11 +28,11 @@
       //$error = NULL;
 
       //hash password
-      $password = hashPassword($password);    //hashes password for storage into database
+      $hashpassword = hashPassword($password);    //hashes password for storage into database
       if(!$pwmatch){
         echo "match";
         if(mysql_query("LOCK TABLES account WRITE")){
-          $query="UPDATE ACCOUNT SET PASSWORD='$password'";
+          $query="UPDATE ACCOUNT SET PASSWORD='$hashpassword'";
           echo '  query is   ';
           echo $query;
           if (mysql_query($query)){
