@@ -61,8 +61,8 @@ include "pageVerification.php";
                 <div class="content">
                   <div class="pull-middle">
                     <h1 class="page-header">Welcome to Alumnet</h1>
-                    <p class="lead">Mobile applications are on the way!</p>
-                    
+                    <p class="lead">News Feed expected to launch May 12th 2016</p>
+                    <img src="newsfeed.png" style="max-height:400px;max-width:600px;padding-left:10px;">
                   </div>              
                 </div>
             </div>

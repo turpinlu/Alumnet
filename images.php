@@ -24,7 +24,7 @@
     	//$target_path = getcwd()."/".$imagename;
       $target_path = $imagename;
 		if(move_uploaded_file("$temp_name", "$target_path")) {
-			 echo $accountnum;
+
     		//$query_upload="INSERT INTO `images_tbl` ( 'images_path', 'submission_date') VALUES ('$target_path', '".date("Y-m-d")."')";
 
     		$query_upload="INSERT into `images_tbl` (ACCOUNTNUM, images_path, submission_date) VALUES ('$accountnum','$target_path','$theDate')";

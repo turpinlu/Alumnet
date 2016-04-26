@@ -107,7 +107,7 @@ $i = $_SESSION['email'];
 
                 
 
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+            <div class="align='left' col-xs-12 col-sm-12 col-md-6 col-lg-6 toppad" >
 
 
           <div class="panel panel-info">
@@ -127,12 +127,10 @@ $i = $_SESSION['email'];
                   $sql = mysql_query($select_query) or die(mysql_error());   
                   while($row = mysql_fetch_array($sql)){
                     $image="uploads/".$row['images_path'];
-                    echo "<div class='col-md-10 col-lg-10 ' align='left'><img alt='User Pic' height='250' width='250' src='$image' class='img-circle img-responsive'> <h6></h6></div>";
-        }
+                    echo "<div class='col-md-8 col-lg-8' align='left'><img alt='User Pic' height='250' width='250' src='$image' class='img-circle img-responsive'> <h6></h6></div>";
+                }
                 ?>
-                
-
-                <div class=" col-md-9 col-lg-9 ">
+                <div class="align='right' col-md-9 col-lg-9 ">
                   <table class="table table-user-information">
                     <tbody>
                      <tr>
@@ -181,6 +179,7 @@ $i = $_SESSION['email'];
                    
                   </table>
                 </div>
+
               </div>
             </div>
           </div>
@@ -190,7 +189,7 @@ $i = $_SESSION['email'];
 </div>
  <div class="panel-body">
   <center>
-<div id="map"></div>
+     <div id="map"></div>
     <script>
       function initMap() {
         var myLatLng = {lat: 38.346515, lng: -75.6056542};
@@ -208,6 +207,7 @@ $i = $_SESSION['email'];
     <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
         async defer></script>
 </div>
+
 </center>
 
 </body>
