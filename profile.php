@@ -117,6 +117,7 @@ $i = $_SESSION['email'];
             </div>
             <div class="panel-body">
               <div class="row">
+                <div class="col-md-4">
                 <?php
                   $i = $_SESSION['email'];
                   $query = "SELECT * FROM ACCOUNT WHERE EMAIL = '$i'";
@@ -127,10 +128,11 @@ $i = $_SESSION['email'];
                   $sql = mysql_query($select_query) or die(mysql_error());   
                   while($row = mysql_fetch_array($sql)){
                     $image="uploads/".$row['images_path'];
-                    echo "<div class='col-md-8 col-lg-8' align='left'><img alt='User Pic' height='250' width='250' src='$image' class='img-circle img-responsive'> <h6></h6></div>";
+                    echo "<div align='left'><img alt='User Pic' style=max-height:250px;max-width:250px; src='$image' class='img-circle img-responsive'> <h6></h6></div>";
                 }
                 ?>
-                <div class="align='right' col-md-9 col-lg-9 ">
+              </div>
+                <div class="col-md-4">
                   <table class="table table-user-information">
                     <tbody>
                      <tr>
@@ -179,7 +181,6 @@ $i = $_SESSION['email'];
                    
                   </table>
                 </div>
-
               </div>
             </div>
           </div>
