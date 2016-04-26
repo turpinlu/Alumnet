@@ -11,7 +11,7 @@ include 'secure.php';
 $reset=$_POST['res'];
 
  if ($reset){
-   
+
 
      $email = cleanStringInput($_POST['email']);
 
@@ -35,7 +35,7 @@ $reset=$_POST['res'];
         $headers="From: DO_NOT_REPLY@alumnet.xyz";
         $mail=mail($email, $subject, $message, $headers);
         if ($mail){
-          $message = "Please check your email to confirm your account";
+          $message = "Please check your email to reset password";
           echo "<script type='text/javascript'>alert('$message');</script>";
         }
         else{
