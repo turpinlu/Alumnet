@@ -32,7 +32,7 @@ $register=$_POST['reg'];
       //hash password
       $password = hashPassword($password);    //hashes password for storage into database
       if(!$error && !$pwmatch && $count_email==0){
-          echo"Cleared for insertion";
+          //echo"Cleared for insertion";
           //insert into database--create account
 
             if(mysql_query("LOCK TABLES account WRITE")){
@@ -43,8 +43,8 @@ $register=$_POST['reg'];
 
          	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL, CITY, STATE, ACTIVATED, CONFIRM) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email','NA','NA','0','$confirm_code')";
 
-            echo '  query is   ';
-            echo $query;
+        //    echo '  query is   ';
+          //  echo $query;
             if (mysql_query($query)){
               echo"query complete";
               $getAcct="SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL='$email'";
@@ -54,7 +54,7 @@ $register=$_POST['reg'];
               $currentAcct=$row['ACCOUNTNUM'];
               $query2="INSERT INTO images_tbl (ACCOUNTNUM, images_path, submission_date) VALUES ('$currentAcct', 'DefaultPic.jpeg', '$theDate')";
               if(mysql_query($query2)){
-                echo "done";
+            //    echo "done";
               }
 
 
@@ -69,10 +69,12 @@ $register=$_POST['reg'];
               $headers="From:  DO_NOT_REPLY@alumnet.xyz";
               $mail=mail($email, $subject, $message,$headers);
               if ($mail){
-                echo "Registration complete please confirm email address";
+                $message = "Please check your email for account confirmation coden.";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+                die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
               }
               else{
-                echo"Email verificaiton message failed to send";
+                //echo"Email verificaiton message failed to send";
               }
 
           $query7 = "SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL = '$email'";
