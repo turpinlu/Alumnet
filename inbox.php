@@ -63,9 +63,6 @@ include "dataLogin.php";
     a.list-group-item.read { color: #222;background-color: #F3F3F3; }
     hr { margin-top: 5px;margin-bottom: 10px; }
     .nav-pills>li>a {padding: 5px 10px;}
-    .ad { padding: 5px;background: #F5F5F5;color: #222;font-size: 80%;border: 1px solid #E5E5E5; }
-    .ad a.title {color: #15C;text-decoration: none;font-weight: bold;font-size: 110%;}
-    .ad a.url {color: #093;text-decoration: none;}
 </style>
 </head>
 
@@ -128,8 +125,7 @@ include "dataLogin.php";
                     <li><a href="#">Unstarred</a></li>
                 </ul>
             </div>
-            <button type="button" class="btn btn-default" data-toggle="tooltip" title="Refresh">
-                   <span class="glyphicon glyphicon-refresh">Refresh</span></button>
+            <button type="button" class="btn btn-default" data-toggle="tooltip" title="Refresh"><span class="glyphicon glyphicon-refresh"></span></button>
             <!-- Single button -->
             <div class="btn-group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -142,7 +138,7 @@ include "dataLogin.php";
                 </ul>
             </div>
             <div class="pull-right">
-                <span class="text-muted"><b>1 &#9866 50</b> of <b>277</b></span>
+                <span class="text-muted"><b>1 &#9866 3</b> of <b>3</b></span>
                 <div class="btn-group btn-group-sm">
                     <button type="button" class="btn btn-default">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -160,7 +156,7 @@ include "dataLogin.php";
             <a href="#" class="btn btn-danger btn-sm btn-block" role="button">COMPOSE</a>
             <hr />
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#"><span class="badge pull-right" style="font-color:black;">42</span> Inbox </a>
+                <li class="active"><a href="#"><span class="badge pull-right" style="color: black;">1</span> Inbox </a>
                 </li>
                 <li><a href="">Starred</a></li>
                 <li><a href="">Important</a></li>
@@ -191,9 +187,9 @@ include "dataLogin.php";
                                 </label>
                             </div>
                             <span class="glyphicon glyphicon-star-empty"></span><span class="name" style="min-width: 120px;
-                                        display: inline-block;">Jeremy Powell</span> <span class="">Not sure where to work?</span>
+                                        display: inline-block;">Jeremy Powell</span> <span class="">Can't find a job?</span>
                             <span class="text-muted" style="font-size: 11px;">- Call me!</span> <span
-                                class="badge">12:10 AM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
+                                class="badge">2015-04-20 07:23:16</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
                                 </span></span></a><a href="#" class="list-group-item">
                                     <div class="checkbox">
                                         <label>
@@ -201,9 +197,9 @@ include "dataLogin.php";
                                         </label>
                                     </div>
                                     <span class="glyphicon glyphicon-star-empty"></span><span class="name" style="min-width: 120px;
-                                        display: inline-block;">Richard McVay</span> <span class="">Delaware Position</span>
+                                        display: inline-block;">Richard McVay</span> <span class="">Spring Social</span>
                                     <span class="text-muted" style="font-size: 11px;">- Looking forward to meeting.</span> <span
-                                        class="badge">1:02 AM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
+                                        class="badge">2016-04-15 14:23:44</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
                                         </span></span></a><a href="#" class="list-group-item read">
                                             <div class="checkbox">
                                                 <label>
@@ -211,9 +207,9 @@ include "dataLogin.php";
                                                 </label>
                                             </div>
                                             <span class="glyphicon glyphicon-star"></span><span class="name" style="min-width: 120px;
-                                                display: inline-block;">Lucas Turpin</span> <span class="">Job Offer</span>
-                                            <span class="text-muted" style="font-size: 11px;">- Hey, buddy!</span> <span
-                                                class="badge">2:45 PM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
+                                                display: inline-block;"><?php echo "$fromfirst $fromlast"; ?></span> <span class=""><?php echo "$message"; ?></span>
+                                            <span class="text-muted" style="font-size: 11px;"></span> <span
+                                                class="badge"><?php echo "$date"; ?></span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
                                                 </span></span></a>
                     </div>
                 </div>

@@ -232,6 +232,7 @@ if (isset($_POST['update'])){
                   <option value="8" <?php if ($degree == 8 ) echo "selected" ; ?> >Spanish</option>
                   <option value="9" <?php if ($degree == 9 ) echo "selected" ; ?> >Management</option>
                   <option value="10"<?php if ($degree == 10 ) echo "selected" ; ?> >Business</option>
+                  <option value="11"<?php if ($degree == 11 ) echo "selected" ; ?> >Computer Science</option>
                 </select>
               </div>
             </div>
