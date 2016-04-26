@@ -30,6 +30,7 @@
       //hash password
       $password = hashPassword($password);    //hashes password for storage into database
       if(!$pwmatch){
+        echo "match";
         if(mysql_query("LOCK TABLES account WRITE")){
           $query="UPDATE ACCOUNT SET PASSWORD='$password'";
           echo '  query is   ';
