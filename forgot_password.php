@@ -22,7 +22,7 @@ $reset=$_POST['res'];
       //$error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
       //$error = NULL;
       if ($count_email==1){
-        $query = "SELECT CONFRIM FROM ACCOUNT WHERE EMAIL = '$email'";
+        $query = "SELECT CONFIRM FROM ACCOUNT WHERE EMAIL = '$email'";
         $r = mysql_query($query);
         $row = mysql_fetch_array($r);
         $confirm_code = $row['CONFIRM'];

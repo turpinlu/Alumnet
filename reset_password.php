@@ -22,12 +22,12 @@
       $confirm_password=$_POST['password_confirmation'];
       $pwmatch = strcmp($confirm_password, $password);
       //Validate Password
-      //$error=validatePassword($password);     //checks for password length.Must include capital, lowercase, number, and special character
+      //$error=validatePassword($password);     //checks for password length. Must include capital, lowercase, number, and special character
       //$error = NULL;
 
       //hash password
       $password = hashPassword($password);    //hashes password for storage into database
-      if(!$error && !$pwmatch){
+      if(!$pwmatch){
         if(mysql_query("LOCK TABLES account WRITE")){
           $query="UPDATE ACCOUNT SET PASSWORD='$password'";
           echo '  query is   ';
