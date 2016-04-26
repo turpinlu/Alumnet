@@ -42,7 +42,7 @@ $register=$_POST['reg'];
             $confirm_code=rand();
 
          	  $query="INSERT INTO ACCOUNT (USERNAME, PASSWORD, FNAME, LNAME, EMAIL, CITY, STATE, ACTIVATED, CONFIRM) VALUES ('$display_name', '$password', '$first_name', '$last_name','$email','NA','NA','0','$confirm_code')";
-            
+
             echo '  query is   ';
             echo $query;
             if (mysql_query($query)){
@@ -56,7 +56,7 @@ $register=$_POST['reg'];
               if(mysql_query($query2)){
                 echo "done";
               }
-        
+
 
               //send email
               $message=

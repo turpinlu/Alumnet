@@ -40,7 +40,7 @@ $reset=$_POST['res'];
           echo "<script type='text/javascript'>alert('$message');</script>";
         }
         else{
-          echo"Email failed to send";
+          //echo"Email failed to send";
         }
           die("<script>location.href = 'http://alumnet.xyz/register.php'</script>");
 
