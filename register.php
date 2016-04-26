@@ -69,7 +69,7 @@ $register=$_POST['reg'];
               $headers="From:  DO_NOT_REPLY@alumnet.xyz";
               $mail=mail($email, $subject, $message,$headers);
               if ($mail){
-                $message = "Please check your email for account confirmation coden.";
+                $message = "Please check your email to complete account activation.";
                 echo "<script type='text/javascript'>alert('$message');</script>";
                 die("<script>location.href = 'http://alumnet.xyz/index.php'</script>");
               }

@@ -11,8 +11,7 @@ include 'secure.php';
 $reset=$_POST['res'];
 
  if ($reset){
-   echo"Reset";
-
+   
 
      $email = cleanStringInput($_POST['email']);
 

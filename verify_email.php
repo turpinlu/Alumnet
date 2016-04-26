@@ -10,7 +10,9 @@ $r = mysql_query($query);
 $row = mysql_fetch_array($r);
 $confirm_code=$row['CONFIRM'];
 if ($confirm_code==$code){
-  echo 'verified';
+//  echo 'verified';
+  $message = "Account Activated! Log in to continue.";
+  echo "<script type='text/javascript'>alert('$message');</script>";
   $activate_query="UPDATE ACCOUNT SET ACTIVATED ='1'";
   $execute=mysql_query($activate_query);
   die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
