@@ -36,7 +36,8 @@ $reset=$_POST['res'];
         $headers="From: DO_NOT_REPLY@alumnet.xyz";
         $mail=mail($email, $subject, $message, $headers);
         if ($mail){
-          echo "Email Sent";
+          $message = "Please check your email to confirm your account";
+          echo "<script type='text/javascript'>alert('$message');</script>";
         }
         else{
           echo"Email failed to send";
