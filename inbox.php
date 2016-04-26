@@ -91,9 +91,9 @@ include "dataLogin.php";
                 <tr><th>FROM</th><th>MESSAGE</th><th>DATE</th></tr>
 
                 <?php
-                    for(int x=0;x<10;x++){
+
                     echo "<tr><td>$fromfirst $fromlast</td><td>$message</td><td>$date</td></tr>";
-                    }
+
                 ?>
 
                 </table>
