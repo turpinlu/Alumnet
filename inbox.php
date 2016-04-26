@@ -142,7 +142,7 @@ include "dataLogin.php";
                 </ul>
             </div>
             <div class="pull-right">
-                <span class="text-muted"><b>1</b>–<b>50</b> of <b>277</b></span>
+                <span class="text-muted"><b>1 – 50</b> of <b>277</b></span>
                 <div class="btn-group btn-group-sm">
                     <button type="button" class="btn btn-default">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -160,12 +160,12 @@ include "dataLogin.php";
             <a href="#" class="btn btn-danger btn-sm btn-block" role="button">COMPOSE</a>
             <hr />
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#"><span class="badge pull-right">42</span> Inbox </a>
+                <li class="active"><a href="#"><span class="badge pull-right" style="font-color:black;">42</span> Inbox </a>
                 </li>
-                <li><a href="http://www.jquery2dotnet.com">Starred</a></li>
-                <li><a href="http://www.jquery2dotnet.com">Important</a></li>
-                <li><a href="http://www.jquery2dotnet.com">Sent Mail</a></li>
-                <li><a href="http://www.jquery2dotnet.com"><span class="badge pull-right">3</span>Drafts</a></li>
+                <li><a href="">Starred</a></li>
+                <li><a href="">Important</a></li>
+                <li><a href="">Sent Mail</a></li>
+                <li><a href=""><span class="badge pull-right">3</span>Drafts</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-md-10">
@@ -190,9 +190,9 @@ include "dataLogin.php";
                                     <input type="checkbox">
                                 </label>
                             </div>
-                            <span class="glyphicon glyphicon-star-empty"></span><span class="name" style="min-width: 80px;height:40px;
-                                display: inline-block;">Bhaumik Patel</span> <span class="">This is big title</span>
-                            <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span> <span
+                            <span class="glyphicon glyphicon-star-empty"></span><span class="name" style="min-width: 120px;
+                                        display: inline-block;">Jeremy Powell</span> <span class="">Not sure where to work?</span>
+                            <span class="text-muted" style="font-size: 11px;">- Call me!</span> <span
                                 class="badge">12:10 AM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
                                 </span></span></a><a href="#" class="list-group-item">
                                     <div class="checkbox">
@@ -201,9 +201,9 @@ include "dataLogin.php";
                                         </label>
                                     </div>
                                     <span class="glyphicon glyphicon-star-empty"></span><span class="name" style="min-width: 120px;
-                                        display: inline-block;">Bhaumik Patel</span> <span class="">This is big title</span>
-                                    <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span> <span
-                                        class="badge">12:10 AM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
+                                        display: inline-block;">Richard McVay</span> <span class="">Delaware Position</span>
+                                    <span class="text-muted" style="font-size: 11px;">- Looking forward to meeting.</span> <span
+                                        class="badge">1:02 AM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
                                         </span></span></a><a href="#" class="list-group-item read">
                                             <div class="checkbox">
                                                 <label>
@@ -211,9 +211,9 @@ include "dataLogin.php";
                                                 </label>
                                             </div>
                                             <span class="glyphicon glyphicon-star"></span><span class="name" style="min-width: 120px;
-                                                display: inline-block;">Bhaumik Patel</span> <span class="">This is big title</span>
-                                            <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span> <span
-                                                class="badge">12:10 AM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
+                                                display: inline-block;">Lucas Turpin</span> <span class="">Job Offer</span>
+                                            <span class="text-muted" style="font-size: 11px;">- Hey, buddy!</span> <span
+                                                class="badge">2:45 PM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
                                                 </span></span></a>
                     </div>
                 </div>
@@ -225,7 +225,7 @@ include "dataLogin.php";
                     </div>
                 </div>
                 <div class="tab-pane fade in" id="messages">
-                    ...</div>
+                    This tab is empty.</div>
                 <div class="tab-pane fade in" id="settings">
                     This tab is empty.</div>
             </div>
