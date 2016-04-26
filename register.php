@@ -46,7 +46,7 @@ $register=$_POST['reg'];
         //    echo '  query is   ';
           //  echo $query;
             if (mysql_query($query)){
-              echo"query complete";
+            //  echo"query complete";
               $getAcct="SELECT ACCOUNTNUM FROM ACCOUNT WHERE EMAIL='$email'";
               $r=mysql_query($getAcct);
               $theDate=date("Y-m-d");
