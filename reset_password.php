@@ -20,8 +20,8 @@
     if ($confirm_code==$code){
       $password=$_POST['password'];
       $confirm_password=$_POST['password_confirmation'];
-      echo $password;
-      echo $confirm_password;
+  //    echo $password;
+    //  echo $confirm_password;
       $pwmatch = strcmp($confirm_password, $password);
       //Validate Password
       //$error=validatePassword($password);     //checks for password length. Must include capital, lowercase, number, and special character
@@ -30,13 +30,13 @@
       //hash password
       $hashpassword = hashPassword($password);    //hashes password for storage into database
       if(!$pwmatch){
-        echo "match";
-        if(mysql_query("LOCK TABLES account WRITE")){
+    //    echo "match";
+      //  if(mysql_query("LOCK TABLES account WRITE")){
           $query="UPDATE ACCOUNT SET PASSWORD='$hashpassword'";
-          echo '  query is   ';
-          echo $query;
+        //  echo '  query is   ';
+        //  echo $query;
           if (mysql_query($query)){
-            echo"query complete";
+        //    echo"query complete";
             session_destroy();
             session_start();
             $_SESSION['email'] = $email;
@@ -45,7 +45,7 @@
             $_SESSION['start_time']=$time->format('Y-m-d H:i:s');
             die("<script>location.href = 'http://alumnet.xyz/profile.php'</script>");
           }
-        }
+        //}
       }
 }
 
